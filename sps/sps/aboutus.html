@@ -7,7 +7,7 @@
 
 <link href="https://www.satarapolytechnicsatara.org/icon.png" rel="icon" type="image/png">
 
-<!-- Bootstrap 4 (ORDER IS IMPORTANT) -->
+<!-- Bootstrap 4 -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -29,7 +29,7 @@ body{
 
 /* ===== NAVBAR ===== */
 .navbar{
-    background-color:#222;
+    background:#2c2f33;
     position:fixed;
     top:0;
     left:0;
@@ -39,25 +39,57 @@ body{
 }
 
 .navbar-brand img{
-    width:40px;
+    width:42px;
     border-radius:50%;
 }
 
+/* NAV LINKS */
 .nav-link{
     color:#fff !important;
     font-weight:600;
+    padding:10px 14px;
 }
 
 .nav-link:hover,
 .nav-link.active{
     background:#f39c12;
     color:#000 !important;
-    border-radius:5px;
+    border-radius:6px;
 }
 
-/* ===== PAGE FIX ===== */
+/* ===== MOBILE MENU FIX ===== */
+@media (max-width: 768px){
+
+    .navbar-collapse{
+        position:absolute;
+        top:72px;               /* below navbar */
+        left:0;
+        width:100%;
+        background:#2c2f33;     /* solid background */
+        padding:12px 0;
+        box-shadow:0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .navbar-nav{
+        width:100%;
+    }
+
+    .nav-item{
+        width:100%;
+        text-align:left;
+    }
+
+    .nav-link{
+        display:block;
+        width:100%;
+        border-radius:0;
+        padding:12px 20px;
+    }
+}
+
+/* ===== PAGE ===== */
 .page{
-    margin-top:72px; /* push below navbar */
+    margin-top:72px;
     min-height:calc(100vh - 72px);
     background:url('https://www.satarapolytechnicsatara.org/f1.jpg') center/cover no-repeat;
     display:flex;
@@ -75,7 +107,7 @@ body{
 }
 
 .info-box{
-    background:rgba(255,255,255,0.96);
+    background:rgba(255,255,255,0.97);
     padding:26px 24px;
     border-radius:16px;
     box-shadow:0 12px 28px rgba(0,0,0,0.35);
@@ -105,7 +137,7 @@ body{
     font-weight:bold;
 }
 
-/* ===== MOBILE ===== */
+/* ===== MOBILE CONTENT ===== */
 @media(max-width:900px){
 
     .page{
@@ -123,20 +155,18 @@ body{
 
 <body>
 
-<!-- ===== NAVBAR (FIXED & WORKING) ===== -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-md navbar-dark">
   <a class="navbar-brand" href="index.html">
     <img src="https://www.satarapolytechnicsatara.org/logo.jpeg" alt="Logo">
   </a>
 
-  <!-- Hamburger -->
   <button class="navbar-toggler" type="button" data-toggle="collapse"
           data-target="#mainNavbar" aria-controls="mainNavbar"
           aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <!-- Menu -->
   <div class="collapse navbar-collapse" id="mainNavbar">
     <ul class="navbar-nav ml-left">
       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -191,4 +221,5 @@ body{
 
 </body>
 </html>
+
 
