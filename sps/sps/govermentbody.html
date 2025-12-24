@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Governing Body - Satara Polytechnic</title>
 
-<link href="https://www.satarapolytechnicsatara.org/icon.png" rel="icon" sizes="30x30" type="image/png" />
+<link href="https://www.satarapolytechnicsatara.org/icon.png" rel="icon" type="image/png">
 
-<!-- jQuery & Bootstrap -->
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" crossorigin="anonymous"></script>
+<!-- Bootstrap 4 -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
 <style>
@@ -25,10 +25,10 @@ body{
   overflow-x:hidden;
 }
 
-/* ===== NAVBAR (MATCH HOME PAGE SIZE) ===== */
+/* ===== NAVBAR ===== */
 .navbar{
-  background:#2f3b45;                 /* 🔒 color unchanged */
-  padding:0.5rem 1rem;             /* 🔥 SAME AS HOME */
+  background:#2f3b45;
+  padding:0.5rem 1rem;
 }
 
 .navbar .img-logo{
@@ -40,9 +40,9 @@ body{
 .nav-link{
   color:#fff !important;
   font-weight:600;
-  padding:6px 14px;                /* 🔥 SAME AS HOME */
+  padding:6px 14px;
   display:inline-block;
-  transition:background 0.3s,color 0.3s;
+  transition:background .3s,color .3s;
 }
 
 .nav-link:hover,
@@ -52,25 +52,32 @@ body{
   border-radius:8px;
 }
 
-/* ===== DESKTOP SPACING (MATCH HOME) ===== */
+/* ===== DESKTOP SPACING ===== */
 @media (min-width:769px){
   .navbar-nav{
-    gap:1rem;                      /* 🔥 SAME AS HOME */
+    gap:1rem;
   }
 }
 
-/* ===== MOBILE MENU ===== */
+/* ===== MOBILE MENU (FIXED) ===== */
 @media (max-width:768px){
   .navbar-collapse{
-    background:#222;
-    padding:16px 0;
+    position:absolute;
+    top:72px;
+    left:0;
+    width:100%;
+    background:#2f3b45;
+    padding:20px 0;
+    box-shadow:0 8px 20px rgba(0,0,0,.4);
   }
+
   .navbar-nav{
     width:100%;
     text-align:center;
   }
+
   .nav-item{
-    margin:8px 0;
+    margin:10px 0;
   }
 }
 
@@ -102,27 +109,26 @@ h1{
   border-radius:15px;
   overflow:hidden;
   width:200px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-  transition:transform 0.3s,box-shadow 0.3s;
+  box-shadow:0 5px 15px rgba(0,0,0,.1);
+  transition:transform .3s,box-shadow .3s;
   opacity:0;
   transform:translateY(20px);
-  animation:fadeUp 0.8s forwards;
+  animation:fadeUp .8s forwards;
 }
 
 .card:hover{
   transform:translateY(-5px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
 .card img{
   width:100%;
   height:250px;
   object-fit:cover;
-  border-bottom:2px solid #ddd;
 }
 
 .card-body{
-  padding:0.8rem;
+  padding:.8rem;
 }
 
 .card-title{
@@ -131,12 +137,12 @@ h1{
 }
 
 .card-role{
-  font-size:0.9rem;
+  font-size:.9rem;
   color:#555;
-  margin-top:0.3rem;
+  margin-top:.3rem;
 }
 
-/* Responsive */
+/* Mobile cards */
 @media (max-width:480px){
   .row-flex{
     flex-direction:column;
@@ -173,6 +179,7 @@ h1{
     </ul>
   </div>
 </nav>
+
 
 <!-- Governing Body Section -->
 <div class="container-body">
