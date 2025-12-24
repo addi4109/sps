@@ -15,22 +15,22 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 <style>
-/* ===== GLOBAL RESET ===== */
+/* ===== GLOBAL ===== */
 *{
   box-sizing:border-box;
   font-family:'Poppins',sans-serif;
 }
 
 html, body{
-  width:100%;
   margin:0;
+  width:100%;
   overflow-x:hidden;
   background:linear-gradient(135deg,#f5f7fa,#c3cfe2);
 }
 
 /* ===== NAVBAR ===== */
 .navbar{
-  background:#222;
+  background:#2c2f33;
   height:72px;
 }
 
@@ -39,28 +39,47 @@ html, body{
   border-radius:50%;
 }
 
+/* NAV LINKS (IMPORTANT FIXES) */
 .navbar-dark .nav-link{
   color:#fff !important;
   font-weight:600;
-  padding:8px 14px;
+  padding:8px 18px;
+  display:inline-block;               /* 🔥 yellow only on text */
 }
 
 .navbar-dark .nav-link:hover,
 .navbar-dark .nav-link.active{
   background:#f39c12;
   color:#000 !important;
-  border-radius:6px;
+  border-radius:10px;
+}
+
+/* ===== MOBILE MENU FIX ===== */
+@media (max-width:768px){
+
+  .navbar-collapse{
+    padding:20px 0;                   /* space inside menu */
+    background:#2c2f33;
+  }
+
+  .navbar-nav{
+    text-align:center;
+  }
+
+  .nav-item{
+    margin:12px 0;                    /* 🔥 more spacing */
+  }
 }
 
 /* ===== MAIN WRAPPER ===== */
 .main-wrapper{
-  padding-top:72px;
+  padding-top:90px;                   /* avoids overlap */
 }
 
 /* ===== PAGE HEADING ===== */
 .page-heading{
   text-align:center;
-  font-size:2.2rem;
+  font-size:2.3rem;
   font-weight:600;
   margin:2rem 1rem;
   color:#222;
@@ -155,7 +174,7 @@ html, body{
 <body>
 
 <!-- ===== NAVBAR ===== -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
   <a class="navbar-brand" href="index.html">
     <img class="img-logo" src="https://www.satarapolytechnicsatara.org/logo.jpeg" alt="logo">
   </a>
@@ -165,7 +184,7 @@ html, body{
   </button>
 
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto text-center">
+    <ul class="navbar-nav ml-left">
       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
       <li class="nav-item"><a class="nav-link" href="govermentbody.html">Governing Body</a></li>
@@ -232,10 +251,10 @@ html, body{
     </div>
 
   </div>
-
 </div>
 
 </body>
 </html>
+
 
 
