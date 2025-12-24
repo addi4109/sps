@@ -43,47 +43,41 @@ body{
     border-radius:50%;
 }
 
-/* NAV LINKS */
+/* ===== NAV LINKS ===== */
 .nav-link{
     color:#fff !important;
     font-weight:600;
-    padding:10px 14px;
+    padding:10px 18px;
+    display:inline-block;              /* 🔥 IMPORTANT */
 }
 
 .nav-link:hover,
 .nav-link.active{
     background:#f39c12;
     color:#000 !important;
-    border-radius:6px;
+    border-radius:8px;
 }
 
-/* ===== MOBILE MENU FIX ===== */
+/* ===== MOBILE MENU ===== */
 @media (max-width: 768px){
 
     .navbar-collapse{
         position:absolute;
-        top:72px;               /* below navbar */
+        top:72px;
         left:0;
         width:100%;
-        background:#2c2f33;     /* solid background */
-        padding:12px 0;
+        background:#2c2f33;
+        padding:20px 0;
         box-shadow:0 8px 20px rgba(0,0,0,0.4);
     }
 
     .navbar-nav{
         width:100%;
+        text-align:center;              /* 🔥 CENTER TEXT */
     }
 
     .nav-item{
-        width:100%;
-        text-align:left;
-    }
-
-    .nav-link{
-        display:block;
-        width:100%;
-        border-radius:0;
-        padding:12px 20px;
+        margin:8px 0;                   /* spacing between items */
     }
 }
 
@@ -139,12 +133,10 @@ body{
 
 /* ===== MOBILE CONTENT ===== */
 @media(max-width:900px){
-
     .page{
         align-items:flex-start;
         padding:20px 12px;
     }
-
     .box-container{
         grid-template-columns:1fr;
         gap:18px;
@@ -169,7 +161,6 @@ body{
 
   <div class="collapse navbar-collapse" id="mainNavbar">
     <ul class="navbar-nav ml-left">
-        <center>
       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
       <li class="nav-item"><a class="nav-link active" href="aboutus.html">About Us</a></li>
       <li class="nav-item"><a class="nav-link" href="govermentbody.html">Governing Body</a></li>
@@ -179,7 +170,6 @@ body{
       <li class="nav-item"><a class="nav-link" href="notice.html">Notice Board</a></li>
       <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
       <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
-        </center>
     </ul>
   </div>
 </nav>
@@ -223,5 +213,3 @@ body{
 
 </body>
 </html>
-
-
