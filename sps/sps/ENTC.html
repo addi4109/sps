@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Electronics & Telecommunication Engineering — Satara Polytechnic Satara</title>
+
+  <!-- Internal CSS -->
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --accent:#0078d7;
+      --muted:#555;
+      --maxw:1100px;
+      --radius:12px;
+      --gap:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:var(--bg);
+      color:#111;
+      line-height:1.45;
+    }
+
+    .container{
+      max-width:var(--maxw);
+      margin:28px auto;
+      padding:24px;
+    }
+
+    .header{
+      background:linear-gradient(90deg,var(--accent),#2aa7ff);
+      color:white;
+      padding:20px;
+      border-radius:var(--radius);
+      box-shadow:0 8px 30px rgba(0,120,215,0.15);
+      display:flex;
+      gap:16px;
+      align-items:center;
+    }
+    .logo{
+      width:72px;
+      height:72px;
+      border-radius:10px;
+      background:rgba(255,255,255,0.15);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:18px;
+      letter-spacing:0.5px;
+    }
+    .header h1{margin:0;font-size:18px}
+    .header p{margin:0;opacity:0.95;font-size:14px}
+
+    main{margin-top:var(--gap);}
+
+    .card{
+      background:var(--card);
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(15,15,15,0.05);
+      margin-top:18px;
+    }
+
+    .section-title{font-size:16px;margin:0 0 10px 0;color:var(--accent);font-weight:600}
+    .dept-meta p{margin:8px 0;color:var(--muted)}
+    .dept-meta ul{margin:8px 0 0 18px;color:var(--muted)}
+    .dept-meta ul li{margin:6px 0}
+
+    .lab-images{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+      gap:10px;
+      margin-top:12px;
+    }
+    .lab-images img{
+      width:100%;
+      height:110px;
+      object-fit:cover;
+      border-radius:8px;
+      display:block;
+    }
+
+    .staff-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+      margin-top:12px;
+    }
+    .staff-card{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding:12px;
+      border-radius:10px;
+      background:linear-gradient(180deg,rgba(0,0,0,0.03),transparent);
+    }
+    .staff-photo{
+      width:84px;
+      height:84px;
+      object-fit:cover;
+      border-radius:8px;
+      flex-shrink:0;
+    }
+    .staff-body{min-width:0}
+    .staff-name{font-weight:600;margin-bottom:6px}
+    .staff-role{font-size:13px;color:var(--muted);margin-bottom:6px}
+    .staff-meta{font-size:13px;color:var(--muted);margin-bottom:6px}
+    .staff-email{font-size:13px;color:var(--accent);word-break:break-word}
+
+    .footer{margin-top:22px;padding:14px;font-size:14px;color:var(--muted);text-align:center;border-radius:8px}
+
+    @media (max-width:640px){
+      .header{flex-direction:column;align-items:flex-start}
+      .logo{width:56px;height:56px}
+      .lab-images img{height:96px}
+      .staff-photo{width:72px;height:72px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">SPS</div>
+      <div>
+        <h1>Satara Polytechnic Satara</h1>
+        <p>Department of Electronics & Telecommunication Engineering</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="card dept-meta">
+        <h4 class="section-title">Electronics & Telecommunication Engineering</h4>
+        <p><strong>Established:</strong> 1983</p>
+        <p><strong>Vision:</strong> To be a place of academic excellence by imparting quality teaching and exposure to recent telecom trends.</p>
+
+        <h5 class="section-title">Labs</h5>
+        <ul>
+          <li>Digital-LIC Lab</li>
+          <li>Applied Electronics Lab</li>
+          <li>MP/MC/Embedded System Lab</li>
+        </ul>
+
+        <div class="lab-images">
+          <img src="https://i.ibb.co/Y40mDsZz/digital-lic-lab.jpg" alt="Digital LIC Lab">
+          <img src="https://i.ibb.co/4nq8gyrw/IMG-5906-1.jpg" alt="Applied Electronics Lab">
+          <img src="https://i.ibb.co/5hPRsVYf/IMG-5907.jpg" alt="Embedded System Lab 1">
+          <img src="https://i.ibb.co/DfwdDzMd/IMG-5910-1.jpg" alt="Embedded System Lab 2">
+        </div>
+      </section>
+
+      <section class="card">
+        <h5 class="section-title">Staff — E&TC Department</h5>
+        <div class="staff-grid">
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/vSbpYp8/salunkhe.jpg" alt="Salunkhe Anita">
+            <div class="staff-body">
+              <div class="staff-name">Ms. Salunkhe Anita Tanaji</div>
+              <div class="staff-role">Incharge HOD — B.E. (Electronics)</div>
+              <div class="staff-meta">Experience: 12 Years</div>
+              <div class="staff-email">anita.salunkhe11@yahoo.com</div>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/j97hvbH0/jadhav.jpg" alt="Jadhav Snehal">
+            <div class="staff-body">
+              <div class="staff-name">Ms. Jadhav Snehal Sunil</div>
+              <div class="staff-role">Lecturer — B.E. (E&TC)</div>
+              <div class="staff-meta">Experience: 1 Year</div>
+              <div class="staff-email">snehaljadhav1709@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/SDfgFH7r/chavan.jpg" alt="Chavan">
+            <div class="staff-body">
+              <div class="staff-name">Mrs. Chavan Aishwarya Shailesh</div>
+              <div class="staff-role">Lecturer — B.E. (E&TC)</div>
+              <div class="staff-meta">Experience: 1 Year</div>
+              <div class="staff-email">aishwarya1994dhane@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/s7yYf86/bhosale.jpg" alt="Bhosale">
+            <div class="staff-body">
+              <div class="staff-name">Ms. Bhosale Divya Pramod</div>
+              <div class="staff-role">Lecturer — B.E. (E&TC)</div>
+              <div class="staff-meta">Experience: 1 Year</div>
+              <div class="staff-email">divyabhosale9422@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/9ky88stz/Bagade.jpg" alt="Bagade">
+            <div class="staff-body">
+              <div class="staff-name">Ms. Bagade Sayali Umesh</div>
+              <div class="staff-role">Lecturer — B.E. (Electrical)</div>
+              <div class="staff-meta">Experience: 1 Year</div>
+              <div class="staff-email">sayalibagade@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/DfHXG8JT/navale.jpg" alt="Navale">
+            <div class="staff-body">
+              <div class="staff-name">Mrs. Navale Smita Vinod</div>
+              <div class="staff-role">Technical Assistant — Diploma in E&TC</div>
+              <div class="staff-meta">Experience: —</div>
+              <div class="staff-email">Smita07@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/nstFZFxQ/vahalkar.jpg" alt="Vahalkar">
+            <div class="staff-body">
+              <div class="staff-name">Mrs. Vahalkar Madhavi Dilip</div>
+              <div class="staff-role">Technical Assistant — D.E.E</div>
+              <div class="staff-meta">Experience: —</div>
+              <div class="staff-email">vahalkarmadhavi@gmail.com</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="footer card">
+        For detailed queries contact the department email addresses listed above.
+      </div>
+    </main>
+  </div>
+</body>
+</html>

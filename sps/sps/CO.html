@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Computer Engineering — Satara Polytechnic Satara</title>
+
+  <!-- Internal CSS -->
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --accent:#0078d7;
+      --muted:#555;
+      --maxw:1100px;
+      --radius:12px;
+      --gap:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:var(--bg);
+      color:#111;
+      line-height:1.45;
+    }
+
+    .container{
+      max-width:var(--maxw);
+      margin:28px auto;
+      padding:24px;
+    }
+
+    .header{
+      background:linear-gradient(90deg,var(--accent),#2aa7ff);
+      color:white;
+      padding:20px;
+      border-radius:var(--radius);
+      box-shadow:0 8px 30px rgba(0,120,215,0.15);
+      display:flex;
+      gap:16px;
+      align-items:center;
+    }
+    .logo{
+      width:72px;
+      height:72px;
+      border-radius:10px;
+      background:rgba(255,255,255,0.15);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:18px;
+      letter-spacing:0.5px;
+    }
+    .header h1{margin:0;font-size:18px}
+    .header p{margin:0;opacity:0.95;font-size:14px}
+
+    main{margin-top:var(--gap);}
+
+    .card{
+      background:var(--card);
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(15,15,15,0.05);
+      margin-top:18px;
+    }
+
+    .section-title{font-size:16px;margin:0 0 10px 0;color:var(--accent);font-weight:600}
+    .dept-meta p{margin:8px 0;color:var(--muted)}
+    .dept-meta ul{margin:8px 0 0 18px;color:var(--muted)}
+    .dept-meta ul li{margin:6px 0}
+
+    .lab-images{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+      gap:10px;
+      margin-top:12px;
+    }
+    .lab-images img{
+      width:100%;
+      height:110px;
+      object-fit:cover;
+      border-radius:8px;
+      display:block;
+    }
+
+    .staff-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+      margin-top:12px;
+    }
+    .staff-card{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding:12px;
+      border-radius:10px;
+      background:linear-gradient(180deg,rgba(0,0,0,0.03),transparent);
+    }
+    .staff-photo{
+      width:84px;
+      height:84px;
+      object-fit:cover;
+      border-radius:8px;
+      flex-shrink:0;
+    }
+    .staff-body{min-width:0}
+    .staff-name{font-weight:600;margin-bottom:6px}
+    .staff-role{font-size:13px;color:var(--muted);margin-bottom:6px}
+    .staff-meta{font-size:13px;color:var(--muted);margin-bottom:6px}
+    .staff-email{font-size:13px;color:var(--accent);word-break:break-word}
+
+    .footer{margin-top:22px;padding:14px;font-size:14px;color:var(--muted);text-align:center;border-radius:8px}
+
+    @media (max-width:640px){
+      .header{flex-direction:column;align-items:flex-start}
+      .logo{width:56px;height:56px}
+      .lab-images img{height:96px}
+      .staff-photo{width:72px;height:72px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">SPS</div>
+      <div>
+        <h1>Satara Polytechnic Satara</h1>
+        <p>Department of Computer Engineering</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="card dept-meta">
+        <h4 class="section-title">Computer Engineering</h4>
+        <p><strong>Established:</strong> 1983</p>
+        <p><strong>Vision:</strong> To nurture diploma students to be employable, to pursue higher studies, and to be entrepreneurial and civic-minded.</p>
+        <p><strong>Mission:</strong> Motivate students; empower by classroom + industrial exposure; develop soft and technical skills as per MSBTE.</p>
+
+        <h5 class="section-title">Labs</h5>
+        <ul>
+          <li>Programming Lab</li>
+          <li>Network Lab</li>
+          <li>Hardware Lab</li>
+        </ul>
+
+        <div class="lab-images">
+          <img src="https://i.ibb.co/tT4DP732/programminglab.jpg" alt="Programming Lab">
+          <img src="https://i.ibb.co/Ng9SZYyC/network.jpg" alt="Network Lab">
+          <img src="https://i.ibb.co/zTxNdgyY/IMG-5858.jpg" alt="Hardware Lab 1">
+          <img src="https://i.ibb.co/v4gJDjsd/IMG-5872.jpg" alt="Hardware Lab 2">
+          <img src="https://i.ibb.co/VW11ng9f/hardware-1.jpg" alt="Hardware Lab 3">
+          <img src="https://i.ibb.co/ccnSHMZf/hardware.jpg" alt="Hardware Lab 4">
+        </div>
+      </section>
+
+      <section class="card">
+        <h5 class="section-title">Staff — Computer Department</h5>
+        <div class="staff-grid">
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/nMC3DLbg/Sabale0.jpg" alt="Sabale Komal">
+            <div class="staff-body">
+              <div class="staff-name">Ms. Sabale Komal Sanjeev</div>
+              <div class="staff-role">Incharge HOD — B.Tech (Computer Engg.)</div>
+              <div class="staff-meta">Experience: 4 Years</div>
+              <div class="staff-email">72.komal.ks@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/ZRmdP9JJ/gennurphoto.jpg" alt="Gennur Hina">
+            <div class="staff-body">
+              <div class="staff-name">Ms. Gennur Hina Lalsab</div>
+              <div class="staff-role">Lecturer — B.E. (Computer Science & Engg.)</div>
+              <div class="staff-meta">Experience: 4 Years</div>
+              <div class="staff-email">hina07101@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/84sKy7rF/Padwal.jpg" alt="Padwal Shital">
+            <div class="staff-body">
+              <div class="staff-name">Ms. Padwal Shital Avinash</div>
+              <div class="staff-role">Lecturer — B.E. (Computer Engg.)</div>
+              <div class="staff-meta">Experience: 1 Year</div>
+              <div class="staff-email">shitalpadwal0462@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/xSVTKXnh/Mandeshi.jpg" alt="Mandeshi Mayuri">
+            <div class="staff-body">
+              <div class="staff-name">Ms. Mandeshi Mayuri Mahesh</div>
+              <div class="staff-role">Lecturer — B.Tech (Computer Engg.)</div>
+              <div class="staff-meta">Experience: 1 Year</div>
+              <div class="staff-email">ashwininikam7290@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/jv71zRVp/kulkarni.jpg" alt="Kulkarni Vrishali">
+            <div class="staff-body">
+              <div class="staff-name">Mrs. Kulkarni Vrishali Jayant</div>
+              <div class="staff-role">Technical Assistant — DEE, DCM</div>
+              <div class="staff-meta">Experience: 15 Years</div>
+              <div class="staff-email">kvrishali.1970@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/RTzrSBFP/nikam.jpg" alt="Nikam Hema">
+            <div class="staff-body">
+              <div class="staff-name">Mrs. Nikam Hema Shailesh</div>
+              <div class="staff-role">Technical Assistant — MCOM</div>
+              <div class="staff-meta">Experience: 13 Years</div>
+              <div class="staff-email">hemasurve82@gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer card">
+        For detailed queries contact the department email addresses listed above.
+      </div>
+    </main>
+  </div>
+</body>
+</html>

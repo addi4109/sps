@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Automobile Engineering — Satara Polytechnic Satara</title>
+
+  <!-- Internal CSS -->
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --accent:#0b63d6;
+      --muted:#666;
+      --maxw:1100px;
+      --radius:12px;
+      --gap:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:#111;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    .container{
+      max-width:var(--maxw);
+      margin:28px auto;
+      padding:24px;
+    }
+
+    .header{
+      background:linear-gradient(90deg,var(--accent),#1ea7ff);
+      color:white;
+      padding:20px;
+      border-radius:var(--radius);
+      box-shadow:0 8px 30px rgba(11,99,214,0.12);
+      display:flex;
+      gap:16px;
+      align-items:center;
+    }
+    .logo{
+      width:72px;
+      height:72px;
+      border-radius:10px;
+      background:rgba(255,255,255,0.12);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:18px;
+      letter-spacing:0.6px;
+    }
+    .header h1{margin:0;font-size:18px}
+    .header p{margin:0;opacity:0.95;font-size:14px}
+
+    main{margin-top:var(--gap);}
+
+    .card{
+      background:var(--card);
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(15,15,15,0.04);
+      margin-top:18px;
+    }
+
+    .section-title{font-size:16px;margin:0 0 10px 0;color:var(--accent);font-weight:600}
+    .dept-meta p{margin:8px 0;color:var(--muted)}
+    .dept-meta ul{margin:8px 0 0 18px;color:var(--muted)}
+    .dept-meta ul li{margin:6px 0}
+
+    .lab-images{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+      gap:10px;
+      margin-top:12px;
+    }
+    .lab-images img{
+      width:100%;
+      height:110px;
+      object-fit:cover;
+      border-radius:8px;
+      display:block;
+    }
+
+    .staff-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+      margin-top:12px;
+    }
+    .staff-card{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding:12px;
+      border-radius:10px;
+      background:linear-gradient(180deg,rgba(0,0,0,0.02),transparent);
+    }
+    .staff-photo{
+      width:84px;
+      height:84px;
+      object-fit:cover;
+      border-radius:8px;
+      flex-shrink:0;
+    }
+    .staff-body{min-width:0}
+    .staff-name{font-weight:600;margin-bottom:6px}
+    .staff-role{font-size:13px;color:var(--muted);margin-bottom:6px}
+    .staff-meta{font-size:13px;color:var(--muted);margin-bottom:6px}
+    .staff-email{font-size:13px;color:#0b63d6;word-break:break-word}
+
+    .small-table{width:100%;margin-top:12px;border-collapse:collapse}
+    .small-table th, .small-table td{
+      padding:10px;border:1px solid #eee;text-align:left;font-size:14px;
+    }
+    .footer{margin-top:22px;padding:14px;font-size:14px;color:var(--muted);text-align:center;border-radius:8px}
+
+    /* Responsive tweaks */
+    @media (max-width:640px){
+      .header{flex-direction:column;align-items:flex-start}
+      .logo{width:56px;height:56px}
+      .lab-images img{height:96px}
+      .staff-photo{width:72px;height:72px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">SPS</div>
+      <div>
+        <h1>Satara Polytechnic Satara</h1>
+        <p>Department of Automobile Engineering</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="card dept-meta">
+        <!-- EXACT DATA FROM YOUR UPLOADED CODE -->
+        <h4 class="section-title">Automobile Engineering</h4>
+        <p><strong>Established:</strong> 1983</p>
+        <p><strong>Vision:</strong> The vision of Automobile Engineering Department is to grow the students into engineers and entrepreneurs with elevated skills, who can accumulate the global demands and input concepts and knowledge of automobile engineering.</p>
+        <p><strong>Mission:</strong> The mission is to input concepts and knowledge of automobile engineering and develop psycho-motor and soft skills by providing global-standard facilities and programs.</p>
+
+        <h5 class="section-title">Laboratories</h5>
+        <ul>
+          <li>System and Body Engineering Lab</li>
+          <li>SATTEP Lab</li>
+          <li>Auto Engines Lab</li>
+        </ul>
+
+        <div class="lab-images" aria-hidden="false">
+          <img src="https://i.ibb.co/G4kNp2dz/Auto-Autmobile-sytem-and-body-engineering.jpg" alt="Auto lab1">
+          <img src="https://i.ibb.co/Pnd75tT/Auto-Autmobile-sytem-and-body-engineering4.jpg" alt="Auto lab2">
+          <img src="https://i.ibb.co/Lz7jmwzM/Auto-Auto-Engines-Lab.jpg" alt="Auto engines">
+          <img src="https://i.ibb.co/Gfw1VN1S/Auto-Auto-Engines-Lab3.jpg" alt="Auto engines2">
+          <img src="https://i.ibb.co/HfZW3fnW/Auto-SATTEP-Lab.jpg" alt="SATTEP lab">
+          <img src="https://i.ibb.co/jPKPD2Y9/Auto-SATTEP-Lab4.jpg" alt="SATTEP lab2">
+        </div>
+
+        <h5 class="section-title">Equipment & Placement</h5>
+        <p>Major Equipment: Petrol Engines, Diesel Engines, Carburetors, MPFI Engine, CRDI Engine, Simulators, Maruti 800, Mahindra Jeep, Auto Rickshaw, Kinetic Honda, Measuring Instruments, Gear Boxes, Starter motors, Charts etc.</p>
+
+        <table class="small-table" aria-label="Placement table">
+          <thead><tr><th>Year</th><th>Placed</th></tr></thead>
+          <tbody>
+            <tr><td>2013-14</td><td>20</td></tr>
+            <tr><td>2014-15</td><td>17</td></tr>
+            <tr><td>2015-16</td><td>14</td></tr>
+            <tr><td>2016-17</td><td>20</td></tr>
+            <tr><td>2017-18</td><td>18</td></tr>
+            <tr><td>2018-19</td><td>17</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h5 class="section-title">Staff — Automobile Department</h5>
+        <div class="staff-grid">
+          <!-- Gaikwad (HOD) -->
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/ZzWS61xL/gaikwad.jpg" alt="Gaikwad">
+            <div class="staff-body">
+              <div class="staff-name">Mr. Gaikwad Abhaysingh Vilasrao</div>
+              <div class="staff-role">Incharge HOD — B.E. (Mechanical), M.E. (Design)</div>
+              <div class="staff-meta">Experience: 8 Years</div>
+              <div class="staff-email">abhaysinhgkwd@gmail.com</div>
+            </div>
+          </div>
+
+          <!-- Bhosale Vhiki Ashok -->
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/b5Z0qGCM/vhiki.jpg" alt="Vhiki Bhosale">
+            <div class="staff-body">
+              <div class="staff-name">Mr. Bhosale Vhiki Ashok</div>
+              <div class="staff-role">Lecturer — B.E. (Production)</div>
+              <div class="staff-meta">Experience: 10 Years</div>
+              <div class="staff-email">bhosalevicky123@gmail.com</div>
+            </div>
+          </div>
+
+          <!-- Mane Amol Mohan -->
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/kgPMjCRw/mane.jpg" alt="Mane Amol">
+            <div class="staff-body">
+              <div class="staff-name">Mr. Mane Amol Mohan</div>
+              <div class="staff-role">Lecturer — B.E. (Mechanical)</div>
+              <div class="staff-meta">Experience: 9 Years</div>
+              <div class="staff-email">amolmane2806@gmail.com</div>
+            </div>
+          </div>
+
+          <!-- Nikam Pramod -->
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/LD6hx7wt/nikam.jpg" alt="Nikam">
+            <div class="staff-body">
+              <div class="staff-name">Mr. Nikam Pramod Sudhakar</div>
+              <div class="staff-role">Technical Assistant — Diploma in Auto Engg.</div>
+              <div class="staff-meta">Experience: —</div>
+              <div class="staff-email">psnikam2010@gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer card">For detailed queries contact the department email addresses listed above.</div>
+    </main>
+  </div>
+</body>
+</html>
+s

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chemical Engineering — Satara Polytechnic Satara</title>
+
+  <!-- Internal CSS -->
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --accent:#0b63d6;
+      --muted:#666;
+      --maxw:1100px;
+      --radius:12px;
+      --gap:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:#111;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    .container{
+      max-width:var(--maxw);
+      margin:28px auto;
+      padding:24px;
+    }
+
+    .header{
+      background:linear-gradient(90deg,var(--accent),#1ea7ff);
+      color:white;
+      padding:20px;
+      border-radius:var(--radius);
+      box-shadow:0 8px 30px rgba(11,99,214,0.12);
+      display:flex;
+      gap:16px;
+      align-items:center;
+    }
+    .logo{
+      width:72px;
+      height:72px;
+      border-radius:10px;
+      background:rgba(255,255,255,0.12);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:18px;
+      letter-spacing:0.6px;
+    }
+    .header h1{margin:0;font-size:18px}
+    .header p{margin:0;opacity:0.95;font-size:14px}
+
+    main{margin-top:var(--gap);}
+
+    .card{
+      background:var(--card);
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 6px 18px rgba(15,15,15,0.04);
+      margin-top:18px;
+    }
+
+    .section-title{font-size:16px;margin:0 0 10px 0;color:var(--accent);font-weight:600}
+    .dept-meta p{margin:8px 0;color:var(--muted)}
+    .dept-meta ul{margin:8px 0 0 18px;color:var(--muted)}
+    .dept-meta ul li{margin:6px 0}
+
+    .lab-images{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+      gap:10px;
+      margin-top:12px;
+    }
+    .lab-images img{
+      width:100%;
+      height:110px;
+      object-fit:cover;
+      border-radius:8px;
+      display:block;
+    }
+
+    .staff-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+      margin-top:12px;
+    }
+    .staff-card{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding:12px;
+      border-radius:10px;
+      background:linear-gradient(180deg,rgba(0,0,0,0.02),transparent);
+    }
+    .staff-photo{
+      width:84px;
+      height:84px;
+      object-fit:cover;
+      border-radius:8px;
+      flex-shrink:0;
+    }
+    .staff-body{min-width:0}
+    .staff-name{font-weight:600;margin-bottom:6px}
+    .staff-role{font-size:13px;color:var(--muted);margin-bottom:6px}
+    .staff-meta{font-size:13px;color:var(--muted);margin-bottom:6px}
+    .staff-email{font-size:13px;color:#0b63d6;word-break:break-word}
+
+    .footer{margin-top:22px;padding:14px;font-size:14px;color:var(--muted);text-align:center;border-radius:8px}
+
+    @media (max-width:640px){
+      .header{flex-direction:column;align-items:flex-start}
+      .logo{width:56px;height:56px}
+      .lab-images img{height:96px}
+      .staff-photo{width:72px;height:72px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">SPS</div>
+      <div>
+        <h1>Satara Polytechnic Satara</h1>
+        <p>Department of Chemical Engineering</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="card dept-meta">
+        <h4 class="section-title">Chemical Engineering</h4>
+        <p><strong>Established:</strong> 1983</p>
+        <p><strong>Vision:</strong> To be a nationally recognized chemical engineering department catering to the needs of industry & society.</p>
+        <p><strong>Mission:</strong> Prepare employable personnel & entrepreneurs through industry-institute interaction; inculcate social responsibility; educate students at national competitive level.</p>
+
+        <h5 class="section-title">Laboratories</h5>
+        <ul>
+          <li>Fluid Mechanics Lab</li>
+          <li>Instrumentation & Process Control Lab</li>
+          <li>Heat & Mass Transfer Lab</li>
+        </ul>
+
+        <div class="lab-images">
+          <img src="https://i.ibb.co/N25c0qDh/chem-fluid-mechanics-lab.jpg" alt="Chem lab1">
+          <img src="https://i.ibb.co/SDnMvQYm/chem-Heat-and-Mass-transfer-lab-1.jpg" alt="Heat and mass">
+          <img src="https://i.ibb.co/S4Hf5s5y/chem-instrumantation-and-process-control-lab.jpg" alt="Instrumentation">
+          <img src="https://i.ibb.co/CpG8w4fL/chem-instrumantation-and-process-control-lab1.jpg" alt="Instrumentation2">
+          <img src="https://i.ibb.co/VcxWXB54/chem-PVETlab1.jpg" alt="PVET">
+        </div>
+      </section>
+
+      <section class="card">
+        <h5 class="section-title">Staff — Chemical Department</h5>
+        <div class="staff-grid">
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/20TzZdKd/patil.jpg" alt="Patil">
+            <div class="staff-body">
+              <div class="staff-name">Mr. Patil Ulhas S.</div>
+              <div class="staff-role">Incharge HOD — M.E. (Chemical Engg.)</div>
+              <div class="staff-meta">Experience: 27 Years</div>
+              <div class="staff-email">ulhaspatil23@yahoo.com</div>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/CpY9f19M/ghalke.jpg" alt="Ghalke">
+            <div class="staff-body">
+              <div class="staff-name">Mr. Ghalke Sunil K.</div>
+              <div class="staff-role">Lecturer (Selection Grade) — B.Tech (Chemical Engg.)</div>
+              <div class="staff-meta">Experience: 29 Years</div>
+              <div class="staff-email">barshikar65@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/ZzDkZps0/chikane.jpg" alt="Chikane">
+            <div class="staff-body">
+              <div class="staff-name">Mr. Chikane Mangesh Ravindra</div>
+              <div class="staff-role">Lecturer — B.Tech (Chemical Engg.)</div>
+              <div class="staff-meta">Experience: 1 Year</div>
+              <div class="staff-email">mangeshchikane1999@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/w1xDghW/Bhide-jpg.jpg" alt="Bhide">
+            <div class="staff-body">
+              <div class="staff-name">Ms. Bhide V.D.</div>
+              <div class="staff-role">Lecturer — B.E. (Chemical Engg.)</div>
+              <div class="staff-meta">Experience: 1 Year</div>
+              <div class="staff-email">itsvish.101@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/GQGLSdHs/Waghmare.jpg" alt="Waghmare">
+            <div class="staff-body">
+              <div class="staff-name">Mr. Waghmare A. A.</div>
+              <div class="staff-role">Technical Assistant — Diploma (CHE)</div>
+              <div class="staff-meta">Experience: 1 Year</div>
+              <div class="staff-email">akashwaghmare2491@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="staff-card">
+            <img class="staff-photo" src="https://i.ibb.co/hJSRgSRX/tatpuje.jpg" alt="Tatpuje">
+            <div class="staff-body">
+              <div class="staff-name">Mr. Tatpuje Mandar Uttamrao</div>
+              <div class="staff-role">Technical Assistant — B.Sc</div>
+              <div class="staff-meta">Experience: —</div>
+              <div class="staff-email">mandar.tatpuje@gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer card">For detailed queries contact the department email addresses listed above.</div>
+    </main>
+  </div>
+</body>
+</html>
