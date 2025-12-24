@@ -15,190 +15,194 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 <style>
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-  min-height: 100vh;
+/* ===== GLOBAL FIX ===== */
+*{
+  box-sizing:border-box;
 }
 
-/* Navbar */
-.navbar {
-    background-color: #222;
-    padding: 0.5rem 1rem;
-}
-.navbar .navbar-brand { margin-right: 1rem; }
-.navbar .img-logo { border-radius: 50%; width: 40px; margin-right: 10px; }
-.navbar-nav { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; align-items: center; }
-.nav-item { position: relative; }
-.navbar-dark .navbar-nav .nav-link,
-.navbar-dark .navbar-nav .nav-link:focus,
-.navbar-dark .navbar-nav .nav-link:active {
-    color: white !important;
-    font-weight: bold;
-    transition: background 0.3s, color 0.3s;
-}
-.navbar-dark .navbar-nav .nav-link:hover {
-    background-color: #f39c12;
-    color: black !important;
-    border-radius: 5px;
+html, body{
+  width:100%;
+  overflow-x:hidden;   /* 🔥 IMPORTANT FIX */
+  font-family:'Poppins',sans-serif;
+  margin:0;
+  background:linear-gradient(135deg,#f5f7fa,#c3cfe2);
 }
 
-/* Page Heading */
-.page-heading {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin: 2rem 1rem 2rem 1rem;
-  color: #222;
+/* ===== NAVBAR ===== */
+.navbar{
+  background-color:#222;
+  padding:0.5rem 1rem;
 }
 
-/* Contact Form */
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto 3rem auto;
-  gap: 2rem;
-  padding: 0 1rem;
-}
-.contact-form, .contact-info, .contact-map {
-  flex: 1 1 350px;
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  animation: fadeInUp 1s ease forwards;
-}
-.contact-form h2, .contact-info h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #222;
-}
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  padding: 0.7rem 1rem;
-  margin: 0.5rem 0;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-.contact-form input:focus, .contact-form textarea:focus {
-  border-color: #f39c12;
-  box-shadow: 0 0 5px rgba(243,156,18,0.5);
-  outline: none;
-}
-.contact-form button {
-  background-color: #f39c12;
-  color: #fff;
-  padding: 0.7rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 0.5rem;
-}
-.contact-form button:hover {
-  background-color: #e67e22;
+.navbar .img-logo{
+  border-radius:50%;
+  width:40px;
 }
 
-/* Contact Info */
-.contact-info p {
-  margin: 0.8rem 0;
-  font-size: 1rem;
-  color: #333;
-}
-.contact-info a {
-  color: #f39c12;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-.contact-info a:hover {
-  color: #e67e22;
+.navbar-dark .navbar-nav .nav-link{
+  color:white !important;
+  font-weight:600;
+  padding:8px 14px;
 }
 
-/* Google Map */
-.contact-map iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-  border-radius: 15px;
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active{
+  background:#f39c12;
+  color:black !important;
+  border-radius:6px;
 }
 
-/* Animation */
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
+/* ===== PAGE HEADING ===== */
+.page-heading{
+  text-align:center;
+  font-size:2.2rem;
+  font-weight:600;
+  margin:2rem 1rem;
+  color:#222;
 }
 
-.fade-in { opacity: 0; animation: fadeInUp 1s ease forwards; }
+/* ===== CONTACT SECTION ===== */
+.contact-container{
+  display:flex;
+  flex-wrap:wrap;
+  max-width:1200px;
+  margin:0 auto 3rem auto;
+  gap:1.8rem;
+  padding:0 1rem;
+}
 
-@media(max-width: 768px) {
-  .contact-container { flex-direction: column; }
+.contact-form,
+.contact-info,
+.contact-map{
+  flex:1 1 320px;
+  background:#fff;
+  padding:1.5rem;
+  border-radius:15px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* ===== FORM ===== */
+.contact-form h2,
+.contact-info h2{
+  text-align:center;
+  margin-bottom:1rem;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:0.7rem 1rem;
+  margin:0.5rem 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color:#f39c12;
+  outline:none;
+}
+
+.contact-form button{
+  background:#f39c12;
+  color:#fff;
+  padding:0.7rem 1.5rem;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.contact-form button:hover{
+  background:#e67e22;
+}
+
+/* ===== INFO ===== */
+.contact-info p{
+  margin:0.8rem 0;
+}
+
+.contact-info a{
+  color:#f39c12;
+  text-decoration:none;
+}
+
+/* ===== MAP ===== */
+.contact-map iframe{
+  width:100%;
+  height:300px;
+  border:0;
+  border-radius:12px;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  .contact-container{
+    flex-direction:column;
+  }
 }
 </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
+<!-- ===== NAVBAR ===== -->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <a class="navbar-brand pb-2" href="index.html">
-    <img alt="logo" class="img-logo" src="https://www.satarapolytechnicsatara.org/logo.jpeg">
+  <a class="navbar-brand" href="index.html">
+    <img class="img-logo" src="https://www.satarapolytechnicsatara.org/logo.jpeg" alt="logo">
   </a>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav ml-auto text-center">
       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="aboutus.html">&nbsp;&nbsp;About Us&nbsp;&nbsp;</a></li>
+      <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
       <li class="nav-item"><a class="nav-link" href="govermentbody.html">Governing Body</a></li>
       <li class="nav-item"><a class="nav-link" href="sample.html">Department</a></li>
-      <li class="nav-item"><a class="nav-link" href="events.html">Event and Activities</a></li>
+      <li class="nav-item"><a class="nav-link" href="events.html">Event & Activities</a></li>
       <li class="nav-item"><a class="nav-link" href="campus.html">Campus Gallery</a></li>
       <li class="nav-item"><a class="nav-link" href="notice.html">Notice Board</a></li>
-      <li class="nav-item"><a class="nav-link" href="contactus.html">Contact us</a></li>
-      <li class="nav-item"><a class="nav-link" href="admission.html">Admission Process</a></li>
+      <li class="nav-item"><a class="nav-link active" href="contactus.html">Contact Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- Page Heading -->
+<!-- ===== PAGE ===== -->
 <h1 class="page-heading">Contact Us</h1>
 
-<!-- Contact Section -->
 <div class="contact-container">
-  <!-- Form -->
-  <div class="contact-form fade-in">
+
+  <div class="contact-form">
     <h2>Send a Message</h2>
     <form>
-      <input type="text" name="firstName" placeholder="First Name" required>
-      <input type="text" name="lastName" placeholder="Last Name" required>
-      <input type="email" name="email" placeholder="Email / Phone No." required>
-      <textarea name="feedback" rows="5" placeholder="Your Feedback" required></textarea>
+      <input type="text" placeholder="First Name" required>
+      <input type="text" placeholder="Last Name" required>
+      <input type="email" placeholder="Email / Phone No." required>
+      <textarea rows="5" placeholder="Your Feedback" required></textarea>
       <button type="submit">Submit</button>
     </form>
   </div>
 
-  <!-- Contact Info -->
-  <div class="contact-info fade-in">
+  <div class="contact-info">
     <h2>Contact Information</h2>
-    <p><strong>Office E-mail:</strong> <a href="mailto:officesatarapolytechnicsatara@gmail.com">officesatarapolytechnicsatara@gmail.com</a></p>
-    <p><strong>OS No. (Koratkar S S):</strong> <a href="tel:+919096050503">9096050503</a> / <a href="tel:+917796050503">7796050503</a></p>
-    <p><strong>Principal E-mail:</strong> <a href="mailto:0042principal@msbte.com">0042principal@msbte.com</a></p>
-    <p><strong>Principal Contact No.:</strong> <a href="tel:+919960182230">9960182230</a></p>
+    <p><strong>Office Email:</strong> officesatarapolytechnicsatara@gmail.com</p>
+    <p><strong>OS No:</strong> 9096050503 / 7796050503</p>
+    <p><strong>Principal Email:</strong> 0042principal@msbte.com</p>
+    <p><strong>Principal Contact:</strong> 9960182230</p>
   </div>
 
-  <!-- Map -->
-  <div class="contact-map fade-in">
+  <div class="contact-map">
     <h2>Our Location</h2>
     <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.7210867339084!2d74.01697177491108!3d17.67699128818538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc3c2c58a8e6a2d%3A0xa7f18c74f4e947c8!2sSatara%20Polytechnic%20Satara!5e0!3m2!1sen!2sin!4v1699722764134!5m2!1sen!2sin" 
-      allowfullscreen="" loading="lazy"></iframe>
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.7210867339084!2d74.01697177491108!3d17.67699128818538"
+      loading="lazy"></iframe>
   </div>
+
 </div>
 
 </body>
 </html>
+
