@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us — Satara Polytechnic Satara</title>
 
-<!-- Google Fonts -->
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <!-- Bootstrap 4 -->
@@ -15,41 +15,46 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 <style>
-/* ===== GLOBAL FIX ===== */
+/* ===== GLOBAL RESET ===== */
 *{
   box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
 html, body{
   width:100%;
-  overflow-x:hidden;   /* 🔥 IMPORTANT FIX */
-  font-family:'Poppins',sans-serif;
   margin:0;
+  overflow-x:hidden;
   background:linear-gradient(135deg,#f5f7fa,#c3cfe2);
 }
 
 /* ===== NAVBAR ===== */
 .navbar{
-  background-color:#222;
-  padding:0.5rem 1rem;
+  background:#222;
+  height:72px;
 }
 
 .navbar .img-logo{
-  border-radius:50%;
   width:40px;
+  border-radius:50%;
 }
 
-.navbar-dark .navbar-nav .nav-link{
-  color:white !important;
+.navbar-dark .nav-link{
+  color:#fff !important;
   font-weight:600;
   padding:8px 14px;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active{
+.navbar-dark .nav-link:hover,
+.navbar-dark .nav-link.active{
   background:#f39c12;
-  color:black !important;
+  color:#000 !important;
   border-radius:6px;
+}
+
+/* ===== MAIN WRAPPER ===== */
+.main-wrapper{
+  padding-top:72px;
 }
 
 /* ===== PAGE HEADING ===== */
@@ -83,7 +88,8 @@ html, body{
 
 /* ===== FORM ===== */
 .contact-form h2,
-.contact-info h2{
+.contact-info h2,
+.contact-map h2{
   text-align:center;
   margin-bottom:1rem;
 }
@@ -116,14 +122,17 @@ html, body{
   background:#e67e22;
 }
 
-/* ===== INFO ===== */
+/* ===== CONTACT INFO ===== */
 .contact-info p{
   margin:0.8rem 0;
+  font-size:0.95rem;
+  word-break:break-word;
 }
 
 .contact-info a{
   color:#f39c12;
   text-decoration:none;
+  word-break:break-all;
 }
 
 /* ===== MAP ===== */
@@ -146,7 +155,7 @@ html, body{
 <body>
 
 <!-- ===== NAVBAR ===== -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="index.html">
     <img class="img-logo" src="https://www.satarapolytechnicsatara.org/logo.jpeg" alt="logo">
   </a>
@@ -170,39 +179,63 @@ html, body{
   </div>
 </nav>
 
-<!-- ===== PAGE ===== -->
-<h1 class="page-heading">Contact Us</h1>
+<!-- ===== CONTENT ===== -->
+<div class="main-wrapper">
 
-<div class="contact-container">
+  <h1 class="page-heading">Contact Us</h1>
 
-  <div class="contact-form">
-    <h2>Send a Message</h2>
-    <form>
-      <input type="text" placeholder="First Name" required>
-      <input type="text" placeholder="Last Name" required>
-      <input type="email" placeholder="Email / Phone No." required>
-      <textarea rows="5" placeholder="Your Feedback" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+  <div class="contact-container">
 
-  <div class="contact-info">
-    <h2>Contact Information</h2>
-    <p><strong>Office Email:</strong> officesatarapolytechnicsatara@gmail.com</p>
-    <p><strong>OS No:</strong> 9096050503 / 7796050503</p>
-    <p><strong>Principal Email:</strong> 0042principal@msbte.com</p>
-    <p><strong>Principal Contact:</strong> 9960182230</p>
-  </div>
+    <!-- FORM -->
+    <div class="contact-form">
+      <h2>Send a Message</h2>
+      <form>
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+        <input type="email" placeholder="Email / Phone No." required>
+        <textarea rows="5" placeholder="Your Feedback" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
 
-  <div class="contact-map">
-    <h2>Our Location</h2>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.7210867339084!2d74.01697177491108!3d17.67699128818538"
-      loading="lazy"></iframe>
+    <!-- INFO -->
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+
+      <p><strong>Office Email:</strong>
+        <a href="mailto:officesatarapolytechnicsatara@gmail.com">
+          officesatarapolytechnicsatara@gmail.com
+        </a>
+      </p>
+
+      <p><strong>OS No:</strong>
+        <a href="tel:+919096050503">9096050503</a> /
+        <a href="tel:+917796050503">7796050503</a>
+      </p>
+
+      <p><strong>Principal Email:</strong>
+        <a href="mailto:0042principal@msbte.com">0042principal@msbte.com</a>
+      </p>
+
+      <p><strong>Principal Contact:</strong>
+        <a href="tel:+919960182230">9960182230</a>
+      </p>
+    </div>
+
+    <!-- MAP -->
+    <div class="contact-map">
+      <h2>Our Location</h2>
+      <iframe
+        src="https://www.google.com/maps?q=Satara%20Polytechnic%20Satara&output=embed"
+        loading="lazy">
+      </iframe>
+    </div>
+
   </div>
 
 </div>
 
 </body>
 </html>
+
 
