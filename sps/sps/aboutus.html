@@ -2,214 +2,148 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>About | Satara Polytechnic, Satara</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link href="https://www.satarapolytechnicsatara.org/icon.png" rel="icon" type="image/png">
-
-<!-- Bootstrap 4 -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Satara Polytechnic Satara</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-/* ===== RESET ===== */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    overflow-x:hidden;
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
 }
 
 /* ===== NAVBAR ===== */
-.navbar{
-    background:#2c2f33;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:72px;
-    z-index:1000;
+.navbar {
+    background-color: #222;
+    padding: 12px 0;
+    text-align: center;
 }
 
-.navbar-brand img{
-    width:42px;
-    border-radius:50%;
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* ===== NAV LINKS ===== */
-.nav-link{
-    color:#fff !important;
-    font-weight:600;
-    padding:10px 18px;
-    display:inline-block;              /* 🔥 IMPORTANT */
+.nav-menu li {
+    display: inline-block;
+    margin: 0 10px;
 }
 
-.nav-link:hover,
-.nav-link.active{
-    background:#f39c12;
-    color:#000 !important;
-    border-radius:8px;
+.nav-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 6px 10px;
 }
 
-/* ===== MOBILE MENU ===== */
-@media (max-width: 768px){
-
-    .navbar-collapse{
-        position:absolute;
-        top:72px;
-        left:0;
-        width:100%;
-        background:#2c2f33;
-        padding:20px 0;
-        box-shadow:0 8px 20px rgba(0,0,0,0.4);
-    }
-
-    .navbar-nav{
-        width:100%;
-        text-align:center;              /* 🔥 CENTER TEXT */
-    }
-
-    .nav-item{
-        margin:8px 0;                   /* spacing between items */
-    }
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    background: #0078d7;
+    border-radius: 4px;
 }
 
-/* ===== PAGE ===== */
-.page{
-    margin-top:72px;
-    min-height:calc(100vh - 72px);
-    background:url('https://www.satarapolytechnicsatara.org/f1.jpg') center/cover no-repeat;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+/* ===== PAGE CONTENT ===== */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
 }
 
-/* ===== CONTENT ===== */
-.box-container{
-    width:92%;
-    max-width:1200px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:26px;
+h1 {
+    text-align: center;
+    color: #0078d7;
+    margin-bottom: 20px;
 }
 
-.info-box{
-    background:rgba(255,255,255,0.97);
-    padding:26px 24px;
-    border-radius:16px;
-    box-shadow:0 12px 28px rgba(0,0,0,0.35);
-    text-align:center;
+h2 {
+    color: #333;
+    margin-top: 25px;
 }
 
-.info-box h2,
-.info-box h3{
-    color:#003366;
-    margin-bottom:10px;
+p {
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
 }
 
-.info-box p,
-.info-box li{
-    font-size:0.95rem;
-    line-height:1.6;
-}
-
-.info-box ul{
-    list-style:none;
-    padding:0;
-}
-
-.info-box ul li::before{
-    content:"✔ ";
-    color:#f39c12;
-    font-weight:bold;
-}
-
-/* ===== MOBILE CONTENT ===== */
-@media(max-width:900px){
-    .page{
-        align-items:flex-start;
-        padding:20px 12px;
-    }
-    .box-container{
-        grid-template-columns:1fr;
-        gap:18px;
-    }
+/* ===== FOOTER ===== */
+.footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 14px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<nav class="navbar navbar-expand-md navbar-dark">
-  <a class="navbar-brand" href="index.html">
-    <img src="https://www.satarapolytechnicsatara.org/logo.jpeg" alt="Logo">
-  </a>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse"
-          data-target="#mainNavbar" aria-controls="mainNavbar"
-          aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="mainNavbar">
-    <ul class="navbar-nav ml-left">
-      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link active" href="aboutus.html">About Us&nbsp;&nbsp;</a></li>
-      <li class="nav-item"><a class="nav-link" href="govermentbody.html">Governing Body</a></li>
-      <li class="nav-item"><a class="nav-link" href="sample.html">Department</a></li>
-      <li class="nav-item"><a class="nav-link" href="events.html">Event & Activities</a></li>
-      <li class="nav-item"><a class="nav-link" href="campus.html">Campus Gallery</a></li>
-      <li class="nav-item"><a class="nav-link" href="notice.html">Notice Board</a></li>
-      <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
-      <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+<!-- ===== NAVIGATION BAR ===== -->
+<nav class="navbar">
+    <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="governing-body.html">Governing Body</a></li>
+        <li><a href="department.html">Department</a></li>
+        <li><a href="events.html">Event & Activities</a></li>
+        <li><a href="gallery.html">Campus Gallery</a></li>
+        <li><a href="notice.html">Notice Board</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="admission.html">Admission Process</a></li>
     </ul>
-  </div>
 </nav>
 
-<!-- ===== CONTENT ===== -->
-<div class="page">
-  <div class="box-container">
+<!-- ===== ABOUT CONTENT ===== -->
+<div class="container">
+    <h1>About Us</h1>
 
-    <div class="info-box">
-      <h2>About Institute</h2>
-      <p>
-        Satara Polytechnic, Satara is a well-established technical institute in Maharashtra,
-        committed to providing quality diploma education and skill-oriented training.
-      </p>
-      <p>
-        The institute focuses on academic excellence, hands-on practical knowledge,
-        discipline, and overall personality development.
-      </p>
-    </div>
+    <p>
+        Satara Polytechnic, Satara is one of the premier technical institutes committed to providing
+        quality education in the field of engineering and technology. The institute aims to develop
+        technically competent, socially responsible, and industry-ready diploma engineers.
+    </p>
 
-    <div class="info-box">
-      <h3>Vision</h3>
-      <p>
-        To be a leading polytechnic institute by delivering quality technical education
-        and developing skilled, innovative, and socially responsible professionals.
-      </p>
-    </div>
+    <h2>Our Vision</h2>
+    <p>
+        To be a leading polytechnic institute by imparting quality technical education, fostering
+        innovation, and nurturing skilled professionals who contribute effectively to society and industry.
+    </p>
 
-    <div class="info-box">
-      <h3>Mission</h3>
-      <ul>
-        <li>Quality technical education as per industry needs</li>
-        <li>Strong practical training through labs & workshops</li>
-        <li>Discipline, ethics and professionalism</li>
-        <li>Innovation, teamwork and lifelong learning</li>
-      </ul>
-    </div>
+    <h2>Our Mission</h2>
+    <p>
+        • To provide high-quality technical education with strong practical knowledge.<br>
+        • To promote ethical values, discipline, and lifelong learning.<br>
+        • To enhance industry interaction and skill development.<br>
+        • To encourage innovation, research, and entrepreneurship among students.
+    </p>
 
-  </div>
+    <h2>Quality Education</h2>
+    <p>
+        The institute follows a student-centric approach with well-qualified faculty, modern laboratories,
+        and effective teaching-learning methods. Emphasis is given to practical training, industrial visits,
+        workshops, and co-curricular activities.
+    </p>
+
+    <h2>Infrastructure & Facilities</h2>
+    <p>
+        Satara Polytechnic is equipped with well-developed infrastructure including spacious classrooms,
+        advanced laboratories, computer centers, library facilities, and a safe campus environment that
+        supports overall student development.
+    </p>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+    © 2025 Satara Polytechnic, Satara | All Rights Reserved
 </div>
 
 </body>
 </html>
+
