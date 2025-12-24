@@ -15,7 +15,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-/* ===== RESET ===== */
 *{
     margin:0;
     padding:0;
@@ -27,28 +26,27 @@ body{
     overflow-x:hidden;
 }
 
-/* ===== NAVBAR (MATCH HOME PAGE) ===== */
+/* ===== NAVBAR ===== */
 .navbar{
-    background:#2f3b45;       /* ✅ NEW COLOR */
+    background:#2f3b45;
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    height:72px;              /* ✅ SAME AS HOME */
-    padding:0.5rem 1rem;      /* ✅ SAME AS HOME */
+    height:72px;
+    padding:0.5rem 1rem;
     z-index:1000;
 }
 
 .navbar-brand img{
-    width:40px;               /* ✅ SAME AS HOME */
+    width:40px;
     border-radius:50%;
 }
 
-/* ===== NAV LINKS ===== */
 .nav-link{
     color:#fff !important;
     font-weight:600;
-    padding:6px 14px;         /* ✅ SAME AS HOME */
+    padding:6px 14px;
     display:inline-block;
 }
 
@@ -59,37 +57,31 @@ body{
     border-radius:8px;
 }
 
-/* ===== DESKTOP ONLY SPACING ===== */
-@media (min-width: 769px){
+@media (min-width:769px){
     .navbar-nav{
-        gap:1rem;             /* ✅ SAME AS HOME */
+        gap:1rem;
     }
 }
 
-/* ===== MOBILE MENU ===== */
-@media (max-width: 768px){
-
+@media (max-width:768px){
     .navbar-collapse{
         position:absolute;
         top:72px;
         left:0;
         width:100%;
-        background:#2f3b45;   /* ✅ SAME COLOR */
+        background:#2f3b45;
         padding:16px 0;
         box-shadow:0 8px 20px rgba(0,0,0,0.4);
     }
-
     .navbar-nav{
         width:100%;
         text-align:center;
     }
-
     .nav-item{
         margin:8px 0;
     }
 }
 
-/* ===== PAGE ===== */
 .page{
     margin-top:72px;
     min-height:calc(100vh - 72px);
@@ -99,7 +91,6 @@ body{
     align-items:center;
 }
 
-/* ===== CONTENT ===== */
 .box-container{
     width:92%;
     max-width:1200px;
@@ -139,7 +130,6 @@ body{
     font-weight:bold;
 }
 
-/* ===== MOBILE CONTENT ===== */
 @media(max-width:900px){
     .page{
         align-items:flex-start;
@@ -155,15 +145,13 @@ body{
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
 <nav class="navbar navbar-expand-md navbar-dark">
   <a class="navbar-brand" href="index.html">
     <img src="https://www.satarapolytechnicsatara.org/logo.jpeg" alt="Logo">
   </a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse"
-          data-target="#mainNavbar" aria-controls="mainNavbar"
-          aria-expanded="false" aria-label="Toggle navigation">
+          data-target="#mainNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -182,30 +170,24 @@ body{
   </div>
 </nav>
 
-<!-- ===== CONTENT ===== -->
 <div class="page">
   <div class="box-container">
-
     <div class="info-box">
       <h2>About Institute</h2>
       <p>
         Satara Polytechnic, Satara is a well-established technical institute in Maharashtra,
         committed to providing quality diploma education and skill-oriented training.
       </p>
-      <p>
+       <p>
         The institute focuses on academic excellence, hands-on practical knowledge,
         discipline, and overall personality development.
       </p>
     </div>
-
     <div class="info-box">
       <h3>Vision</h3>
-      <p>
-        To be a leading polytechnic institute by delivering quality technical education
-        and developing skilled, innovative, and socially responsible professionals.
-      </p>
+      <p>To be a leading polytechnic institute by delivering quality technical education
+        and developing skilled, innovative, and socially responsible professionals.</p>
     </div>
-
     <div class="info-box">
       <h3>Mission</h3>
       <ul>
@@ -215,25 +197,23 @@ body{
         <li>Innovation, teamwork and lifelong learning</li>
       </ul>
     </div>
-
   </div>
 </div>
 
-<!-- ===== AUTO ACTIVE TAB SCRIPT ===== -->
 <script>
   const currentPage = window.location.pathname.split("/").pop();
 
-  document.querySelectorAll(".nav-link").forEach(link => {
-    if (link.getAttribute("href") === currentPage) {
+  document.querySelectorAll(".nav-link").forEach(link=>{
+    if(link.getAttribute("href") === currentPage){
       link.classList.add("active");
     }
   });
 
-  if (currentPage === "" || currentPage === "index.html") {
-    document.querySelector('.nav-link[href="index.html"]')
-      .classList.add("active");
+  if(currentPage === "" || currentPage === "index.html"){
+    document.querySelector('.nav-link[href="index.html"]').classList.add("active");
   }
 </script>
 
 </body>
 </html>
+
