@@ -15,7 +15,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 <style>
-/* ===== GLOBAL ===== */
+/* ===== GLOBAL RESET ===== */
 *{
   box-sizing:border-box;
   font-family:'Poppins',sans-serif;
@@ -32,19 +32,21 @@ html, body{
 .navbar{
   background:#2c2f33;
   height:72px;
+  padding:0;                /* 🔥 remove side padding */
 }
 
 .navbar .img-logo{
   width:40px;
   border-radius:50%;
+  margin-left:16px;
 }
 
-/* NAV LINKS (IMPORTANT FIXES) */
+/* NAV LINKS */
 .navbar-dark .nav-link{
   color:#fff !important;
   font-weight:600;
   padding:8px 18px;
-  display:inline-block;               /* 🔥 yellow only on text */
+  display:inline-block;     /* yellow only on text */
 }
 
 .navbar-dark .nav-link:hover,
@@ -54,26 +56,36 @@ html, body{
   border-radius:10px;
 }
 
-/* ===== MOBILE MENU FIX ===== */
+/* ===== MOBILE MENU FULL WIDTH FIX ===== */
 @media (max-width:768px){
 
+  .navbar{
+    padding-left:0;
+    padding-right:0;
+  }
+
   .navbar-collapse{
-    padding:20px 0;                   /* space inside menu */
     background:#2c2f33;
+    width:100vw;            /* 🔥 full screen */
+    margin:0;
+    padding:22px 0;
   }
 
   .navbar-nav{
+    width:100%;
     text-align:center;
+    margin:0;
+    padding:0;
   }
 
   .nav-item{
-    margin:12px 0;                    /* 🔥 more spacing */
+    margin:14px 0;          /* spacing between items */
   }
 }
 
 /* ===== MAIN WRAPPER ===== */
 .main-wrapper{
-  padding-top:90px;                   /* avoids overlap */
+  padding-top:90px;         /* navbar height + space */
 }
 
 /* ===== PAGE HEADING ===== */
@@ -162,7 +174,7 @@ html, body{
   border-radius:12px;
 }
 
-/* ===== MOBILE ===== */
+/* ===== MOBILE CONTENT ===== */
 @media(max-width:768px){
   .contact-container{
     flex-direction:column;
@@ -179,12 +191,12 @@ html, body{
     <img class="img-logo" src="https://www.satarapolytechnicsatara.org/logo.jpeg" alt="logo">
   </a>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+  <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-left">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
       <li class="nav-item"><a class="nav-link" href="govermentbody.html">Governing Body</a></li>
@@ -255,6 +267,7 @@ html, body{
 
 </body>
 </html>
+
 
 
 
