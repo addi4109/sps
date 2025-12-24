@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link href="https://www.satarapolytechnicsatara.org/icon.png" rel="icon" sizes="30x30" type="image/png" />
 <title>Satara Polytechnic Satara</title>
 
@@ -14,6 +15,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 html, body {
     margin: 0;
@@ -23,7 +25,7 @@ html, body {
     overflow: hidden;
 }
 
-/* Background image */
+/* Background */
 body {
     background: url('https://www.satarapolytechnicsatara.org/f1.jpg') no-repeat center center;
     background-size: cover;
@@ -31,44 +33,53 @@ body {
     flex-direction: column;
 }
 
-/* Navbar */
+/* ===== NAVBAR ===== */
 .navbar {
     background-color: rgba(0,0,0,0.6);
     padding: 0.5rem 1rem;
 }
+
 .navbar .navbar-brand {
     display: flex;
     align-items: center;
     margin-right: 1rem;
 }
+
 .navbar .img-logo {
     border-radius: 50%;
     width: 40px;
     margin-right: 10px;
 }
+
+/* Menu */
 .navbar-nav {
     display: flex;
     gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
     align-items: center;
 }
-.nav-item { position: relative; }
-.navbar-dark .navbar-nav .nav-link,
-.navbar-dark .navbar-nav .nav-link:focus,
-.navbar-dark .navbar-nav .nav-link:active {
+
+/* Links */
+.navbar-dark .navbar-nav .nav-link {
     color: white !important;
-    font-weight: bold;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
     transition: background 0.3s, color 0.3s;
 }
+
+/* Hover */
 .navbar-dark .navbar-nav .nav-link:hover {
     background-color: #f39c12;
     color: black !important;
-    border-radius: 5px;
 }
 
-/* Hero Section */
+/* ✅ ACTIVE TAB (AUTO) */
+.navbar-dark .navbar-nav .nav-link.active {
+    background-color: #f39c12;
+    color: black !important;
+}
+
+/* ===== HERO ===== */
 .hero-container {
     flex: 1;
     display: flex;
@@ -78,7 +89,6 @@ body {
     text-align: center;
 }
 
-/* Hero text */
 .hero-container h1 {
     font-size: 4vw;
     margin-bottom: 20px;
@@ -104,15 +114,18 @@ body {
     text-align: center;
     animation: fadeIn 1s ease forwards;
 }
+
 .admission-box h5 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: 600;
 }
+
 .admission-box p {
     margin: 0.2rem 0;
     font-size: 1rem;
 }
+
 .admission-box img {
     width: 40px;
     border-radius: 50%;
@@ -120,51 +133,74 @@ body {
     vertical-align: middle;
 }
 
-/* Fade-in animation */
+/* Animation */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px);}
     to { opacity: 1; transform: translateY(0);}
 }
 </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
+<!-- ===== NAVBAR ===== -->
 <nav class="navbar navbar-expand-md navbar-dark">
   <a class="navbar-brand pb-2" href="index.html">
     <img alt="logo" class="img-logo" src="https://www.satarapolytechnicsatara.org/logo.jpeg" />
-    </a>
+  </a>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
       <li class="nav-item"><a class="nav-link" href="govermentbody.html">Governing Body</a></li>
       <li class="nav-item"><a class="nav-link" href="sample.html">Department</a></li>
-      <li class="nav-item"><a class="nav-link" href="events.html">Event and Activities</a></li>
+      <li class="nav-item"><a class="nav-link" href="events.html">Event & Activities</a></li>
       <li class="nav-item"><a class="nav-link" href="campus.html">Campus Gallery</a></li>
       <li class="nav-item"><a class="nav-link" href="notice.html">Notice Board</a></li>
-      <li class="nav-item"><a class="nav-link" href="contactus.html">Contact us</a></li>
-      <li class="nav-item"><a class="nav-link" href="admission.html">Admission Process</a></li>
+      <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- ===== HERO ===== -->
 <div class="hero-container">
     <h1>Satara Polytechnic Satara</h1>
     <img alt="College Logo" src="https://www.satarapolytechnicsatara.org/logo.jpeg" />
 
-    <!-- Admission Box -->
     <div class="admission-box">
-        <h5><img src="https://www.satarapolytechnicsatara.org/logo.jpeg" alt="logo" /> Admissions Open!</h5>
+        <h5>
+          <img src="https://www.satarapolytechnicsatara.org/logo.jpeg" alt="logo" />
+          Admissions Open!
+        </h5>
         <p>Mr. Phadtare M J : 9960182230</p>
         <p>Mrs. Pawar S S : 9881726261</p>
-        <p>Mr. Jagtap R S  : 9860841722</p>
+        <p>Mr. Jagtap R S : 9860841722</p>
     </div>
 </div>
 
+<!-- ===== AUTO ACTIVE SCRIPT ===== -->
+<script>
+  const currentPage = window.location.pathname.split("/").pop();
+
+  document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+
+  // Home page fallback
+  if (currentPage === "" || currentPage === "index.html") {
+    document.querySelector('.navbar-nav .nav-link[href="index.html"]')
+      .classList.add("active");
+  }
+</script>
+
 </body>
 </html>
+
