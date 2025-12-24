@@ -48,7 +48,7 @@ body{
     color:#fff !important;
     font-weight:600;
     padding:10px 18px;
-    display:inline-block;              /* 🔥 IMPORTANT */
+    display:inline-block;               /* yellow only around text */
 }
 
 .nav-link:hover,
@@ -56,6 +56,16 @@ body{
     background:#f39c12;
     color:#000 !important;
     border-radius:8px;
+}
+
+/* ===== DESKTOP ONLY SPACING ===== */
+@media (min-width: 769px){
+    .navbar-nav{
+        gap:1.6rem;                     /* 🔥 more space between items */
+    }
+    .nav-link{
+        padding:10px 22px;              /* 🔥 wider pill on desktop */
+    }
 }
 
 /* ===== MOBILE MENU ===== */
@@ -73,11 +83,11 @@ body{
 
     .navbar-nav{
         width:100%;
-        text-align:center;              /* 🔥 CENTER TEXT */
+        text-align:center;
     }
 
     .nav-item{
-        margin:8px 0;                   /* spacing between items */
+        margin:8px 0;
     }
 }
 
@@ -162,7 +172,7 @@ body{
   <div class="collapse navbar-collapse" id="mainNavbar">
     <ul class="navbar-nav ml-left">
       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link active" href="aboutus.html">About Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
       <li class="nav-item"><a class="nav-link" href="govermentbody.html">Governing Body</a></li>
       <li class="nav-item"><a class="nav-link" href="sample.html">Department</a></li>
       <li class="nav-item"><a class="nav-link" href="events.html">Event & Activities</a></li>
@@ -211,5 +221,23 @@ body{
   </div>
 </div>
 
+<!-- ===== AUTO ACTIVE TAB SCRIPT ===== -->
+<script>
+  const currentPage = window.location.pathname.split("/").pop();
+
+  document.querySelectorAll(".nav-link").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+
+  // Home fallback
+  if (currentPage === "" || currentPage === "index.html") {
+    document.querySelector('.nav-link[href="index.html"]')
+      .classList.add("active");
+  }
+</script>
+
 </body>
 </html>
+
