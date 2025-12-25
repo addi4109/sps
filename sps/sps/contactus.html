@@ -5,119 +5,136 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us — Satara Polytechnic Satara</title>
 
-<!-- Google Fonts -->
+<link href="https://www.satarapolytechnicsatara.org/icon.png" rel="icon" type="image/png">
+
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <!-- Bootstrap 4 -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
 <style>
-body{
-  font-family:'Poppins',sans-serif;
+/* ===============================
+   RESET
+   =============================== */
+*{
   margin:0;
-  background:linear-gradient(135deg,#f5f7fa,#c3cfe2);
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
-/* ===== NAVBAR (UNCHANGED) ===== */
-.navbar{
-  background:#222;
-  padding:0.5rem 1rem;
+body{
+  background:#f4f4f4;
+  overflow-x:hidden;
 }
-.navbar .img-logo{
-  width:40px;
+
+/* ===============================
+   NAVBAR (EXACT SAME AS ADMISSION)
+   =============================== */
+.navbar{
+  background:#2f3b45;
+  padding:0.35rem 0.6rem;
+}
+
+.navbar-brand img{
+  width:38px;
   border-radius:50%;
 }
+
 .navbar-nav{
-  display:flex;
-  gap:1rem;
-  align-items:center;
-}
-.navbar-dark .nav-link{
-  color:#fff !important;
-  font-weight:600;
-}
-.navbar-dark .nav-link:hover,
-.navbar-dark .nav-link.active{
-  background:#f39c12;
-  color:#000 !important;
-  border-radius:5px;
+  margin-left:20px;
 }
 
-/* ===== PAGE HEADING ===== */
+.navbar-nav .nav-item{
+  margin-right:10px;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+  color:#fff !important;
+  font-weight:600;
+  padding:8px 14px;
+  transition:all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active{
+  background:#f39c12;
+  color:#000 !important;
+  border-radius:6px;
+}
+
+/* Mobile center menu */
+@media(max-width:767px){
+  .navbar-nav{
+    margin-left:0;
+    width:100%;
+    text-align:center;
+  }
+  .navbar-nav .nav-item{
+    margin:6px 0;
+  }
+  .navbar-nav .nav-link{
+    display:inline-block;
+  }
+}
+
+/* ===============================
+   PAGE HEADING
+   =============================== */
 .page-heading{
   text-align:center;
   font-size:2.3rem;
   font-weight:600;
-  margin:1.8rem 1rem;
+  margin:1.5rem 1rem;
   color:#222;
 }
 
-/* ===== CONTACT SECTION ===== */
+/* ===============================
+   CONTACT SECTION
+   =============================== */
 .contact-container{
-  max-width:1100px;
-  margin:auto;
-  padding:0 14px 40px;
+  max-width:1200px;
+  margin:0 auto 3rem;
+  padding:0 1rem;
   display:flex;
   flex-wrap:wrap;
-  gap:20px;
+  gap:1.5rem;
 }
 
-/* Cards */
-.contact-form,
-.contact-info,
-.contact-map{
+.contact-box{
   flex:1 1 320px;
   background:#fff;
-  padding:18px;
-  border-radius:16px;
-  box-shadow:0 6px 20px rgba(0,0,0,0.12);
+  padding:1.5rem;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.12);
+}
+
+.contact-box h2{
+  text-align:center;
+  margin-bottom:1rem;
 }
 
 /* Form */
-.contact-form h2,
-.contact-info h2,
-.contact-map h2{
-  text-align:center;
-  margin-bottom:14px;
-}
-
-.contact-form input,
-.contact-form textarea{
+.contact-box input,
+.contact-box textarea{
   width:100%;
-  padding:12px;
-  margin-bottom:12px;
+  padding:10px 12px;
+  margin:8px 0;
   border-radius:8px;
   border:1px solid #ccc;
-  font-size:15px;
 }
 
-.contact-form textarea{
-  resize:none;
-}
-
-.contact-form button{
+.contact-box button{
   background:#f39c12;
   color:#fff;
   border:none;
-  padding:10px 22px;
+  padding:10px 20px;
   border-radius:8px;
-  font-size:15px;
-}
-.contact-form button:hover{
-  background:#e67e22;
-}
-
-/* Contact Info */
-.contact-info p{
-  font-size:15px;
-  margin:8px 0;
-}
-.contact-info a{
-  color:#f39c12;
-  word-break:break-word;
+  cursor:pointer;
+  margin-top:8px;
 }
 
 /* Map */
@@ -128,18 +145,10 @@ body{
   border-radius:12px;
 }
 
-/* ===== MOBILE FIX ===== */
+/* Mobile fix */
 @media(max-width:768px){
   .page-heading{
-    font-size:2rem;
-  }
-  .contact-container{
-    padding:0 10px 30px;
-  }
-  .contact-form,
-  .contact-info,
-  .contact-map{
-    padding:16px;
+    font-size:1.9rem;
   }
 }
 </style>
@@ -147,14 +156,18 @@ body{
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
+<!-- ===============================
+     NAVBAR
+     =============================== -->
 <nav class="navbar navbar-expand-md navbar-dark">
   <a class="navbar-brand" href="index.html">
-    <img src="https://www.satarapolytechnicsatara.org/logo.jpeg" class="img-logo">
+    <img src="https://www.satarapolytechnicsatara.org/logo.jpeg" alt="Logo">
   </a>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -164,7 +177,7 @@ body{
       <li class="nav-item"><a class="nav-link" href="events.html">Event & Activities</a></li>
       <li class="nav-item"><a class="nav-link" href="campus.html">Campus Gallery</a></li>
       <li class="nav-item"><a class="nav-link" href="notice.html">Notice Board</a></li>
-      <li class="nav-item"><a class="nav-link active" href="contactus.html">Contact Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
       <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
     </ul>
   </div>
@@ -174,49 +187,48 @@ body{
 
 <div class="contact-container">
 
-  <!-- Form -->
-  <div class="contact-form">
+  <div class="contact-box">
     <h2>Send a Message</h2>
     <input type="text" placeholder="First Name">
     <input type="text" placeholder="Last Name">
-    <input type="text" placeholder="Email / Phone No.">
-    <textarea rows="4" placeholder="Your Feedback"></textarea>
+    <input type="email" placeholder="Email / Phone">
+    <textarea rows="4" placeholder="Your Message"></textarea>
     <button>Submit</button>
   </div>
 
-  <!-- Info -->
-  <div class="contact-info">
+  <div class="contact-box">
     <h2>Contact Information</h2>
-    <p><strong>Office E-mail:</strong><br>
-      <a href="mailto:officesatarapolytechnicsatara@gmail.com">
-        officesatarapolytechnicsatara@gmail.com
-      </a>
-    </p>
-    <p><strong>OS No. (Koratkar S S):</strong><br>
-      <a href="tel:+919096050503">9096050503</a> /
-      <a href="tel:+917796050503">7796050503</a>
-    </p>
-    <p><strong>Principal E-mail:</strong><br>
-      <a href="mailto:0042principal@msbte.com">0042principal@msbte.com</a>
-    </p>
-    <p><strong>Principal Contact:</strong><br>
-      <a href="tel:+919960182230">9960182230</a>
-    </p>
+    <p><strong>Email:</strong><br>officesatarapolytechnicsatara@gmail.com</p>
+    <p><strong>Office No:</strong><br>9096050503 / 7796050503</p>
+    <p><strong>Principal:</strong><br>9960182230</p>
   </div>
 
-  <!-- Map -->
-  <div class="contact-map">
+  <div class="contact-box contact-map">
     <h2>Our Location</h2>
-    <iframe
-      src="https://www.google.com/maps?q=Satara%20Polytechnic%20Satara&output=embed"
-      loading="lazy">
-    </iframe>
+    <iframe 
+      src="https://www.google.com/maps?q=Satara+Polytechnic+Satara&output=embed"
+      loading="lazy"></iframe>
   </div>
 
 </div>
 
+<!-- ===============================
+     AUTO ACTIVE TAB
+     =============================== -->
+<script>
+(function(){
+  const page = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".nav-link").forEach(link=>{
+    if(link.getAttribute("href") === page){
+      link.classList.add("active");
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
+
 
 
 
