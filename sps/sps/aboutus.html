@@ -62,14 +62,12 @@ body{
    PAGE CONTENT (DESKTOP = NO SCROLL)
    =============================== */
 .page{
-  height:calc(100vh - 56px); /* navbar height */
+  height:calc(100vh - 56px);
   background:url('https://www.satarapolytechnicsatara.org/f1.jpg') center/cover no-repeat;
-
   display:flex;
   justify-content:center;
   align-items:center;
-
-  overflow:hidden; /* 🔒 desktop: no scroll */
+  overflow:hidden;
 }
 
 /* wrapper */
@@ -91,13 +89,13 @@ body{
   gap:20px;
 }
 
-/* heading spans full width */
 .principal-box .info-heading{
   grid-column:1 / -1;
   margin-bottom:10px;
 }
 
 .principal-photo{
+  width:180px;
   height:170px;
   background:#e0e0e0;
   border-radius:12px;
@@ -166,7 +164,7 @@ body{
 }
 
 /* ===============================
-   MOBILE / TABLET (ALLOW SCROLL)
+   MOBILE / TABLET
    =============================== */
 @media(max-width:900px){
 
@@ -186,8 +184,33 @@ body{
     grid-template-columns:1fr;
   }
 
+  .principal-photo{
+    margin:0 auto;
+  }
+
   .box-container{
     grid-template-columns:1fr;
+  }
+}
+
+/* ===== MOBILE NAVBAR CENTER ALIGN ===== */
+@media (max-width: 767px){
+
+  .navbar-collapse{
+    text-align:center;
+  }
+
+  .navbar-nav{
+    margin:0 auto;
+  }
+
+  .navbar-nav .nav-item{
+    width:100%;
+  }
+
+  .navbar-nav .nav-link{
+    display:inline-block;
+    width:auto;
   }
 }
 </style>
@@ -206,7 +229,7 @@ body{
   </button>
 
   <div class="collapse navbar-collapse" id="mainNav">
-    <ul class="navbar-nav ml-left">
+    <ul class="navbar-nav mx-auto">
       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
       <li class="nav-item"><a class="nav-link active" href="aboutus.html">About Us</a></li>
       <li class="nav-item"><a class="nav-link" href="govermentbody.html">Governing Body</a></li>
@@ -273,6 +296,7 @@ body{
 
 </body>
 </html>
+
 
 
 
