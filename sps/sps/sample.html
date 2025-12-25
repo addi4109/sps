@@ -152,17 +152,20 @@ body{
 .info-note span{
   background:#f39c12;
   color:#000;
-  padding:8px 18px;      /* 🔽 reduced padding */
-  font-size:16px;        /* 🔽 reduced font size */
-  font-weight:600;       /* 🔽 slightly lighter */
-  border-radius:24px;    /* 🔽 smaller pill */
+  padding:8px 16px;
+  font-size:16px;
+  font-weight:600;
+  border-radius:24px;
   letter-spacing:0.3px;
   box-shadow:0 2px 5px rgba(0,0,0,0.15);
 
+  white-space:nowrap;        /* ✅ force single line */
+  max-width:95vw;            /* ✅ prevent overflow */
+  overflow:hidden;
+  text-overflow:ellipsis;    /* ✅ safety if very small screens */
+
   animation:headlinePop 1.2s ease-out;
 }
-
-
 /* Smooth pop + fade animation */
 @keyframes headlinePop{
   0%{
@@ -175,6 +178,12 @@ body{
   }
   100%{
     transform:translateY(0) scale(1);
+  }
+}
+@media (max-width:480px){
+  .info-note span{
+    font-size:14px;
+    padding:7px 14px;
   }
 }
 
