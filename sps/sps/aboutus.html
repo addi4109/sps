@@ -37,6 +37,7 @@ body{
 .navbar{
   background:#2f3b45;
   padding:0.35rem 0.6rem;
+  animation: slideDown 0.8s ease forwards;
 }
 
 .navbar-brand img{
@@ -108,6 +109,8 @@ body{
   display:grid;
   grid-template-columns:180px 1fr;
   gap:20px;
+
+  animation: fadeScale 0.9s ease forwards;
 }
 
 /* heading full width */
@@ -142,7 +145,14 @@ body{
   border-radius:16px;
   padding:18px;
   box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
+  opacity:0;
+  animation: fadeUp 0.8s ease forwards;
 }
+
+.info-box:nth-child(1){ animation-delay:0.2s; }
+.info-box:nth-child(2){ animation-delay:0.4s; }
+.info-box:nth-child(3){ animation-delay:0.6s; }
 
 /* ===== HEADING WITH LINE ===== */
 .info-heading{
@@ -188,10 +198,9 @@ body{
 }
 
 /* ===============================
-   MOBILE FIX (PHOTO SMALL + CENTER)
+   MOBILE FIX
    =============================== */
 @media(max-width:900px){
-
   .page{
     align-items:flex-start;
     padding:20px 10px;
@@ -203,14 +212,38 @@ body{
   }
 
   .principal-photo{
-    width:140px;       /* 🔽 reduced width */
+    width:140px;
     height:140px;
-    margin:0 auto;     /* ✅ centered */
+    margin:0 auto;
   }
 
   .box-container{
     grid-template-columns:1fr;
   }
+}
+
+/* ===============================
+   ANIMATIONS ONLY
+   =============================== */
+@keyframes slideDown{
+  from{transform:translateY(-30px);opacity:0}
+  to{transform:translateY(0);opacity:1}
+}
+
+@keyframes fadeScale{
+  from{opacity:0;transform:scale(0.95)}
+  to{opacity:1;transform:scale(1)}
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(25px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.info-box:hover,
+.principal-box:hover{
+  transform:translateY(-6px);
+  transition:transform 0.3s ease;
 }
 </style>
 </head>
@@ -250,7 +283,6 @@ body{
 <div class="page">
   <div class="content-wrapper">
 
-    <!-- PRINCIPAL DESK -->
     <div class="principal-box">
       <div class="info-heading">
         <h2>Principal’s Desk</h2>
@@ -259,7 +291,6 @@ body{
       <div class="principal-info"></div>
     </div>
 
-    <!-- INFO BOXES -->
     <div class="box-container">
 
       <div class="info-box">
@@ -299,6 +330,7 @@ body{
 
 </body>
 </html>
+
 
 
 
