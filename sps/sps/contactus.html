@@ -104,13 +104,23 @@ body{
   gap:1.5rem;
 }
 
+/* CONTACT BOX */
 .contact-box{
   flex:1 1 320px;
   background:#fff;
   padding:1.5rem;
   border-radius:14px;
   box-shadow:0 6px 18px rgba(0,0,0,0.12);
+
+  /* 🔹 animation */
+  opacity:0;
+  transform:translateY(30px);
+  animation:contactFade 0.8s ease forwards;
 }
+
+.contact-box:nth-child(1){animation-delay:0.1s;}
+.contact-box:nth-child(2){animation-delay:0.25s;}
+.contact-box:nth-child(3){animation-delay:0.4s;}
 
 .contact-box h2{
   text-align:center;
@@ -145,10 +155,30 @@ body{
   border-radius:12px;
 }
 
-/* Mobile fix */
+/* ===============================
+   MOBILE FIXES
+   =============================== */
 @media(max-width:768px){
+
   .page-heading{
     font-size:1.9rem;
+  }
+
+  /* 🔹 prevent contact info overflow */
+  .contact-box p{
+    word-wrap:break-word;
+    overflow-wrap:break-word;
+    word-break:break-word;
+  }
+}
+
+/* ===============================
+   ANIMATION KEYFRAMES
+   =============================== */
+@keyframes contactFade{
+  to{
+    opacity:1;
+    transform:translateY(0);
   }
 }
 </style>
@@ -228,6 +258,7 @@ body{
 
 </body>
 </html>
+
 
 
 
