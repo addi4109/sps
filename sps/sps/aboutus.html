@@ -23,22 +23,21 @@
   font-family:'Poppins',sans-serif;
 }
 
+html, body{
+  height:100%;
+}
+
 body{
   background:#f4f4f4;
   overflow-x:hidden;
 }
 
 /* ===============================
-   NAVBAR (SAME AS GOVERNING BODY)
+   NAVBAR
    =============================== */
 .navbar{
   background-color:#2f3b45;
-  padding:0.35rem 0.6rem;   /* ✅ reduced height */
-}
-
-.navbar-brand{
-  display:flex;
-  align-items:center;
+  padding:0.35rem 0.6rem;
 }
 
 .navbar-brand img{
@@ -46,102 +45,149 @@ body{
   border-radius:50%;
 }
 
-.navbar-nav{
-  margin-left:20px;
-}
-
-.navbar-nav .nav-item{
-  margin-right:10px;
-}
-
 .navbar-dark .navbar-nav .nav-link{
-  color:#ffffff !important;
+  color:#fff;
   font-weight:600;
   padding:8px 14px;
-  transition:all 0.3s ease;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active{
-  background-color:#f39c12;
-  color:#000 !important;
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover{
+  background:#f39c12;
+  color:#000;
   border-radius:6px;
 }
 
-/* ===== MOBILE CENTER MENU ===== */
-@media (max-width:767px){
-  .navbar-nav{
-    margin-left:0;
-    width:100%;
-    text-align:center;
-  }
-  .navbar-nav .nav-item{
-    margin:6px 0;
-  }
-  .navbar-nav .nav-link{
-    display:inline-block;
-  }
-}
-
 /* ===============================
-   PAGE CONTENT
+   PAGE CONTENT (DESKTOP = NO SCROLL)
    =============================== */
 .page{
-  padding:40px 16px;
-  min-height:calc(100vh - 60px);
+  height:calc(100vh - 56px); /* navbar height */
   background:url('https://www.satarapolytechnicsatara.org/f1.jpg') center/cover no-repeat;
+
   display:flex;
   justify-content:center;
   align-items:center;
+
+  overflow:hidden; /* 🔒 desktop: no scroll */
 }
 
-.box-container{
-  width:92%;
-  max-width:1200px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:26px;
+/* wrapper */
+.content-wrapper{
+  width:100%;
+  max-width:1100px;
 }
 
-.info-box{
-  background:rgba(255,255,255,0.97);
-  padding:26px 24px;
+/* ===== PRINCIPAL DESK ===== */
+.principal-box{
+  background:#ffffff;
   border-radius:16px;
-  box-shadow:0 12px 28px rgba(0,0,0,0.35);
-  text-align:center;
+  padding:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+  margin-bottom:24px;
+
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:20px;
 }
 
-.info-box h2,
-.info-box h3{
-  color:#003366;
+/* heading spans full width */
+.principal-box .info-heading{
+  grid-column:1 / -1;
   margin-bottom:10px;
 }
 
-.info-box p,
-.info-box li{
-  font-size:0.95rem;
-  line-height:1.6;
+.principal-photo{
+  height:170px;
+  background:#e0e0e0;
+  border-radius:12px;
 }
 
-.info-box ul{
+.principal-info{
+  min-height:170px;
+}
+
+/* ===== THREE BOX GRID ===== */
+.box-container{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:28px;
+}
+
+/* ===== INFO BOX ===== */
+.info-box{
+  background:#ffffff;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* ===== HEADING WITH LINE ===== */
+.info-heading{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  margin-bottom:6px;
+}
+
+.info-heading::before{
+  content:"";
+  width:6px;
+  height:32px;
+  background:#f1b600;
+  border-radius:6px;
+  margin-top:4px;
+}
+
+.info-heading h2,
+.info-heading h3{
+  color:#f1b600;
+  font-weight:700;
+  margin:0;
+}
+
+/* ===== CONTENT ===== */
+.info-content p,
+.info-content li{
+  font-size:0.9rem;
+  line-height:1.5;
+  color:#444;
+}
+
+.info-content ul{
   list-style:none;
   padding:0;
 }
 
-.info-box ul li::before{
+.info-content ul li::before{
   content:"✔ ";
-  color:#f39c12;
+  color:#f1b600;
   font-weight:bold;
 }
 
-/* ===== MOBILE CONTENT ===== */
+/* ===============================
+   MOBILE / TABLET (ALLOW SCROLL)
+   =============================== */
 @media(max-width:900px){
-  .page{
-    align-items:flex-start;
+
+  body{
+    overflow-y:auto;
   }
+
+  .page{
+    height:auto;
+    min-height:calc(100vh - 56px);
+    overflow:visible;
+    align-items:flex-start;
+    padding:20px 10px;
+  }
+
+  .principal-box{
+    grid-template-columns:1fr;
+  }
+
   .box-container{
     grid-template-columns:1fr;
-    gap:18px;
   }
 }
 </style>
@@ -155,12 +201,12 @@ body{
     <img src="https://www.satarapolytechnicsatara.org/logo.jpeg" alt="Logo">
   </a>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNav">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="mainNavbar">
-    <ul class="navbar-nav">
+  <div class="collapse navbar-collapse" id="mainNav">
+    <ul class="navbar-nav ml-left">
       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
       <li class="nav-item"><a class="nav-link active" href="aboutus.html">About Us</a></li>
       <li class="nav-item"><a class="nav-link" href="govermentbody.html">Governing Body</a></li>
@@ -176,36 +222,50 @@ body{
 
 <!-- ===== CONTENT ===== -->
 <div class="page">
-  <div class="box-container">
+  <div class="content-wrapper">
 
-    <div class="info-box">
-      <h2>About Institute</h2>
-      <p>
-        Satara Polytechnic, Satara is a well-established technical institute in Maharashtra,
-        committed to providing quality diploma education and skill-oriented training.
-      </p>
-      <p>
-        The institute focuses on academic excellence, hands-on practical knowledge,
-        discipline, and overall personality development.
-      </p>
+    <!-- PRINCIPAL DESK -->
+    <div class="principal-box">
+      <div class="info-heading">
+        <h2>Principal’s Desk</h2>
+      </div>
+      <div class="principal-photo"></div>
+      <div class="principal-info"></div>
     </div>
 
-    <div class="info-box">
-      <h3>Vision</h3>
-      <p>
-        To be a leading polytechnic institute by delivering quality technical education
-        and developing skilled, innovative, and socially responsible professionals.
-      </p>
-    </div>
+    <!-- INFO BOXES -->
+    <div class="box-container">
 
-    <div class="info-box">
-      <h3>Mission</h3>
-      <ul>
-        <li>Quality technical education as per industry needs</li>
-        <li>Strong practical training through labs & workshops</li>
-        <li>Discipline, ethics and professionalism</li>
-        <li>Innovation, teamwork and lifelong learning</li>
-      </ul>
+      <div class="info-box">
+        <div class="info-heading"><h2>About Institute</h2></div>
+        <div class="info-content">
+          <p>Satara Polytechnic, Satara is a well-established technical institute in Maharashtra,
+          committed to providing quality diploma education and skill-oriented training.</p>
+          <p>The institute focuses on academic excellence, hands-on practical knowledge,
+          discipline, and overall personality development.</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <div class="info-heading"><h3>Vision</h3></div>
+        <div class="info-content">
+          <p>To be a leading polytechnic institute by delivering quality technical education
+          and developing skilled, innovative, and socially responsible professionals.</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <div class="info-heading"><h3>Mission</h3></div>
+        <div class="info-content">
+          <ul>
+            <li>Quality technical education as per industry needs</li>
+            <li>Strong practical training through labs & workshops</li>
+            <li>Discipline, ethics and professionalism</li>
+            <li>Innovation, teamwork and lifelong learning</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -213,6 +273,7 @@ body{
 
 </body>
 </html>
+
 
 
 
