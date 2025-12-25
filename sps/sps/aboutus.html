@@ -121,6 +121,22 @@
         transform: translateY(0);
       }
     }
+/* ===== MOBILE ONLY CENTER NAV ITEMS ===== */
+@media (max-width: 767px) {
+  .navbar-nav {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 6px 0;              /* vertical spacing */
+  }
+
+  .navbar-nav .nav-link {
+    display: inline-block;      /* keeps yellow box tight */
+  }
+}
   </style>
 </head>
 
@@ -194,6 +210,8 @@
 
 </body>
 </html>
+
+
 
 
 
