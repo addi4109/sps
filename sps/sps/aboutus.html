@@ -1,143 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us — Satara Polytechnic Satara</title>
+<meta charset="UTF-8">
+<title>About | Satara Polytechnic, Satara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://www.satarapolytechnicsatara.org/icon.png" rel="icon" type="image/png">
 
-  <!-- Bootstrap 4 -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- Bootstrap 4 -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background: #f4f4f4;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    /* ===== NAVBAR ===== */
-    .navbar {
-      background-color: #222;
-      padding: 0.6rem 1rem;
-    }
+<style>
+/* ===== RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
 
-    .navbar-brand {
-      display: flex;
-      align-items: center;
-    }
+body{
+  background:#f4f4f4;
+  overflow-x:hidden;
+}
 
-    .img-logo {
-      width: 42px;
-      border-radius: 50%;
-    }
+/* ===============================
+   NAVBAR (SAME AS GOVERNING BODY)
+   =============================== */
+.navbar{
+  background-color:#2f3b45;
+  padding:0.35rem 0.6rem;   /* ✅ reduced height */
+}
 
-    .navbar-nav {
-      margin-left: 20px;
-    }
-    /* ✅ SPACE BETWEEN NAV ITEMS */
-    .navbar-nav .nav-item {
-    margin-right: 10px;
-     }
+.navbar-brand{
+  display:flex;
+  align-items:center;
+}
 
-    .navbar-dark .navbar-nav .nav-link {
-      color: #fff !important;
-      font-weight: 600;
-      padding: 10px 18px;
-      transition: all 0.3s ease;
-    }
+.navbar-brand img{
+  width:38px;
+  border-radius:50%;
+}
 
-    .navbar-dark .navbar-nav .nav-link:hover {
-      background-color: #f39c12;
-      color: #000 !important;
-      border-radius: 6px;
-    }
+.navbar-nav{
+  margin-left:20px;
+}
 
-    /* ===== ACTIVE TAB ===== */
-    .navbar-dark .navbar-nav .nav-link.active {
-      background-color: #f39c12;
-      color: #000 !important;
-      border-radius: 6px;
-    }
+.navbar-nav .nav-item{
+  margin-right:10px;
+}
 
-    /* ===== PAGE HEADING ===== */
-    .page-heading {
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin: 40px 0 20px;
-      color: #222;
-    }
+.navbar-dark .navbar-nav .nav-link{
+  color:#ffffff !important;
+  font-weight:600;
+  padding:8px 14px;
+  transition:all 0.3s ease;
+}
 
-    /* ===== CONTENT ===== */
-    .content-container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 0 20px 40px;
-    }
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active{
+  background-color:#f39c12;
+  color:#000 !important;
+  border-radius:6px;
+}
 
-    .content-box {
-      background: #fff;
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeUp 0.8s forwards;
-    }
-
-    .content-box:nth-child(1) { animation-delay: 0.1s; }
-    .content-box:nth-child(2) { animation-delay: 0.2s; }
-    .content-box:nth-child(3) { animation-delay: 0.3s; }
-
-    .content-box h3 {
-      border-left: 5px solid #f39c12;
-      padding-left: 12px;
-      color: #2c3e50;
-      margin-bottom: 15px;
-      font-size: 1.5rem;
-    }
-
-    .content-box p,
-    .content-box li {
-      color: #444;
-      line-height: 1.7;
-      font-size: 1rem;
-    }
-
-    .content-box ul {
-      padding-left: 20px;
-    }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-/* ===== MOBILE ONLY CENTER NAV ITEMS ===== */
-@media (max-width: 767px) {
-  .navbar-nav {
-    margin-left: 0;
-    width: 100%;
-    text-align: center;
+/* ===== MOBILE CENTER MENU ===== */
+@media (max-width:767px){
+  .navbar-nav{
+    margin-left:0;
+    width:100%;
+    text-align:center;
   }
-
-  .navbar-nav .nav-item {
-    margin: 6px 0;              /* vertical spacing */
+  .navbar-nav .nav-item{
+    margin:6px 0;
   }
-
-  .navbar-nav .nav-link {
-    display: inline-block;      /* keeps yellow box tight */
+  .navbar-nav .nav-link{
+    display:inline-block;
   }
 }
-  </style>
+
+/* ===============================
+   PAGE CONTENT
+   =============================== */
+.page{
+  padding:40px 16px;
+  min-height:calc(100vh - 60px);
+  background:url('https://www.satarapolytechnicsatara.org/f1.jpg') center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.box-container{
+  width:92%;
+  max-width:1200px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+}
+
+.info-box{
+  background:rgba(255,255,255,0.97);
+  padding:26px 24px;
+  border-radius:16px;
+  box-shadow:0 12px 28px rgba(0,0,0,0.35);
+  text-align:center;
+}
+
+.info-box h2,
+.info-box h3{
+  color:#003366;
+  margin-bottom:10px;
+}
+
+.info-box p,
+.info-box li{
+  font-size:0.95rem;
+  line-height:1.6;
+}
+
+.info-box ul{
+  list-style:none;
+  padding:0;
+}
+
+.info-box ul li::before{
+  content:"✔ ";
+  color:#f39c12;
+  font-weight:bold;
+}
+
+/* ===== MOBILE CONTENT ===== */
+@media(max-width:900px){
+  .page{
+    align-items:flex-start;
+  }
+  .box-container{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -145,71 +152,68 @@
 <!-- ===== NAVBAR ===== -->
 <nav class="navbar navbar-expand-md navbar-dark">
   <a class="navbar-brand" href="index.html">
-    <img src="https://www.satarapolytechnicsatara.org/logo.jpeg" alt="logo" class="img-logo">
+    <img src="https://www.satarapolytechnicsatara.org/logo.jpeg" alt="Logo">
   </a>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <div class="collapse navbar-collapse" id="mainNavbar">
     <ul class="navbar-nav">
       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-
-      <!-- ACTIVE PAGE -->
-      <li class="nav-item">
-        <a class="nav-link active" href="aboutus.html">About Us</a>
-      </li>
-
+      <li class="nav-item"><a class="nav-link active" href="aboutus.html">About Us</a></li>
       <li class="nav-item"><a class="nav-link" href="govermentbody.html">Governing Body</a></li>
       <li class="nav-item"><a class="nav-link" href="sample.html">Department</a></li>
       <li class="nav-item"><a class="nav-link" href="events.html">Event & Activities</a></li>
       <li class="nav-item"><a class="nav-link" href="campus.html">Campus Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="notice.html">Notice Board</a></li>
       <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
-      <li class="nav-item"><a class="nav-link" href="admission.html">Admission Process</a></li>
+      <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- ===== PAGE HEADING ===== -->
-<h1 class="page-heading">About Us</h1>
-
 <!-- ===== CONTENT ===== -->
-<div class="content-container">
+<div class="page">
+  <div class="box-container">
 
-  <div class="content-box">
-    <h3>About Institute</h3>
-    <p>
-      Satara Polytechnic, Satara is a reputed technical institute committed to
-      providing quality diploma education in engineering and technology.
-      The institute focuses on skill-based learning, practical exposure and
-      overall development of students.
-    </p>
+    <div class="info-box">
+      <h2>About Institute</h2>
+      <p>
+        Satara Polytechnic, Satara is a well-established technical institute in Maharashtra,
+        committed to providing quality diploma education and skill-oriented training.
+      </p>
+      <p>
+        The institute focuses on academic excellence, hands-on practical knowledge,
+        discipline, and overall personality development.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h3>Vision</h3>
+      <p>
+        To be a leading polytechnic institute by delivering quality technical education
+        and developing skilled, innovative, and socially responsible professionals.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h3>Mission</h3>
+      <ul>
+        <li>Quality technical education as per industry needs</li>
+        <li>Strong practical training through labs & workshops</li>
+        <li>Discipline, ethics and professionalism</li>
+        <li>Innovation, teamwork and lifelong learning</li>
+      </ul>
+    </div>
+
   </div>
-
-  <div class="content-box">
-    <h3>Vision</h3>
-    <p>
-      To become a leading polytechnic institute by delivering quality technical
-      education and developing skilled, innovative and socially responsible
-      professionals.
-    </p>
-  </div>
-
-  <div class="content-box">
-    <h3>Mission</h3>
-    <ul>
-      <li>Provide quality education as per industry needs</li>
-      <li>Strengthen practical training through laboratories and workshops</li>
-      <li>Develop discipline, ethics and professionalism among students</li>
-      <li>Encourage innovation, teamwork and lifelong learning</li>
-    </ul>
-  </div>
-
 </div>
 
 </body>
 </html>
+
 
 
 
