@@ -2,29 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>About | Satara Polytechnic, Satara</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us — Satara Polytechnic Satara</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://www.satarapolytechnicsatara.org/icon.png" rel="icon" type="image/png">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <!-- Bootstrap 4 -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
 <style>
-/* ===== RESET ===== */
+/* ===============================
+   RESET
+   =============================== */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
   font-family:'Poppins',sans-serif;
-}
-
-html, body{
-  height:100%;
 }
 
 body{
@@ -33,10 +32,10 @@ body{
 }
 
 /* ===============================
-   NAVBAR
+   NAVBAR (SAME AS ADMISSION PAGE)
    =============================== */
 .navbar{
-  background-color:#2f3b45;
+  background:#2f3b45;
   padding:0.35rem 0.6rem;
 }
 
@@ -45,32 +44,54 @@ body{
   border-radius:50%;
 }
 
-.navbar-dark .navbar-nav .nav-link{
-  color:#fff;
-  font-weight:600;
-  padding:8px 14px;
+.navbar-nav{
+  margin-left:20px;
 }
 
-.navbar-dark .navbar-nav .nav-link.active,
-.navbar-dark .navbar-nav .nav-link:hover{
+.navbar-nav .nav-item{
+  margin-right:10px;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+  color:#fff !important;
+  font-weight:600;
+  padding:8px 14px;
+  transition:all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active{
   background:#f39c12;
-  color:#000;
+  color:#000 !important;
   border-radius:6px;
 }
 
+/* Mobile center menu */
+@media(max-width:767px){
+  .navbar-nav{
+    margin-left:0;
+    width:100%;
+    text-align:center;
+  }
+  .navbar-nav .nav-item{
+    margin:6px 0;
+  }
+  .navbar-nav .nav-link{
+    display:inline-block;
+  }
+}
+
 /* ===============================
-   PAGE CONTENT (DESKTOP = NO SCROLL)
+   PAGE CONTENT
    =============================== */
 .page{
-  height:calc(100vh - 56px);
+  min-height:calc(100vh - 56px);
   background:url('https://www.satarapolytechnicsatara.org/f1.jpg') center/cover no-repeat;
   display:flex;
   justify-content:center;
   align-items:center;
-  overflow:hidden;
 }
 
-/* wrapper */
 .content-wrapper{
   width:100%;
   max-width:1100px;
@@ -89,11 +110,13 @@ body{
   gap:20px;
 }
 
+/* heading full width */
 .principal-box .info-heading{
   grid-column:1 / -1;
   margin-bottom:10px;
 }
 
+/* PRINCIPAL PHOTO */
 .principal-photo{
   width:180px;
   height:170px;
@@ -101,6 +124,7 @@ body{
   border-radius:12px;
 }
 
+/* info */
 .principal-info{
   min-height:170px;
 }
@@ -132,23 +156,23 @@ body{
   content:"";
   width:6px;
   height:32px;
-  background:#f1b600;
+  background:#f39c12;
   border-radius:6px;
   margin-top:4px;
 }
 
 .info-heading h2,
 .info-heading h3{
-  color:#f1b600;
-  font-weight:700;
+  color:#f39c12;
+  font-weight:600;
   margin:0;
 }
 
 /* ===== CONTENT ===== */
 .info-content p,
 .info-content li{
-  font-size:0.9rem;
-  line-height:1.5;
+  font-size:0.95rem;
+  line-height:1.6;
   color:#444;
 }
 
@@ -159,58 +183,33 @@ body{
 
 .info-content ul li::before{
   content:"✔ ";
-  color:#f1b600;
+  color:#f39c12;
   font-weight:bold;
 }
 
 /* ===============================
-   MOBILE / TABLET
+   MOBILE FIX (PHOTO SMALL + CENTER)
    =============================== */
 @media(max-width:900px){
 
-  body{
-    overflow-y:auto;
-  }
-
   .page{
-    height:auto;
-    min-height:calc(100vh - 56px);
-    overflow:visible;
     align-items:flex-start;
     padding:20px 10px;
   }
 
   .principal-box{
     grid-template-columns:1fr;
+    text-align:center;
   }
 
   .principal-photo{
-    margin:0 auto;
+    width:140px;       /* 🔽 reduced width */
+    height:140px;
+    margin:0 auto;     /* ✅ centered */
   }
 
   .box-container{
     grid-template-columns:1fr;
-  }
-}
-
-/* ===== MOBILE NAVBAR CENTER ALIGN ===== */
-@media (max-width: 767px){
-
-  .navbar-collapse{
-    text-align:center;
-  }
-
-  .navbar-nav{
-    margin:0 auto;
-  }
-
-  .navbar-nav .nav-item{
-    width:100%;
-  }
-
-  .navbar-nav .nav-link{
-    display:inline-block;
-    width:auto;
   }
 }
 </style>
@@ -218,18 +217,20 @@ body{
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
+<!-- ===============================
+     NAVBAR
+     =============================== -->
 <nav class="navbar navbar-expand-md navbar-dark">
   <a class="navbar-brand" href="index.html">
     <img src="https://www.satarapolytechnicsatara.org/logo.jpeg" alt="Logo">
   </a>
 
-  <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNav">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="mainNav">
-    <ul class="navbar-nav mx-auto">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
       <li class="nav-item"><a class="nav-link active" href="aboutus.html">About Us</a></li>
       <li class="nav-item"><a class="nav-link" href="govermentbody.html">Governing Body</a></li>
@@ -243,7 +244,9 @@ body{
   </div>
 </nav>
 
-<!-- ===== CONTENT ===== -->
+<!-- ===============================
+     CONTENT
+     =============================== -->
 <div class="page">
   <div class="content-wrapper">
 
@@ -296,6 +299,7 @@ body{
 
 </body>
 </html>
+
 
 
 
