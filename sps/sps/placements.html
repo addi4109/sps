@@ -30,9 +30,7 @@ body{
   overflow-x:hidden;
 }
 
-/* =====================================
-   NAVBAR — SAME AS YOUR CODE (UNCHANGED)
-   ===================================== */
+/* ================= NAVBAR ================= */
 .navbar{
   background:#2f3b45;
   padding:0.35rem 0.6rem;
@@ -59,10 +57,11 @@ body{
 .navbar-dark .navbar-nav .nav-link{
   color:#fff !important;
   font-weight:600;
-  padding:6px 10px;
+  padding:8px 14px;
   transition:all 0.3s ease;
 }
 
+/* ACTIVE + HOVER (YELLOW) */
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active{
   background:#f39c12;
@@ -85,9 +84,7 @@ body{
   }
 }
 
-/* =====================================
-   PLACEMENTS SECTION
-   ===================================== */
+/* ================= PLACEMENTS ================= */
 .placements-section{
   padding:3rem 1rem;
   text-align:center;
@@ -191,7 +188,9 @@ body{
       <li class="nav-item"><a class="nav-link" href="notice.html">Notice Board</a></li>
       <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
       <li class="nav-item"><a class="nav-link" href="admission.html">Admission Process</a></li>
-      <li class="nav-item"><a class="nav-link" href="placements.html">Placements</a></li>
+      <li class="nav-item">
+        <a class="nav-link active" href="placements.html">Placements</a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -203,7 +202,6 @@ body{
 
   <div class="company-grid">
 
-    <!-- Company Card -->
     <div class="company-card">
       <div class="company-logo">Company Logo</div>
       <div class="company-name">Company Name</div>
@@ -241,3 +239,4 @@ body{
 
 </body>
 </html>
+
