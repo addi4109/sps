@@ -442,9 +442,11 @@ body{background:#f4f6fb;overflow-x:hidden;}
     <span class="news3-arrow right" onclick="news3Next()">&#10095;</span>
   </div>
 
-  <div class="news3-play">
-    <button onclick="news3Auto()">▶</button>
-  </div>
+<div class="news3-play">
+  <button onclick="news3Auto()">▶</button>
+  <button onclick="news3Pause()">⏸</button>
+</div>
+
 </section>
 
 <!-- FOOTER -->
@@ -462,7 +464,7 @@ const cards3 = Array.from(track3.children);
 
 let index3 = 0;
 let cardStep = 0;
-let auto3;
+let auto3 = null;
 
 /* visible cards */
 function visibleCards(){
@@ -471,12 +473,12 @@ function visibleCards(){
   return 3;
 }
 
-/* calculate width */
+/* calculate card width */
 function calculateStep(){
   cardStep = cards3[0].getBoundingClientRect().width + 24;
 }
 
-/* update */
+/* update slider */
 function updateSlider(){
   track3.style.transform =
     `translate3d(${-index3 * cardStep}px,0,0)`;
@@ -500,17 +502,22 @@ function news3Prev(){
   updateSlider();
 }
 
-/* AUTO */
+/* PLAY */
 function news3Auto(){
-  clearInterval(auto3);
+  if(auto3) return;               // ⛔ already running
   auto3 = setInterval(news3Next, 3000);
+}
+
+/* PAUSE */
+function news3Pause(){
+  clearInterval(auto3);
+  auto3 = null;
 }
 
 /* INIT */
 window.addEventListener('load', ()=>{
   calculateStep();
   updateSlider();
-  news3Auto();
 });
 
 window.addEventListener('resize', ()=>{
