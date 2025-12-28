@@ -32,7 +32,7 @@ body{
 }
 
 /* ===============================
-   NAVBAR (SAME AS CONTACT PAGE)
+   NAVBAR
    =============================== */
 .navbar{
   background:#2f3b45;
@@ -56,8 +56,12 @@ body{
   color:#fff !important;
   font-weight:600;
   padding:6px 10px;
-  font-size: 14px;
+  font-size:14px;
   transition:all 0.3s ease;
+
+  /* ✅ FIX */
+  touch-action: manipulation;
+  cursor:pointer;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
@@ -78,7 +82,7 @@ body{
     margin:6px 0;
   }
   .navbar-nav .nav-link{
-    display:inline-block;
+    display:block; /* ✅ FIX */
   }
 }
 
@@ -142,9 +146,7 @@ body{
 
 <body>
 
-<!-- ===============================
-     NAVBAR
-     =============================== -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-md navbar-dark">
   <a class="navbar-brand" href="index.html">
     <img src="https://www.satarapolytechnicsatara.org/logo.jpeg" alt="Logo">
@@ -164,76 +166,51 @@ body{
       <li class="nav-item"><a class="nav-link" href="campus.html">Campus Gallery</a></li>
       <li class="nav-item"><a class="nav-link" href="notice.html">Notice Board</a></li>
       <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
-      <li class="nav-item"><a class="nav-link" href="admission.html">Admission Process</a></li>
+      <li class="nav-item"><a class="nav-link active" href="admission.html">Admission Process</a></li>
       <li class="nav-item"><a class="nav-link" href="placements.html">Our Placements</a></li>
-      <li class="nav-item"><a class="nav-link" href="nonteachingstaff.html">Non-Teaching Staff</a></li>
+      <li class="nav-item">
+        <a class="nav-link" href="nonteachingstaff.html"
+           onclick="location.href='nonteachingstaff.html'">
+           Non-Teaching Staff
+        </a>
+      </li>
     </ul>
   </div>
 </nav>
 
-<!-- ===============================
-     CONTENT
-     =============================== -->
+<!-- CONTENT -->
 <h1 class="page-heading">Admission Process</h1>
 
 <div class="step-container">
 
   <div class="admission-step">
     <h3>Step 1: Eligibility Check</h3>
-    <p>
-      Ensure you meet the eligibility criteria for diploma courses:
-      Passed SSC (10th) for First Year or ITI / HSC for Direct Second Year admission.
-    </p>
+    <p>Ensure you meet the eligibility criteria for diploma courses.</p>
   </div>
 
   <div class="admission-step">
     <h3>Step 2: Online Application</h3>
-    <p>
-      Complete the online application form by filling in personal, academic details
-      and uploading required documents.
-    </p>
+    <p>Fill the online application form with required details.</p>
   </div>
 
   <div class="admission-step">
-    <h3>Step 3: Document Verification & Merit List</h3>
-    <p>
-      Shortlisted candidates are called for document verification.
-      Merit lists are published based on eligibility and seat availability.
-    </p>
+    <h3>Step 3: Document Verification</h3>
+    <p>Merit list is published after verification.</p>
   </div>
 
   <div class="admission-step">
-    <h3>Step 4: Fee Payment & Seat Confirmation</h3>
-    <p>
-      After selection, pay the prescribed fees to confirm your seat.
-      Admission is finalized after completing all formalities.
-    </p>
+    <h3>Step 4: Fee Payment</h3>
+    <p>Pay fees to confirm admission.</p>
   </div>
 
   <div class="admission-step">
-    <h3>Step 5: Orientation & Commencement</h3>
-    <p>
-      Attend the orientation programme and begin your academic journey
-      on the announced date.
-    </p>
+    <h3>Step 5: Orientation</h3>
+    <p>Attend orientation and start classes.</p>
   </div>
 
 </div>
 
-<!-- ===============================
-     AUTO ACTIVE TAB
-     =============================== -->
-<script>
-(function(){
-  const page = window.location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".nav-link").forEach(link=>{
-    if(link.getAttribute("href") === page){
-      link.classList.add("active");
-    }
-  });
-})();
-</script>
-
 </body>
 </html>
+
 
