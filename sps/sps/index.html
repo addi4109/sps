@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -6,175 +6,208 @@
 
 <title>Satara Polytechnic Satara</title>
 
-<link href="https://www.satarapolytechnicsatara.org/icon.png" rel="icon" type="image/png">
-
-<!-- Google Font -->
+<link rel="icon" href="https://www.satarapolytechnicsatara.org/icon.png" type="image/png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<!-- Bootstrap 4 -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
 <style>
-/* ===== RESET ===== */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f4f6fb;overflow-x:hidden;}
 
-html,body{
-  height:100%;
-}
-
-/* ===== BACKGROUND ===== */
-body{
-  background:url('https://www.satarapolytechnicsatara.org/f1.jpg') center/cover no-repeat;
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-}
-
-/* =====================================
-   NAVBAR (100% SAME AS GOVERNING BODY)
-   TRANSPARENCY KEPT
-   ===================================== */
-/* ===== NAVBAR — FIXED HEIGHT (MATCH GOVERNING BODY) ===== */
-/* ===== NAVBAR STANDARD (FINAL) ===== */
-/* ===== NAVBAR (TRANSPARENCY KEPT AS-IS) ===== */
-.navbar{
-  background-color: rgba(0,0,0,0.6); /* ❗ SAME transparency as your home page */
-  padding: 0.35rem 0.6rem;           /* height from your provided CSS */
-}
-
-/* Logo */
-.navbar-brand img{
-  width: 38px;
-  height: 38px;                      /* prevents height increase */
-  border-radius: 50%;
-}
-
-/* Nav alignment */
-.navbar-nav{
-  margin-left: 20px;
-}
-
-/* Space between items */
-.navbar-nav .nav-item{
-  margin-right: 10px;
-}
-
-/* Nav links */
+/* NAVBAR */
+.navbar{background:linear-gradient(90deg, #0b1f3a, #102e5a);padding:.35rem .6rem}
+.navbar-brand img{width:38px;height:38px;border-radius:50%}
+.navbar-nav{margin-left:20px}
+.navbar-nav .nav-item{margin-right:7px;font-size:14px}
 .navbar-dark .navbar-nav .nav-link{
-  color: #fff !important;
-  font-weight: 600;
-  padding: 6px 10px;                 /* content size from your CSS */
-  transition: all 0.3s ease;
+  color:#fff!important;font-weight:600;padding:6px 10px;transition:.3s
 }
-
-/* Hover + Active */
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active{
-  background: #f39c12;
-  color: #000 !important;
-  border-radius: 6px;
+  background:#f39c12;color:#000!important;border-radius:6px
 }
 
-/* ===== MOBILE CENTER MENU ===== */
-@media (max-width: 767px){
-  .navbar-nav{
-    margin-left: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .navbar-nav .nav-item{
-    margin: 6px 0;
-  }
-
-  .navbar-nav .nav-link{
-    display: inline-block;
-  }
-}
-
-
-/* Mobile center */
-@media(max-width:767px){
-  .navbar-nav{
-    margin-left:0;
-    width:100%;
-    text-align:center;
-  }
-  .navbar-nav .nav-item{
-    margin:6px 0;
-  }
-  .navbar-nav .nav-link{
-    display:inline-block;
-  }
-}
-
-
-/* =====================================
-   HERO SECTION
-   ===================================== */
-.hero-container{
-  flex:1;
+/* HERO */
+.hero{
+  height:53vh;
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.15), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(255,255,255,0.12), transparent 45%),
+    linear-gradient(135deg, #1e3c72, #2a5298);
   display:flex;
-  flex-direction:column;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
   text-align:center;
   color:#fff;
+  padding-top:90px;
 }
 
-.hero-container h1{
-  font-size:clamp(28px,4vw,52px);
-  margin-bottom:18px;
-  font-weight:600;
+.hero h1{
+  font-size:clamp(32px,4.5vw,56px);
+  opacity:0;
+  animation:titleFade 1.2s ease-out forwards;
 }
 
-.hero-container img{
+.hero img{
   width:140px;
   border-radius:50%;
-  margin-bottom:25px;
-}
-
-/* =====================================
-   ADMISSION BOX (WITH ANIMATION)
-   ===================================== */
-.admission-box{
-  background:rgba(0,0,0,0.75);
-  color:#fff;
-  padding:1.5rem 2rem;
-  border-radius:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.4);
-  max-width:420px;
-  text-align:center;
-
+  margin:25px 0;
   opacity:0;
-  transform:translateY(35px) scale(0.95);
-  animation:admissionFade 1s ease-out forwards;
-  animation-delay:0.4s;
+  animation:
+    logoZoom 1.2s ease-out forwards,
+    logoFloat 4s ease-in-out infinite,
+    logoGlow 3s ease-in-out infinite;
 }
 
-.admission-box h5{
-  font-size:1.5rem;
-  font-weight:600;
-  margin-bottom:1rem;
+/* ===== ANIMATIONS ===== */
+@keyframes titleFade{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
 }
 
-.admission-box p{
-  margin:0.3rem 0;
-  font-size:1rem;
+@keyframes logoZoom{
+  from{opacity:0;transform:scale(0.7);}
+  to{opacity:1;transform:scale(1);}
 }
 
-/* Animation */
-@keyframes admissionFade{
-  to{
-    opacity:1;
-    transform:translateY(0) scale(1);
+@keyframes logoFloat{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-6px);}
+}
+
+@keyframes logoGlow{
+  0%,100%{box-shadow:0 0 0 rgba(255,255,255,.3);}
+  50%{box-shadow:0 0 25px rgba(255,255,255,.6);}
+}
+/* ADMISSION BOX */
+.admission-box{
+  background:rgba(255,255,255,.18);
+  backdrop-filter:blur(12px);
+  padding:1.8rem 2.4rem;
+  border-radius:18px;
+  max-width:440px;
+  box-shadow:0 15px 40px rgba(0,0,0,.35)
+}
+.admission-box h5{color:#ffd24d}
+
+/* SECTION */
+.section{padding:80px 15px}
+.section h2{text-align:center;margin-bottom:50px;font-weight:600}
+.inner-container{max-width:1100px;margin:auto}
+
+/* FEATURES */
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px}
+.feature-card{
+  background:#fff;padding:30px;border-radius:18px;text-align:center;
+  box-shadow:0 12px 30px rgba(0,0,0,.08)
+}
+
+/* RANKERS */
+.rankers-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}
+.rank-card{
+  background:#fff;padding:25px;border-radius:18px;text-align:center;
+  box-shadow:0 12px 30px rgba(0,0,0,.08)
+}
+.rank-placeholder{width:90px;height:90px;border-radius:50%;background:#ddd;margin:0 auto 15px}
+
+/* LIFE */
+.life-section{max-width:1100px;margin:80px auto;padding:0 15px;text-align:center}
+.slider-wrapper{position:relative;background:#e8f6fb;padding:25px;border-radius:8px}
+.slider{overflow:hidden;border-radius:6px}
+.slider img{width:100%;height:460px;object-fit:cover;display:none}
+.slider img.active{display:block}
+.life-arrow{position:absolute;top:50%;transform:translateY(-50%);font-size:36px;font-weight:600;cursor:pointer}
+.life-arrow.left{left:5px}
+.life-arrow.right{right:5px}
+
+/* ================= LATEST NEWS ================= */
+.news-3{max-width:1100px;margin:80px auto;padding:0 15px;text-align:center}
+.news-3-wrapper{position:relative;overflow:visible}
+
+/* 🔥 THIS IS THE KEY FIX */
+.news-clip{
+  overflow:hidden;
+  width:100%;
+}
+
+.news-3-track{display:flex;gap:24px;transition:.5s}
+.news-card-3{
+  min-width:calc(33.333% - 16px);
+  background:#fff;border-radius:14px;
+  box-shadow:0 8px 30px rgba(0,0,0,.08);
+  overflow:hidden
+}
+.news-img{height:160px;background:#ddd}
+.news-img img{width:100%;height:100%;object-fit:cover}
+.news-body{padding:20px}
+.news-body h5{font-size:16px;font-weight:600}
+.news-body .date{font-size:13px;color:#777;margin-bottom:10px}
+
+/* ARROWS */
+.news3-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:44px;height:44px;
+  display:flex;align-items:center;justify-content:center;
+  background:#fff;border-radius:50%;
+  box-shadow:0 4px 15px rgba(0,0,0,.15);
+  font-size:28px;font-weight:700;
+  cursor:pointer;z-index:10
+}
+.news3-arrow.left{left:10px}
+.news3-arrow.right{right:10px}
+
+/* FOOTER */
+.site-footer{background:#2f3b45;color:#fff;padding:18px;text-align:center}
+  /* 📱 MOBILE FIX – Latest News: 1 card per screen */
+@media (max-width: 600px){
+  .news-card-3{
+    min-width:100%;
+  }
+
+  .news-3-wrapper{
+    padding:0 48px; /* keeps space for arrows */
+  }
+}
+/* 🚀 PERFORMANCE BOOST */
+.news-3-track{
+  will-change: transform;
+  transform: translate3d(0,0,0);
+}
+@media(max-width:767px){
+  .navbar-collapse{
+    background:rgba(0,0,0,0.85);
+    padding:10px 0;
+    border-radius:0 0 12px 12px;
+  }
+}
+/* ===== MOBILE NAVBAR BACKGROUND FIX ===== */
+@media (max-width: 767px){
+
+  .navbar-collapse{
+    background: linear-gradient(
+      to bottom,
+      rgba(11,31,58,0.96),
+      rgba(16,46,90,0.96)
+    );
+    padding:14px 12px;
+    border-radius:0 0 16px 16px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.35);
+  }
+
+  .navbar-nav .nav-link{
+    width:100%;
+    text-align:left;
+    padding:12px 16px;
+    border-radius:10px;
+  }
+
+  .navbar-nav .nav-link.active{
+    background:#f39c12;
+    color:#000 !important;
+  }
+
+  .navbar-nav .nav-link:not(.active):hover{
+    background:rgba(255,255,255,0.08);
   }
 }
 </style>
@@ -182,17 +215,15 @@ body{
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<nav class="navbar navbar-expand-md navbar-dark">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
   <a class="navbar-brand" href="index.html">
-    <img src="https://i.ibb.co/RkDs4pfs/download.jpg" alt="Logo">
+    <img src="https://i.ibb.co/RkDs4pfs/download.jpg">
   </a>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#nav">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <div class="collapse navbar-collapse" id="nav">
     <ul class="navbar-nav">
       <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
@@ -204,22 +235,326 @@ body{
       <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
       <li class="nav-item"><a class="nav-link" href="admission.html">Admission Process</a></li>
       <li class="nav-item"><a class="nav-link" href="placements.html">Our Placements</a></li>
+      <li class="nav-item"><a class="nav-link" href="placements.html">Non-Teaching Staff</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- ===== HERO ===== -->
-<div class="hero-container">
-  <h1>Satara Polytechnic Satara</h1>
-  <img src="https://i.ibb.co/RkDs4pfs/download.jpg" alt="College Logo">
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Satara Polytechnic , Satara</h1>
+    <img src="https://i.ibb.co/RkDs4pfs/download.jpg">
+  </div>
+</section>
 
-  <div class="admission-box">
-    <h5>🎓 Admissions Open!</h5>
-    <p>Mr. Phadtare M J : 9960182230</p>
-    <p>Mrs. Pawar S S : 9881726261</p>
-    <p>Mr. Jagtap R S : 9860841722</p>
+<!-- WHY CHOOSE US -->
+<section class="section">
+<h2>Why Choose Us</h2>
+<div class="inner-container">
+  <div class="features">
+    <div class="feature-card"><h5>Experienced Faculty</h5><p>Highly qualified and dedicated teaching staff.</p></div>
+    <div class="feature-card"><h5>Modern Infrastructure</h5><p>Well-equipped labs and digital classrooms.</p></div>
+    <div class="feature-card"><h5>Excellent Placements</h5><p>Strong industry tie-ups and career support.</p></div>
   </div>
 </div>
+</section>
+
+<!-- OUR RANKERS -->
+<section class="section">
+  <h2>🏆 Our Rankers</h2>
+
+  <div class="inner-container">
+
+    <div class="rankers-grid">
+
+      <!-- First Year -->
+      <div class="rank-card">
+        <div class="rank-placeholder"></div>
+        <h5>Rank 1</h5>
+        <p><strong>First Year</strong></p>
+        <p>Student Name</p>
+        <p>Department</p>
+      </div>
+
+      <!-- Second Year -->
+      <div class="rank-card">
+        <div class="rank-placeholder"></div>
+        <h5>Rank 1</h5>
+        <p><strong>Second Year</strong></p>
+        <p>Student Name</p>
+        <p>Department</p>
+      </div>
+
+      <!-- Third Year -->
+      <div class="rank-card">
+        <div class="rank-placeholder"></div>
+        <h5>Rank 1</h5>
+        <p><strong>Third Year</strong></p>
+        <p>Student Name</p>
+        <p>Department</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- LIFE AT CAMPUS -->
+<section class="life-section">
+  <h2>Life at Satara Polytechnic</h2>
+
+  <div class="slider-wrapper">
+    <span class="life-arrow left" onclick="lifePrev()">&#10094;</span>
+
+    <div class="slider" id="lifeSlider">
+      <img src="https://i.ibb.co/7t7r1N4f/s1.jpg" class="active">
+      <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d">
+      <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b">
+    </div>
+
+    <span class="life-arrow right" onclick="lifeNext()">&#10095;</span>
+  </div>
+
+  <div class="life-play">
+    <button onclick="lifeAuto()">▶</button>
+  </div>
+</section>
+
+<!-- LATEST NEWS -->
+<section class="news-3">
+  <h2>Latest News</h2>
+
+  <div class="news-3-wrapper">
+    <!-- LEFT ARROW -->
+    <span class="news3-arrow left" onclick="news3Prev()">&#10094;</span>
+
+    <!-- 🔒 CLIP AREA (IMPORTANT FIX) -->
+    <div class="news-clip">
+      <div class="news-3-track" id="news3Track">
+
+        <div class="news-card-3">
+          <div class="news-img">
+            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f">
+          </div>
+          <div class="news-body">
+            <h5>Admissions Open 2025–26</h5>
+            <div class="date">10 June 2025</div>
+            <p>Admissions for the academic year 2025–26 have started.</p>
+          </div>
+        </div>
+
+        <div class="news-card-3">
+          <div class="news-img">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+          </div>
+          <div class="news-body">
+            <h5>Campus Placement Drive</h5>
+            <div class="date">28 May 2025</div>
+            <p>Leading companies participated in campus placements.</p>
+          </div>
+        </div>
+
+        <div class="news-card-3">
+          <div class="news-img">
+            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1">
+          </div>
+          <div class="news-body">
+            <h5>Industrial Visit Program</h5>
+            <div class="date">15 April 2025</div>
+            <p>Students visited reputed automobile industries.</p>
+          </div>
+        </div>
+
+        <div class="news-card-3">
+          <div class="news-img">
+            <img src="https://images.unsplash.com/photo-1581091870627-3e6f1a9f56a6">
+          </div>
+          <div class="news-body">
+            <h5>Expert Guest Lecture</h5>
+            <div class="date">02 April 2025</div>
+            <p>Industry experts shared insights on new technologies.</p>
+          </div>
+        </div>
+
+        <!-- NEWS 5 -->
+        <div class="news-card-3">
+          <div class="news-img">
+            <img src="https://images.unsplash.com/photo-1544717305-2782549b5136">
+          </div>
+          <div class="news-body">
+            <h5>Annual Sports Meet 2025</h5>
+            <div class="date">20 March 2025</div>
+            <p>Inter-department sports events were conducted with great enthusiasm.</p>
+          </div>
+        </div>
+
+        <!-- NEWS 6 -->
+        <div class="news-card-3">
+          <div class="news-img">
+            <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b">
+          </div>
+          <div class="news-body">
+            <h5>Technical Project Exhibition</h5>
+            <div class="date">05 March 2025</div>
+            <p>Final year students showcased innovative technical projects.</p>
+          </div>
+        </div>
+
+        <!-- NEWS 7 -->
+        <div class="news-card-3">
+          <div class="news-img">
+            <img src="https://images.unsplash.com/photo-1581091870627-3e6f1a9f56a6">
+          </div>
+          <div class="news-body">
+            <h5>Workshop on Electric Vehicles</h5>
+            <div class="date">18 February 2025</div>
+            <p>A hands-on workshop on EV technology was conducted for students.</p>
+          </div>
+        </div>
+
+        <!-- NEWS 8 -->
+        <div class="news-card-3">
+          <div class="news-img">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+          </div>
+          <div class="news-body">
+            <h5>Alumni Interaction Program</h5>
+            <div class="date">02 February 2025</div>
+            <p>Alumni shared industry experience and career guidance.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT ARROW -->
+    <span class="news3-arrow right" onclick="news3Next()">&#10095;</span>
+  </div>
+
+  <div class="news3-play">
+    <button onclick="news3Auto()">▶</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p>
+      © <span id="year"></span> Satara Polytechnic, Satara.  
+      All Rights Reserved.
+    </p>
+  </div>
+</footer>
+<script>
+const slider = document.getElementById('newsSlider');
+let pos = 0;
+let speed = 0.4;
+let max;
+
+function calc(){
+  max = slider.scrollWidth / 2;
+}
+window.onload = calc;
+window.onresize = calc;
+
+function move(){
+  pos -= speed;
+  if(Math.abs(pos) >= max) pos = 0;
+  slider.style.transform = `translateX(${pos}px)`;
+  requestAnimationFrame(move);
+}
+move();
+</script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script>
+let lifeSlides = document.querySelectorAll('#lifeSlider img');
+let lifeIndex = 0;
+let lifeTimer;
+
+function showLife(i){
+  lifeSlides.forEach(img => img.classList.remove('active'));
+  lifeSlides[i].classList.add('active');
+}
+
+function lifeNext(){
+  lifeIndex = (lifeIndex + 1) % lifeSlides.length;
+  showLife(lifeIndex);
+}
+
+function lifePrev(){
+  lifeIndex = (lifeIndex - 1 + lifeSlides.length) % lifeSlides.length;
+  showLife(lifeIndex);
+}
+
+function lifeAuto(){
+  clearInterval(lifeTimer);
+  lifeTimer = setInterval(lifeNext, 2500);
+}
+</script>
+<script>
+const track3 = document.getElementById('news3Track');
+const cards3 = document.querySelectorAll('.news-card-3');
+
+let index3 = 0;
+let auto3 = null;
+let cardStep = 0;
+
+function visibleCards(){
+  if (window.innerWidth < 600) return 1;
+  if (window.innerWidth < 900) return 2;
+  return 3;
+}
+
+function calculateStep(){
+  if(!cards3.length) return;
+  cardStep = cards3[0].getBoundingClientRect().width + 24;
+}
+
+function updateSlider(){
+  track3.style.transform =
+    `translate3d(${-index3 * cardStep}px,0,0)`;
+}
+
+function news3Next(){
+  const max = cards3.length - visibleCards();
+  if(index3 < max){
+    index3++;
+    updateSlider();
+  }
+}
+
+function news3Prev(){
+  if(index3 > 0){
+    index3--;
+    updateSlider();
+  }
+}
+
+function news3Auto(){
+  clearInterval(auto3);
+  auto3 = setInterval(()=>{
+    const max = cards3.length - visibleCards();
+    index3 = index3 >= max ? 0 : index3 + 1;
+    updateSlider();
+  }, 3000);
+}
+
+/* Init */
+window.addEventListener('load', ()=>{
+  calculateStep();
+  updateSlider();
+});
+
+window.addEventListener('resize', ()=>{
+  calculateStep();
+  updateSlider();
+});
+</script>
+<!-- REQUIRED FOR MOBILE NAVBAR -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
