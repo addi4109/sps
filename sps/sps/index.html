@@ -326,9 +326,11 @@ body{background:#f4f6fb;overflow-x:hidden;}
     <span class="life-arrow right" onclick="lifeNext()">&#10095;</span>
   </div>
 
-  <div class="life-play">
-    <button onclick="lifeAuto()">▶</button>
-  </div>
+<div class="life-play">
+  <button onclick="lifePlay()">▶</button>
+  <button onclick="lifePause()">⏸</button>
+</div>
+
 </section>
 
 <!-- LATEST NEWS -->
@@ -529,29 +531,44 @@ window.addEventListener('resize', ()=>{
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 <script>
-let lifeSlides = document.querySelectorAll('#lifeSlider img');
+const lifeSlides = document.querySelectorAll('#lifeSlider img');
 let lifeIndex = 0;
-let lifeTimer;
+let lifeTimer = null;
 
+/* show slide */
 function showLife(i){
   lifeSlides.forEach(img => img.classList.remove('active'));
   lifeSlides[i].classList.add('active');
 }
 
+/* NEXT */
 function lifeNext(){
   lifeIndex = (lifeIndex + 1) % lifeSlides.length;
   showLife(lifeIndex);
 }
 
+/* PREV */
 function lifePrev(){
   lifeIndex = (lifeIndex - 1 + lifeSlides.length) % lifeSlides.length;
   showLife(lifeIndex);
 }
 
-function lifeAuto(){
-  clearInterval(lifeTimer);
+/* ▶ PLAY */
+function lifePlay(){
+  if(lifeTimer) return;            // ⛔ already running
   lifeTimer = setInterval(lifeNext, 2500);
 }
+
+/* ⏸ PAUSE */
+function lifePause(){
+  clearInterval(lifeTimer);
+  lifeTimer = null;
+}
+
+/* INIT */
+window.addEventListener('load', ()=>{
+  showLife(lifeIndex);
+});
 </script>
 <script>
 const track3 = document.getElementById('news3Track');
