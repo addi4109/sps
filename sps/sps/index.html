@@ -446,25 +446,144 @@ body{background:#f4f6fb;overflow-x:hidden;}
   </div>
 </footer>
 <script>
-const slider = document.getElementById('newsSlider');
-let pos = 0;
-let speed = 0.4;
-let max;
+const track3 = document.getElementById('news3Track');
+const cards3 = document.querySelectorAll('.news-card-3');
 
-function calc(){
-  max = slider.scrollWidth / 2;
-}
-window.onload = calc;
-window.onresize = calc;
+let index3 = 0;
+let auto3 = null;
+let cardStep = 0;
 
-function move(){
-  pos -= speed;
-  if(Math.abs(pos) >= max) pos = 0;
-  slider.style.transform = `translateX(${pos}px)`;
-  requestAnimationFrame(move);
+function visibleCards(){
+  if (window.innerWidth < 600) return 1;
+  if (window.innerWidth < 900) return 2;
+  return 3;
 }
-move();
+
+function calculateStep(){
+  if(!cards3.length) return;
+  cardStep = cards3[0].getBoundingClientRect().width + 24;
+}
+
+function updateSlider(){
+  track3.style.transform =
+    `translate3d(${-index3 * cardStep}px,0,0)`;
+}
+
+function news3Next(){
+  const max = cards3.length - visibleCards();
+  if(index3 < max){
+    index3++;
+    updateSlider();
+  }
+}
+
+function news3Prev(){
+  if(index3 > 0){
+    index3--;
+    updateSlider();
+  }
+}
+
+function news3Auto(){
+  clearInterval(auto3);
+  auto3 = setInterval(()=>{
+    const max = cards3.length - visibleCards();
+    index3 = index3 >= max ? 0 : index3 + 1;
+    updateSlider();
+  }, 3000);
+}
+
+/* Init */
+window.addEventListener('load', ()=>{
+  calculateStep();
+  updateSlider();
+});
+
+window.addEventListener('resize', ()=>{
+  calculateStep();
+  updateSlider();
+});
 </script>
+<script>
+const track3 = document.getElementById('news3Track');
+let cards3 = Array.from(document.querySelectorAll('.news-card-3'));
+
+let index3 = 0;
+let cardStep = 0;
+let auto3;
+
+/* how many visible */
+function visibleCards(){
+  if (window.innerWidth < 600) return 1;
+  if (window.innerWidth < 900) return 2;
+  return 3;
+}
+
+/* clone first cards to end */
+function cloneCards(){
+  const count = visibleCards();
+  for(let i=0;i<count;i++){
+    track3.appendChild(cards3[i].cloneNode(true));
+  }
+  cards3 = Array.from(document.querySelectorAll('.news-card-3'));
+}
+
+/* calculate card width */
+function calculateStep(){
+  cardStep = cards3[0].getBoundingClientRect().width + 24;
+}
+
+/* move slider */
+function updateSlider(animate=true){
+  track3.style.transition = animate ? '.5s' : 'none';
+  track3.style.transform =
+    `translate3d(${-index3 * cardStep}px,0,0)`;
+}
+
+/* next */
+function news3Next(){
+  index3++;
+  updateSlider(true);
+
+  /* reset silently */
+  if(index3 >= cards3.length - visibleCards()){
+    setTimeout(()=>{
+      index3 = 0;
+      updateSlider(false);
+    }, 500);
+  }
+}
+
+/* prev */
+function news3Prev(){
+  if(index3 === 0){
+    index3 = cards3.length - visibleCards();
+    updateSlider(false);
+  }
+  index3--;
+  setTimeout(()=>updateSlider(true),20);
+}
+
+/* auto play */
+function news3Auto(){
+  clearInterval(auto3);
+  auto3 = setInterval(news3Next, 3000);
+}
+
+/* INIT */
+window.addEventListener('load', ()=>{
+  cloneCards();
+  calculateStep();
+  updateSlider(false);
+  news3Auto();
+});
+
+window.addEventListener('resize', ()=>{
+  calculateStep();
+  updateSlider(false);
+});
+</script>
+
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
