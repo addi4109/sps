@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non-Teaching Staff — Satara Polytechnic Satara</title>
+
+<link href="https://www.satarapolytechnicsatara.org/icon.png" rel="icon" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f4f4f4;
+  overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+.navbar{
+  background-color:#2f3b45;
+  padding:0.35rem 0.6rem;
+}
+.navbar-brand img{width:38px;border-radius:50%}
+.navbar-nav{margin-left:20px}
+.navbar-nav .nav-item{margin-right:7px}
+.navbar-dark .navbar-nav .nav-link{
+  color:#fff!important;font-weight:600;padding:6px 10px;font-size:14px;
+}
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active{
+  background:#f39c12;color:#000!important;border-radius:6px
+}
+@media(max-width:767px){
+  .navbar-nav{margin-left:0;text-align:center}
+  .navbar-nav .nav-item{margin:6px 0}
+}
+
+/* ================= PAGE ================= */
+.page-title{text-align:center;margin:30px 10px}
+.section-title{
+  max-width:1100px;
+  margin:35px auto 15px;
+  padding:0 15px;
+  font-weight:600;
+  color:#2f3b45;
+}
+
+/* ================= GRID ================= */
+.staff-container{
+  max-width:1100px;
+  margin:0 auto 40px;
+  padding:0 15px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+
+/* ================= CARD ================= */
+.staff-card{
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.18);
+  padding:22px 18px;
+  text-align:center;
+
+  min-height:360px; /* 🔒 equal height */
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+
+  opacity:0;
+  transform:translateY(25px);
+  animation:fadeUp 0.8s ease forwards;
+}
+
+.staff-card:nth-child(odd){animation-delay:.15s}
+.staff-card:nth-child(even){animation-delay:.3s}
+
+/* Hover */
+.staff-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 35px rgba(0,0,0,0.25);
+  transition:all .35s ease;
+}
+
+/* ================= PHOTO ================= */
+.staff-photo{
+  width:135px;   /* ⬅ bigger */
+  height:135px;
+  border-radius:50%;
+  background:#e0e0e0;
+  margin-bottom:14px;
+  border:4px solid #f39c12;
+}
+
+/* ================= TEXT ================= */
+.staff-card h5{
+  font-weight:600;
+  margin-bottom:4px;
+}
+
+.staff-role{
+  font-size:14px;
+  color:#f39c12;
+  font-weight:600;
+}
+
+.staff-info{
+  font-size:13.5px;
+  color:#444;
+  margin-top:6px;
+  line-height:1.45;
+}
+
+/* ================= FOOTER ================= */
+.site-footer{
+  background:#2f3b45;
+  color:#fff;
+  padding:16px;
+  text-align:center;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp{
+  to{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-md navbar-dark">
+  <a class="navbar-brand" href="index.html">
+    <img src="https://www.satarapolytechnicsatara.org/logo.jpeg">
+  </a>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#nav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="govermentbody.html">Governing Body</a></li>
+      <li class="nav-item"><a class="nav-link" href="sample.html">Department</a></li>
+      <li class="nav-item"><a class="nav-link" href="events.html">Event & Activities</a></li>
+      <li class="nav-item"><a class="nav-link" href="campus.html">Campus Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="notice.html">Notice Board</a></li>
+      <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="admission.html">Admission Process</a></li>
+      <li class="nav-item"><a class="nav-link" href="placements.html">Our Placements</a></li>
+      <li class="nav-item"><a class="nav-link active" href="nonteachingstaff.html">Non-Teaching Staff</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- TITLE -->
+<div class="page-title">
+  <h2>Non-Teaching Staff</h2>
+</div>
+
+<!-- OFFICE STAFF -->
+<div class="section-title">Office Staff</div>
+<div class="staff-container">
+  <div class="staff-card">
+    <div class="staff-photo"></div>
+    <h5>Mr. Koratkar Shankar Shivaji</h5>
+    <div class="staff-role">Office Superintendent</div>
+    <div class="staff-info">M.A. B.Ed.</div>
+    <div class="staff-info">Experience: 15 Years</div>
+    <div class="staff-info">shankarkoratkar111@gmail.com</div>
+  </div>
+
+  <div class="staff-card">
+    <div class="staff-photo"></div>
+    <h5>Mr. Swapnil Surendra Phule</h5>
+    <div class="staff-role">Jr. Clerk</div>
+    <div class="staff-info">Diploma (Construction Supervisor)</div>
+    <div class="staff-info">Experience: —</div>
+    <div class="staff-info">swapnilphule4@gmail.com</div>
+  </div>
+
+  <div class="staff-card">
+    <div class="staff-photo"></div>
+    <h5>Kadam Bhaghyashri Sagar</h5>
+    <div class="staff-role">Jr. Clerk</div>
+    <div class="staff-info">M.Com</div>
+    <div class="staff-info">Experience: 4 Years</div>
+    <div class="staff-info">bhagyashrikadam93@gmail.com</div>
+  </div>
+</div>
+
+<!-- PEONS -->
+<div class="section-title">Peons</div>
+<div class="staff-container">
+  <div class="staff-card"><div class="staff-photo"></div><h5>Sevak Kumbhar</h5><div class="staff-info">Experience: 20 Years</div></div>
+  <div class="staff-card"><div class="staff-photo"></div><h5>Adhik More</h5><div class="staff-info">Experience: 14 Years</div></div>
+  <div class="staff-card"><div class="staff-photo"></div><h5>Bhanudas Kumbhar</h5><div class="staff-info">Experience: —</div></div>
+  <div class="staff-card"><div class="staff-photo"></div><h5>Mahesh Nawadkar</h5><div class="staff-info">Experience: 9 Years</div></div>
+  <div class="staff-card"><div class="staff-photo"></div><h5>Sanjay Padwal</h5><div class="staff-info">Experience: —</div></div>
+  <div class="staff-card"><div class="staff-photo"></div><h5>Sanjay Shinde</h5><div class="staff-info">Experience: —</div></div>
+  <div class="staff-card"><div class="staff-photo"></div><h5>Sanjay Pawar</h5><div class="staff-info">Experience: 30 Years</div></div>
+  <div class="staff-card"><div class="staff-photo"></div><h5>Vasant Nalawade</h5><div class="staff-info">Experience: —</div></div>
+</div>
+
+<footer class="site-footer">
+  © <span id="year"></span> Satara Polytechnic, Satara. All Rights Reserved.
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
