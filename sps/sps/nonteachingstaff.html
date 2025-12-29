@@ -9,10 +9,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
 <style>
+/* ===== RESET ===== */
 *{
   margin:0;
   padding:0;
@@ -25,29 +24,81 @@ body{
   overflow-x:hidden;
 }
 
-/* ================= NAVBAR ================= */
+/* ===============================
+   NAVBAR (HOME PAGE STYLE)
+   =============================== */
 .navbar{
-  background-color:#2f3b45;
-  padding:0.35rem 0.6rem;
+  background:linear-gradient(90deg,#0b1f3a,#102e5a);
+  padding:.35rem .6rem;
 }
-.navbar-brand img{width:38px;border-radius:50%}
-.navbar-nav{margin-left:20px}
-.navbar-nav .nav-item{margin-right:7px}
+
+.navbar-brand img{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+}
+
+.navbar-nav{
+  margin-left:20px;
+}
+
+.navbar-nav .nav-item{
+  margin-right:7px;
+  font-size:14px;
+}
+
 .navbar-dark .navbar-nav .nav-link{
-  color:#fff!important;font-weight:600;padding:6px 10px;font-size:14px;
-  touch-action: manipulation;
+  color:#fff !important;
+  font-weight:600;
+  padding:6px 10px;
+  transition:.3s;
+  touch-action:manipulation;
 }
+
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active{
-  background:#f39c12;color:#000!important;border-radius:6px
+  background:#f39c12;
+  color:#000 !important;
+  border-radius:6px;
 }
+
+/* MOBILE NAVBAR */
 @media(max-width:767px){
-  .navbar-nav{margin-left:0;text-align:center}
-  .navbar-nav .nav-item{margin:6px 0}
+  .navbar-collapse{
+    background:linear-gradient(
+      to bottom,
+      rgba(11,31,58,0.96),
+      rgba(16,46,90,0.96)
+    );
+    padding:14px 12px;
+    border-radius:0 0 16px 16px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.35);
+  }
+
+  .navbar-nav{
+    margin-left:0;
+    width:100%;
+  }
+
+  .navbar-nav .nav-link{
+    width:100%;
+    text-align:left;
+    padding:12px 16px;
+    border-radius:10px;
+    display:block;
+  }
+
+  .navbar-nav .nav-link:not(.active):hover{
+    background:rgba(255,255,255,0.08);
+  }
 }
 
 /* ================= PAGE ================= */
-.page-title{text-align:center;margin:30px 10px}
+.page-title{
+  text-align:center;
+  margin:90px 10px 30px; /* 🔥 spacing below fixed navbar */
+}
+
 .section-title{
   max-width:1100px;
   margin:35px auto 15px;
@@ -74,11 +125,10 @@ body{
   padding:22px 18px;
   text-align:center;
 
-  min-height:360px; /* 🔒 equal height */
+  min-height:360px;
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:flex-start;
 
   opacity:0;
   transform:translateY(25px);
@@ -88,16 +138,15 @@ body{
 .staff-card:nth-child(odd){animation-delay:.15s}
 .staff-card:nth-child(even){animation-delay:.3s}
 
-/* Hover */
 .staff-card:hover{
   transform:translateY(-8px);
   box-shadow:0 18px 35px rgba(0,0,0,0.25);
-  transition:all .35s ease;
+  transition:.35s;
 }
 
 /* ================= PHOTO ================= */
 .staff-photo{
-  width:135px;   /* ⬅ bigger */
+  width:135px;
   height:135px;
   border-radius:50%;
   background:#e0e0e0;
@@ -141,14 +190,16 @@ body{
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-md navbar-dark">
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
   <a class="navbar-brand" href="index.html">
-    <img src="https://www.satarapolytechnicsatara.org/logo.jpeg">
+    <img src="https://i.ibb.co/RkDs4pfs/download.jpg" alt="logo">
   </a>
+
   <button class="navbar-toggler" data-toggle="collapse" data-target="#nav">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse" id="nav">
     <ul class="navbar-nav">
       <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -166,12 +217,12 @@ body{
   </div>
 </nav>
 
-<!-- TITLE -->
+<!-- ===== TITLE ===== -->
 <div class="page-title">
   <h2>Non-Teaching Staff</h2>
 </div>
 
-<!-- OFFICE STAFF -->
+<!-- ===== OFFICE STAFF ===== -->
 <div class="section-title">Office Staff</div>
 <div class="staff-container">
   <div class="staff-card">
@@ -202,7 +253,7 @@ body{
   </div>
 </div>
 
-<!-- PEONS -->
+<!-- ===== PEONS ===== -->
 <div class="section-title">Peons</div>
 <div class="staff-container">
   <div class="staff-card"><div class="staff-photo"></div><h5>Sevak Kumbhar</h5><div class="staff-info">Experience: 20 Years</div></div>
@@ -223,5 +274,9 @@ body{
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+
