@@ -208,32 +208,6 @@ body{background:#f4f6fb;overflow-x:hidden;}
   </div>
 </div>
 </section>
-
-
-<!-- LIFE AT CAMPUS -->
-<section class="life-section">
-  <h2>Life at Satara Polytechnic</h2>
-
-  <div class="slider-wrapper">
-    <span class="life-arrow left" onclick="lifePrev()">&#10094;</span>
-
-    <div class="slider" id="lifeSlider">
-      <img src="https://i.ibb.co/7t7r1N4f/s1.jpg" class="active">
-      <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d">
-      <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b">
-    </div>
-
-    <span class="life-arrow right" onclick="lifeNext()">&#10095;</span>
-  </div>
-
-<div class="life-play">
-  <br>
-  <button onclick="lifePlay()">▶</button>
-  <button onclick="lifePause()">⏸</button>
-</div>
-
-</section>
-
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
@@ -245,105 +219,6 @@ body{background:#f4f6fb;overflow-x:hidden;}
 </footer>
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-<script>
-const lifeSlides = document.querySelectorAll('#lifeSlider img');
-let lifeIndex = 0;
-let lifeTimer = null;
-
-/* show slide */
-function showLife(i){
-  lifeSlides.forEach(img => img.classList.remove('active'));
-  lifeSlides[i].classList.add('active');
-}
-
-/* NEXT */
-function lifeNext(){
-  lifeIndex = (lifeIndex + 1) % lifeSlides.length;
-  showLife(lifeIndex);
-}
-
-/* PREV */
-function lifePrev(){
-  lifeIndex = (lifeIndex - 1 + lifeSlides.length) % lifeSlides.length;
-  showLife(lifeIndex);
-}
-
-/* ▶ PLAY */
-function lifePlay(){
-  if(lifeTimer) return;            // ⛔ already running
-  lifeTimer = setInterval(lifeNext, 2500);
-}
-
-/* ⏸ PAUSE */
-function lifePause(){
-  clearInterval(lifeTimer);
-  lifeTimer = null;
-}
-
-/* INIT */
-window.addEventListener('load', ()=>{
-  showLife(lifeIndex);
-});
-</script>
-<script>
-const track3 = document.getElementById('news3Track');
-const cards3 = document.querySelectorAll('.news-card-3');
-
-let index3 = 0;
-let auto3 = null;
-let cardStep = 0;
-
-function visibleCards(){
-  if (window.innerWidth < 600) return 1;
-  if (window.innerWidth < 900) return 2;
-  return 3;
-}
-
-function calculateStep(){
-  if(!cards3.length) return;
-  cardStep = cards3[0].getBoundingClientRect().width + 24;
-}
-
-function updateSlider(){
-  track3.style.transform =
-    `translate3d(${-index3 * cardStep}px,0,0)`;
-}
-
-function news3Next(){
-  const max = cards3.length - visibleCards();
-  if(index3 < max){
-    index3++;
-    updateSlider();
-  }
-}
-
-function news3Prev(){
-  if(index3 > 0){
-    index3--;
-    updateSlider();
-  }
-}
-
-function news3Auto(){
-  clearInterval(auto3);
-  auto3 = setInterval(()=>{
-    const max = cards3.length - visibleCards();
-    index3 = index3 >= max ? 0 : index3 + 1;
-    updateSlider();
-  }, 3000);
-}
-
-/* Init */
-window.addEventListener('load', ()=>{
-  calculateStep();
-  updateSlider();
-});
-
-window.addEventListener('resize', ()=>{
-  calculateStep();
-  updateSlider();
-});
 </script>
 <!-- REQUIRED FOR MOBILE NAVBAR -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
