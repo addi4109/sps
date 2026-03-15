@@ -548,6 +548,132 @@ text-align:left;
     transform:translateX(-50%);
   }
 }
+/* ===== DEPARTMENTS ===== */
+
+.dept-section{
+padding:80px 20px;
+background:#f5f7fb;
+text-align:center;
+}
+
+.dept-title{
+font-size:32px;
+font-weight:600;
+margin-bottom:50px;
+}
+
+.dept-container{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
+}
+
+.dept-card{
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 12px 35px rgba(0,0,0,.12);
+transition:.35s;
+text-align:left;
+}
+
+.dept-card:hover{
+transform:translateY(-8px);
+}
+
+.dept-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.dept-card h3{
+font-size:22px;
+padding:18px 18px 6px;
+}
+
+.dept-card p{
+padding:0 18px;
+font-size:14px;
+margin-bottom:6px;
+}
+
+.dept-buttons{
+padding:20px 18px 25px;
+display:flex;
+gap:12px;
+}
+
+.dept-buttons button{
+background:#3b82f6;
+border:none;
+color:#fff;
+padding:10px 18px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.dept-buttons a{
+background:#e5e7eb;
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+color:#000;
+}
+/* ADMISSION MODAL */
+
+.admission-modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.modal-content{
+background:#fff;
+padding:35px;
+border-radius:12px;
+width:320px;
+position:relative;
+}
+
+.modal-content h3{
+margin-bottom:20px;
+}
+
+.modal-content input,
+.modal-content select{
+width:100%;
+padding:10px;
+margin-bottom:12px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+.modal-content button{
+width:100%;
+padding:10px;
+background:#3b82f6;
+color:#fff;
+border:none;
+border-radius:6px;
+}
+
+.closeModal{
+position:absolute;
+top:10px;
+right:15px;
+font-size:22px;
+cursor:pointer;
+}
 </style>
 </head>
 
@@ -596,6 +722,95 @@ text-align:left;
     <div class="feature-card"><h5>Excellent Placements</h5><p>Strong industry tie-ups and career support.</p></div>
   </div>
 </div>
+</section>
+<!-- ===== OUR DEPARTMENTS ===== -->
+
+<section class="dept-section">
+
+<h2 class="dept-title">Our Departments</h2>
+
+<div class="dept-container">
+
+<!-- COMPUTER -->
+<div class="dept-card">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<h3>Computer Engineering</h3>
+<p>Intake: 30</p>
+<p>Direct 2nd Year Available: Yes</p>
+
+<div class="dept-buttons">
+<button class="applyBtn">Apply Now</button>
+<a href="#">Learn More</a>
+</div>
+</div>
+
+<!-- ENTC -->
+<div class="dept-card">
+<img src="https://images.unsplash.com/photo-1581091870627-3e7c1a3a7d8a">
+<h3>ENTC</h3>
+<p>Intake: 30</p>
+<p>Direct 2nd Year Available: Yes</p>
+
+<div class="dept-buttons">
+<button class="applyBtn">Apply Now</button>
+<a href="#">Learn More</a>
+</div>
+</div>
+
+<!-- MECHANICAL -->
+<div class="dept-card">
+<img src="https://images.unsplash.com/photo-1581092918484-8313d2c4e6c6">
+<h3>Mechanical Engineering</h3>
+<p>Intake: 30</p>
+<p>Direct 2nd Year Available: Yes</p>
+
+<div class="dept-buttons">
+<button class="applyBtn">Apply Now</button>
+<a href="#">Learn More</a>
+</div>
+</div>
+
+<!-- CIVIL -->
+<div class="dept-card">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+<h3>Civil Engineering</h3>
+<p>Intake: 30</p>
+<p>Direct 2nd Year Available: Yes</p>
+
+<div class="dept-buttons">
+<button class="applyBtn">Apply Now</button>
+<a href="#">Learn More</a>
+</div>
+</div>
+
+<!-- ELECTRICAL -->
+<div class="dept-card">
+<img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231">
+<h3>Electrical Engineering</h3>
+<p>Intake: 30</p>
+<p>Direct 2nd Year Available: Yes</p>
+
+<div class="dept-buttons">
+<button class="applyBtn">Apply Now</button>
+<a href="#">Learn More</a>
+</div>
+</div>
+
+<!-- CHEMICAL -->
+<div class="dept-card">
+<img src="https://images.unsplash.com/photo-1581093458791-9d09c3b4f4c5">
+<h3>Chemical Engineering</h3>
+<p>Intake: 30</p>
+<p>Direct 2nd Year Available: Yes</p>
+
+<div class="dept-buttons">
+<button class="applyBtn">Apply Now</button>
+<a href="#">Learn More</a>
+</div>
+</div>
+
+</div>
+
 </section>
 <!-- TOP RECRUITERS -->
 <section class="recruiters-section">
@@ -783,7 +998,44 @@ window.scrollTo({top:0,behavior:"smooth"});
 <!-- REQUIRED FOR MOBILE NAVBAR -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+... your page content ...
 
+<!-- ===== ADMISSION FORM MODAL ===== -->
+<div id="admissionModal" class="admission-modal">
+
+<div class="modal-content">
+
+<span class="closeModal">&times;</span>
+
+<h3>Admission Application</h3>
+
+<form>
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<select required>
+<option>Select Department</option>
+<option>Computer Engineering</option>
+<option>ENTC</option>
+<option>Mechanical Engineering</option>
+<option>Civil Engineering</option>
+<option>Electrical Engineering</option>
+<option>Chemical Engineering</option>
+</select>
+
+<button type="submit">Submit Application</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
 </body>
 </html>
 
