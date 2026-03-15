@@ -513,26 +513,32 @@ text-align:left;
 .recruiters-slider{
   overflow:hidden;
   position:relative;
+  width:100%;
 }
 
 .recruiters-track{
   display:flex;
-  gap:60px;
-  animation:scrollRecruiters 25s linear infinite;
+  align-items:center;
+  gap:70px;
+  width:max-content;
+  animation:scrollRecruiters 30s linear infinite;
 }
 
 .recruiters-track img{
   height:60px;
-  filter:grayscale(100%);
-  opacity:.8;
-  transition:.3s;
+  width:auto;
+  object-fit:contain;
+  opacity:0.95;
+  transition:transform .3s ease;
 }
 
+/* hover effect */
+
 .recruiters-track img:hover{
-  filter:none;
-  opacity:1;
-  transform:scale(1.1);
+  transform:scale(1.12);
 }
+
+/* smooth infinite scroll */
 
 @keyframes scrollRecruiters{
   0%{
@@ -607,7 +613,7 @@ text-align:left;
 <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Accenture.svg">
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg">
 
-<!-- duplicate for smooth infinite scroll -->
+<!-- duplicate for infinite scroll -->
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg">
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg">
