@@ -1,0 +1,216 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admission Application | Satara Polytechnic</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#1e3c72,#2a5298);
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+/* CONTAINER */
+
+.form-container{
+background:#fff;
+padding:40px;
+border-radius:15px;
+width:100%;
+max-width:700px;
+box-shadow:0 20px 50px rgba(0,0,0,0.25);
+animation:fadeIn .6s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.form-title{
+text-align:center;
+margin-bottom:30px;
+}
+
+.form-title h2{
+color:#1e3c72;
+margin-bottom:5px;
+}
+
+.form-title p{
+font-size:14px;
+color:#555;
+}
+
+/* FORM */
+
+.admission-form{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.form-row{
+display:flex;
+gap:15px;
+}
+
+.form-row input,
+.form-row select{
+flex:1;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:14px;
+transition:.3s;
+}
+
+.form-row input:focus,
+.form-row select:focus{
+border-color:#2a5298;
+outline:none;
+box-shadow:0 0 6px rgba(42,82,152,.3);
+}
+
+/* FILE */
+
+.file-upload{
+font-size:14px;
+}
+
+/* BUTTON */
+
+.submit-btn{
+background:linear-gradient(135deg,#2a5298,#1e3c72);
+color:#fff;
+border:none;
+padding:14px;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+.submit-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 18px rgba(0,0,0,.25);
+}
+
+/* SUCCESS */
+
+.success-message{
+display:none;
+text-align:center;
+margin-top:20px;
+color:green;
+font-weight:500;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.form-row{
+flex-direction:column;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="form-container">
+
+<div class="form-title">
+<h2>Admission Application</h2>
+<p>Satara Polytechnic, Satara</p>
+</div>
+
+<form class="admission-form" id="applyForm">
+
+<div class="form-row">
+<input type="text" placeholder="Full Name" required>
+<input type="text" placeholder="Father Name" required>
+</div>
+
+<div class="form-row">
+<input type="email" placeholder="Email Address" required>
+<input type="tel" placeholder="Phone Number" required>
+</div>
+
+<div class="form-row">
+<select required>
+<option value="">Select Department</option>
+<option>Computer Engineering</option>
+<option>ENTC</option>
+<option>Mechanical Engineering</option>
+<option>Civil Engineering</option>
+<option>Electrical Engineering</option>
+<option>Chemical Engineering</option>
+</select>
+
+<select required>
+<option value="">Qualification</option>
+<option>10th Pass</option>
+<option>12th Science</option>
+<option>ITI</option>
+<option>Diploma</option>
+</select>
+</div>
+
+<div class="form-row">
+<input type="text" placeholder="City">
+<input type="text" placeholder="State">
+</div>
+
+<div>
+<label class="file-upload">Upload Documents</label>
+<input type="file">
+</div>
+
+<button type="submit" class="submit-btn">Submit Application</button>
+
+</form>
+
+<div class="success-message" id="successMsg">
+✅ Application Submitted Successfully!
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("applyForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+document.getElementById("successMsg").style.display="block";
+
+this.reset();
+
+});
+
+</script>
+
+</body>
+</html>
+```
