@@ -512,6 +512,51 @@ text-align:left;
   display:none;
   box-shadow:0 6px 15px rgba(0,0,0,.3);
 }
+/* ===== TOP RECRUITERS ===== */
+
+.recruiters-section{
+  background:#fff;
+  padding:60px 20px;
+  text-align:center;
+}
+
+.recruiters-title{
+  font-weight:600;
+  margin-bottom:40px;
+}
+
+.recruiters-slider{
+  overflow:hidden;
+  position:relative;
+}
+
+.recruiters-track{
+  display:flex;
+  gap:60px;
+  animation:scrollRecruiters 25s linear infinite;
+}
+
+.recruiters-track img{
+  height:60px;
+  filter:grayscale(100%);
+  opacity:.8;
+  transition:.3s;
+}
+
+.recruiters-track img:hover{
+  filter:none;
+  opacity:1;
+  transform:scale(1.1);
+}
+
+@keyframes scrollRecruiters{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform:translateX(-50%);
+  }
+}
 </style>
 </head>
 
@@ -560,6 +605,36 @@ text-align:left;
     <div class="feature-card"><h5>Excellent Placements</h5><p>Strong industry tie-ups and career support.</p></div>
   </div>
 </div>
+</section>
+<!-- TOP RECRUITERS -->
+<section class="recruiters-section">
+
+<h2 class="recruiters-title">Top Recruiters</h2>
+
+<div class="recruiters-slider">
+
+<div class="recruiters-track">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Infosys_logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Wipro_Primary_Logo_Color_RGB.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Accenture.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg">
+
+<!-- duplicate for smooth infinite scroll -->
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Infosys_logo.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Wipro_Primary_Logo_Color_RGB.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Accenture.svg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg">
+
+</div>
+
+</div>
+
 </section>
 <!-- TEMPLE GRAPHIC -->
 <div class="temple-top"></div>
