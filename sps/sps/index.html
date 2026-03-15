@@ -172,6 +172,77 @@ body{background:#f4f6fb;overflow-x:hidden;}
     background:rgba(255,255,255,0.08);
   }
 }
+/* PROFESSIONAL FOOTER */
+.site-footer{
+  background:#08152a;
+  color:#ddd;
+  padding:60px 20px 25px;
+  margin-top:40px;
+}
+
+.footer-container{
+  max-width:1100px;
+  margin:auto;
+}
+
+.footer-col h5{
+  color:#fff;
+  margin-bottom:18px;
+  font-weight:600;
+}
+
+.footer-col p{
+  font-size:14px;
+  line-height:1.6;
+}
+
+.footer-links{
+  list-style:none;
+  padding:0;
+}
+
+.footer-links li{
+  margin-bottom:8px;
+}
+
+.footer-links a{
+  color:#ccc;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.footer-links a:hover{
+  color:#f39c12;
+  padding-left:4px;
+}
+
+.social-icons{
+  margin-top:10px;
+}
+
+.social-icons a{
+  display:inline-block;
+  margin-right:10px;
+  font-size:18px;
+  color:#fff;
+  background:#102e5a;
+  padding:8px 10px;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+.social-icons a:hover{
+  background:#f39c12;
+  color:#000;
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.15);
+  margin-top:35px;
+  padding-top:15px;
+  text-align:center;
+  font-size:14px;
+}
 </style>
 </head>
 
@@ -221,15 +292,71 @@ body{background:#f4f6fb;overflow-x:hidden;}
   </div>
 </div>
 </section>
-<!-- FOOTER -->
+<!-- PROFESSIONAL FOOTER -->
 <footer class="site-footer">
-  <div class="footer-inner">
-    <p>
-      © <span id="year"></span> Satara Polytechnic, Satara.  
-      All Rights Reserved.
-    </p>
-  </div>
+
+<div class="container footer-container">
+
+<div class="row">
+
+<!-- COLLEGE INFO -->
+<div class="col-md-4 footer-col">
+<h5>Satara Polytechnic</h5>
+<p>
+Satara Polytechnic is committed to providing quality technical education 
+with modern infrastructure, experienced faculty, and strong industry 
+connections to help students build successful careers.
+</p>
+</div>
+
+<!-- QUICK LINKS -->
+<div class="col-md-4 footer-col">
+<h5>Quick Links</h5>
+<ul class="footer-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="aboutus.html">About Us</a></li>
+<li><a href="sample.html">Departments</a></li>
+<li><a href="events.html">Events & Activities</a></li>
+<li><a href="notice.html">Notice Board</a></li>
+<li><a href="admission.html">Admission Process</a></li>
+<li><a href="placements.html">Training & Placement</a></li>
+<li><a href="contactus.html">Contact Us</a></li>
+</ul>
+</div>
+
+<!-- CONTACT -->
+<div class="col-md-4 footer-col">
+<h5>Contact Us</h5>
+<p>Satara Polytechnic</p>
+<p>Satara, Maharashtra, India</p>
+<p>Phone: +91 XXXXX XXXXX</p>
+<p>Email: info@satarapolytechnic.org</p>
+
+<div class="social-icons">
+<a href="#">🌐</a>
+<a href="#">📘</a>
+<a href="#">📷</a>
+</div>
+
+</div>
+
+</div>
+
+<!-- COPYRIGHT -->
+<div class="footer-bottom">
+<p>
+© <span id="year"></span> Satara Polytechnic, Satara.  
+All Rights Reserved. | Designed & Developed by <b>Nikhil Sawant</b>
+</p>
+</div>
+
+</div>
+
 </footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
