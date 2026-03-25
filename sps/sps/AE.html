@@ -14,19 +14,81 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{background:#f4f6fb;color:#222;}
 
-/* NAVBAR */
-.navbar{background:linear-gradient(90deg,#0b1f3a,#102e5a);}
-.navbar-brand img{width:38px;height:38px;border-radius:50%;}
-.navbar-nav .nav-link{color:#fff!important;font-weight:600;}
-.navbar-nav .nav-link:hover{background:#f39c12;color:#000!important;border-radius:6px}
+/* NAVBAR MAIN */
+.navbar{
+  background: linear-gradient(90deg,#0b1f3a,#173a6a);
+  padding: 8px 12px;
+}
+
+.navbar-brand img{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+}
+
+/* NAV LINKS */
+.navbar-nav{
+  margin-left:15px;
+}
+
+.navbar-nav .nav-item{
+  margin-right:6px;
+}
+
+.navbar-nav .nav-link{
+  color:#fff !important;
+  font-weight:500;
+  padding:8px 14px;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+/* ACTIVE TAB (HOME) */
+.navbar-nav .nav-link.active{
+  background:#f39c12;
+  color:#000 !important;
+}
+
+/* HOVER EFFECT */
+.navbar-nav .nav-link:hover{
+  background:rgba(255,255,255,0.15);
+}
 
 /* DROPDOWN */
-.dropdown-menu{background:#102e5a;border:none;border-radius:10px;}
-.dropdown-item{color:#fff;}
-.dropdown-item:hover{background:#f39c12;color:#000;}
+.dropdown-menu{
+  background:#102e5a;
+  border:none;
+  border-radius:10px;
+  padding:8px 0;
+  margin-top:8px;
+}
 
+.dropdown-item{
+  color:#fff;
+  padding:10px 18px;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.dropdown-item:hover{
+  background:#f39c12;
+  color:#000;
+}
+
+/* HOVER DROPDOWN (DESKTOP) */
 @media (min-width:768px){
-.navbar .dropdown:hover .dropdown-menu{display:block;}
+  .navbar .dropdown:hover .dropdown-menu{
+    display:block;
+  }
+}
+
+/* MOBILE FIX */
+@media(max-width:767px){
+  .navbar-collapse{
+    background:#102e5a;
+    padding:10px;
+    border-radius:0 0 10px 10px;
+  }
 }
 
 .container{max-width:1200px;margin:auto;padding:100px 20px 30px;}
@@ -80,35 +142,79 @@ object-fit:cover;border:5px solid #0b63d6;margin-bottom:18px;
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-<a class="navbar-brand" href="index.html">
-<img src="https://i.ibb.co/RkDs4pfs/download.jpg">
-</a>
 
-<button class="navbar-toggler" data-toggle="collapse" data-target="#nav">
-<span class="navbar-toggler-icon"></span>
-</button>
+  <a class="navbar-brand" href="index.html">
+    <img src="https://i.ibb.co/RkDs4pfs/download.jpg">
+  </a>
 
-<div class="collapse navbar-collapse" id="nav">
-<ul class="navbar-nav">
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#nav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+  <div class="collapse navbar-collapse" id="nav">
 
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Department</a>
-<div class="dropdown-menu">
-<a class="dropdown-item" href="AE.html">Automobile</a>
-<a class="dropdown-item" href="CH.html">Chemical</a>
-<a class="dropdown-item" href="CO.html">Computer</a>
-<a class="dropdown-item" href="EE.html">Electrical</a>
-<a class="dropdown-item" href="ENTC.html">ENTC</a>
-<a class="dropdown-item" href="ME.html">Mechanical</a>
-</div>
-</li>
+    <ul class="navbar-nav">
 
-</ul>
-</div>
+      <li class="nav-item">
+        <a class="nav-link active" href="index.html">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="aboutus.html">About Us</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="govermentbody.html">Governing Body</a>
+      </li>
+
+      <!-- DROPDOWN -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+          Department
+        </a>
+
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="AE.html">Automobile Engineering</a>
+          <a class="dropdown-item" href="CH.html">Chemical Engineering</a>
+          <a class="dropdown-item" href="CO.html">Computer Engineering</a>
+          <a class="dropdown-item" href="EE.html">Electrical Engineering</a>
+          <a class="dropdown-item" href="ENTC.html">ENTC Engineering</a>
+          <a class="dropdown-item" href="ME.html">Mechanical Engineering</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="events.html">Event & Activities</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="campus.html">Campus Gallery</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="notice.html">Notice Board</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="contactus.html">Contact Us</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="admission.html">Admission Process</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="placements.html">TPO</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="nonteachingstaff.html">Non-Teaching Staff</a>
+      </li>
+
+    </ul>
+
+  </div>
 </nav>
 
 <div class="container">
