@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -6,128 +6,219 @@
 
 <title>Automobile Engineering — Satara Polytechnic Satara</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root{
---bg:#f7f8fb;
---card:#ffffff;
---accent:#0078d7;
---muted:#555;
---maxw:1100px;
---radius:12px;
---gap:18px;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
-*{box-sizing:border-box}
-
 body{
-margin:0;
-font-family:Inter,ui-sans-serif,system-ui;
-background:var(--bg);
-color:#111;
+background:#f4f6fb;
+color:#222;
 }
 
 .container{
-max-width:var(--maxw);
-margin:28px auto;
-padding:24px;
+max-width:1200px;
+margin:auto;
+padding:30px 20px;
 }
 
+/* HEADER */
+
 .header{
-background:linear-gradient(90deg,var(--accent),#2aa7ff);
+background:linear-gradient(135deg,#0b63d6,#1ea7ff);
 color:white;
-padding:20px;
-border-radius:var(--radius);
+padding:25px;
+border-radius:14px;
 display:flex;
-gap:16px;
 align-items:center;
+gap:18px;
+box-shadow:0 10px 35px rgba(0,0,0,.15);
 }
 
 .logo{
-width:72px;
-height:72px;
+width:70px;
+height:70px;
 border-radius:10px;
-background:rgba(255,255,255,0.15);
+background:rgba(255,255,255,.2);
 display:flex;
 align-items:center;
 justify-content:center;
 font-weight:700;
+font-size:20px;
 }
+
+.header h1{
+font-size:20px;
+}
+
+.header p{
+font-size:14px;
+opacity:.9;
+}
+
+/* CARD */
 
 .card{
-background:var(--card);
-padding:18px;
-border-radius:12px;
-margin-top:18px;
+background:#fff;
+padding:25px;
+margin-top:25px;
+border-radius:14px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
+/* TITLES */
+
 .section-title{
-color:var(--accent);
+color:#0b63d6;
 font-weight:600;
-margin-bottom:10px;
+margin-bottom:12px;
 }
+
+/* LAB IMAGES */
 
 .lab-images{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-gap:10px;
-margin-top:12px;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-top:15px;
 }
 
 .lab-images img{
 width:100%;
-height:110px;
+height:200px;
 object-fit:cover;
-border-radius:8px;
+border-radius:10px;
+transition:.4s;
 }
+
+.lab-images img:hover{
+transform:scale(1.05);
+}
+
+/* STAFF GRID */
 
 .staff-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:14px;
-margin-top:12px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:20px;
 }
+
+/* STAFF CARD */
 
 .staff-card{
-display:flex;
-gap:12px;
-align-items:flex-start;
-padding:12px;
-border-radius:10px;
-background:rgba(0,0,0,0.03);
+background:#fff;
+border-radius:20px;
+padding:25px;
+text-align:center;
+box-shadow:0 12px 35px rgba(0,0,0,.12);
+transition:.4s;
 }
+
+.staff-card:hover{
+transform:translateY(-8px);
+}
+
+/* STAFF PHOTO */
 
 .staff-photo{
-width:84px;
-height:84px;
-border-radius:8px;
+width:140px;
+height:140px;
+border-radius:50%;
 object-fit:cover;
+margin:auto;
+border:5px solid #0b63d6; /* SAME AS CHEMICAL */
+margin-bottom:18px;
 }
 
-.staff-name{font-weight:600;}
-.staff-role,.staff-meta{font-size:13px;color:var(--muted);}
-.staff-email{font-size:13px;color:var(--accent);}
+/* STAFF TEXT */
+
+.staff-name{
+font-size:20px;
+font-weight:600;
+margin-bottom:5px;
+}
+
+.staff-role{
+color:#0b63d6;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.staff-meta{
+color:#555;
+margin-bottom:6px;
+}
+
+.staff-email{
+color:#666;
+font-size:14px;
+word-break:break-word;
+}
+
+/* FOOTER */
 
 .footer{
-margin-top:22px;
+margin-top:30px;
 text-align:center;
-color:var(--muted);
+font-size:14px;
+color:#666;
+}
+
+/* BACK BUTTON */
+
+.back-btn-container{
+margin-top:15px;
 }
 
 .back-btn{
 display:inline-block;
-margin-top:15px;
-background:#f39c12;
-padding:8px 14px;
-border-radius:6px;
+background:#0b63d6;
+color:#fff;
+padding:10px 18px;
+border-radius:8px;
 text-decoration:none;
-color:#000;
+font-weight:500;
+transition:.3s;
 }
+
+.back-btn:hover{
+background:#084aa3;
+transform:translateY(-2px);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+.lab-images{
+grid-template-columns:repeat(2,1fr);
+}
+.header{
+flex-direction:column;
+align-items:flex-start;
+}
+}
+
+@media(max-width:480px){
+.lab-images{
+grid-template-columns:1fr;
+}
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="container">
+
+<!-- HEADER -->
 
 <div class="header">
 <div class="logo">SPS</div>
@@ -137,7 +228,11 @@ color:#000;
 </div>
 </div>
 
-<a href="sample.html" class="back-btn">← Back</a>
+<div class="back-btn-container">
+<a href="sample.html" class="back-btn">← Back to Departments</a>
+</div>
+
+<!-- DEPARTMENT INFO -->
 
 <div class="card">
 
@@ -145,9 +240,9 @@ color:#000;
 
 <p><b>Established:</b> 1983</p>
 
-<p><b>Vision:</b> Grow students into engineers and entrepreneurs.</p>
+<p><b>Vision:</b> The vision of Automobile Engineering Department is to grow students into engineers and entrepreneurs with skills to meet global demands.</p>
 
-<p><b>Mission:</b> Provide automobile knowledge and develop skills.</p>
+<p><b>Mission:</b> To provide automobile engineering knowledge and develop psycho-motor and soft skills through modern facilities.</p>
 
 <h4 class="section-title">Laboratories</h4>
 
@@ -158,60 +253,60 @@ color:#000;
 </ul>
 
 <div class="lab-images">
+
 <img src="https://i.ibb.co/G4kNp2dz/Auto-Autmobile-sytem-and-body-engineering.jpg">
 <img src="https://i.ibb.co/Pnd75tT/Auto-Autmobile-sytem-and-body-engineering4.jpg">
 <img src="https://i.ibb.co/Lz7jmwzM/Auto-Auto-Engines-Lab.jpg">
 <img src="https://i.ibb.co/Gfw1VN1S/Auto-Auto-Engines-Lab3.jpg">
 <img src="https://i.ibb.co/HfZW3fnW/Auto-SATTEP-Lab.jpg">
 <img src="https://i.ibb.co/jPKPD2Y9/Auto-SATTEP-Lab4.jpg">
+
 </div>
 
 </div>
+
+<!-- STAFF -->
 
 <div class="card">
 
-<h4 class="section-title">Staff — Automobile Department</h4>
+<h3 class="section-title">Staff — Automobile Department</h3>
 
 <div class="staff-grid">
 
 <div class="staff-card">
 <img class="staff-photo" src="https://i.ibb.co/ZzWS61xL/gaikwad.jpg">
-<div>
-<div class="staff-name">Mr. Gaikwad Abhaysingh</div>
+<div class="staff-name">Mr. Gaikwad Abhaysingh Vilasrao</div>
 <div class="staff-role">Incharge HOD</div>
+<div class="staff-meta">B.E. (Mechanical), M.E. (Design)</div>
 <div class="staff-meta">Experience: 8 Years</div>
 <div class="staff-email">abhaysinhgkwd@gmail.com</div>
-</div>
 </div>
 
 <div class="staff-card">
 <img class="staff-photo" src="https://i.ibb.co/b5Z0qGCM/vhiki.jpg">
-<div>
-<div class="staff-name">Mr. Bhosale Vhiki</div>
+<div class="staff-name">Mr. Bhosale Vhiki Ashok</div>
 <div class="staff-role">Lecturer</div>
+<div class="staff-meta">B.E. (Production)</div>
 <div class="staff-meta">Experience: 10 Years</div>
 <div class="staff-email">bhosalevicky123@gmail.com</div>
-</div>
 </div>
 
 <div class="staff-card">
 <img class="staff-photo" src="https://i.ibb.co/kgPMjCRw/mane.jpg">
-<div>
-<div class="staff-name">Mr. Mane Amol</div>
+<div class="staff-name">Mr. Mane Amol Mohan</div>
 <div class="staff-role">Lecturer</div>
+<div class="staff-meta">B.E. (Mechanical)</div>
 <div class="staff-meta">Experience: 9 Years</div>
 <div class="staff-email">amolmane2806@gmail.com</div>
-</div>
 </div>
 
 <div class="staff-card">
 <img class="staff-photo" src="https://i.ibb.co/LD6hx7wt/nikam.jpg">
-<div>
-<div class="staff-name">Mr. Nikam Pramod</div>
+<div class="staff-name">Mr. Nikam Pramod Sudhakar</div>
 <div class="staff-role">Technical Assistant</div>
+<div class="staff-meta">Diploma in Auto Engineering</div>
 <div class="staff-meta">Experience: —</div>
 <div class="staff-email">psnikam2010@gmail.com</div>
-</div>
 </div>
 
 </div>
@@ -226,4 +321,3 @@ For detailed queries contact the department email addresses listed above.
 
 </body>
 </html>
-
