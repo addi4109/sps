@@ -7,216 +7,96 @@
 <title>Chemical Engineering — Satara Polytechnic Satara</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f4f6fb;color:#222;}
+
+/* NAVBAR */
+.navbar{background:linear-gradient(90deg,#0b1f3a,#102e5a);}
+.navbar-brand img{width:38px;height:38px;border-radius:50%;}
+.navbar-nav .nav-link{color:#fff!important;font-weight:600;}
+.navbar-nav .nav-link:hover{background:#f39c12;color:#000!important;border-radius:6px}
+
+/* DROPDOWN */
+.dropdown-menu{background:#102e5a;border:none;border-radius:10px;}
+.dropdown-item{color:#fff;}
+.dropdown-item:hover{background:#f39c12;color:#000;}
+
+@media (min-width:768px){
+.navbar .dropdown:hover .dropdown-menu{display:block;}
 }
 
-body{
-background:#f4f6fb;
-color:#222;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:30px 20px;
-}
-
-/* HEADER */
+.container{max-width:1200px;margin:auto;padding:100px 20px 30px;}
 
 .header{
 background:linear-gradient(135deg,#0b63d6,#1ea7ff);
-color:white;
-padding:25px;
-border-radius:14px;
-display:flex;
-align-items:center;
-gap:18px;
-box-shadow:0 10px 35px rgba(0,0,0,.15);
+color:white;padding:25px;border-radius:14px;display:flex;gap:18px;
 }
 
 .logo{
-width:70px;
-height:70px;
-border-radius:10px;
+width:70px;height:70px;border-radius:10px;
 background:rgba(255,255,255,.2);
-display:flex;
-align-items:center;
-justify-content:center;
+display:flex;align-items:center;justify-content:center;
 font-weight:700;
-font-size:20px;
 }
-
-.header h1{
-font-size:20px;
-}
-
-.header p{
-font-size:14px;
-opacity:.9;
-}
-
-/* CARD */
 
 .card{
-background:#fff;
-padding:25px;
-margin-top:25px;
-border-radius:14px;
+background:#fff;padding:25px;margin-top:25px;border-radius:14px;
 box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
-/* TITLES */
-
-.section-title{
-color:#0b63d6;
-font-weight:600;
-margin-bottom:12px;
-}
-
-/* LAB IMAGES */
+.section-title{color:#0b63d6;font-weight:600;margin-bottom:12px;}
 
 .lab-images{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
-margin-top:15px;
+display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:15px;
 }
 
 .lab-images img{
-width:100%;
-height:200px;
-object-fit:cover;
-border-radius:10px;
-transition:.4s;
+width:100%;height:200px;object-fit:cover;border-radius:10px;
 }
 
-.lab-images img:hover{
-transform:scale(1.05);
-}
-
-/* STAFF GRID */
-
-.staff-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-top:20px;
-}
-
-/* STAFF CARD */
-
-.staff-card{
-background:#fff;
-border-radius:20px;
-padding:25px;
-text-align:center;
-box-shadow:0 12px 35px rgba(0,0,0,.12);
-transition:.4s;
-}
-
-.staff-card:hover{
-transform:translateY(-8px);
-}
-
-/* STAFF PHOTO */
-
-.staff-photo{
-width:140px;
-height:140px;
-border-radius:50%;
-object-fit:cover;
-margin:auto;
-border:5px solid #0b63d6;
-margin-bottom:18px;
-}
-
-/* STAFF TEXT */
-
-.staff-name{
-font-size:20px;
-font-weight:600;
-margin-bottom:5px;
-}
-
-.staff-role{
-color:#0b63d6;
-font-weight:600;
-margin-bottom:10px;
-}
-
-.staff-meta{
-color:#555;
-margin-bottom:6px;
-}
-
-.staff-email{
-color:#666;
-font-size:14px;
-word-break:break-word;
-}
-
-/* FOOTER */
-
-.footer{
-margin-top:30px;
-text-align:center;
-font-size:14px;
-color:#666;
-}
-
-.back-btn-container{
-margin-top:15px;
-}
-
-.back-btn{
-display:inline-block;
-background:#0b63d6;
-color:#fff;
-padding:10px 18px;
-border-radius:8px;
-text-decoration:none;
-font-weight:500;
-transition:.3s;
-}
-
-.back-btn:hover{
-background:#084aa3;
-transform:translateY(-2px);
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-.lab-images{
-grid-template-columns:repeat(2,1fr);
-}
-.header{
-flex-direction:column;
-align-items:flex-start;
-}
-}
-
-@media(max-width:480px){
-.lab-images{
-grid-template-columns:1fr;
-}
-}
+.footer{text-align:center;margin-top:30px;color:#666;}
 
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+<a class="navbar-brand" href="index.html">
+<img src="https://i.ibb.co/RkDs4pfs/download.jpg">
+</a>
 
-<!-- HEADER -->
+<button class="navbar-toggler" data-toggle="collapse" data-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav">
+
+<li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Department</a>
+<div class="dropdown-menu">
+<a class="dropdown-item" href="AE.html">Automobile</a>
+<a class="dropdown-item" href="CH.html">Chemical</a>
+<a class="dropdown-item" href="CO.html">Computer</a>
+<a class="dropdown-item" href="EE.html">Electrical</a>
+<a class="dropdown-item" href="ENTC.html">ENTC</a>
+<a class="dropdown-item" href="ME.html">Mechanical</a>
+</div>
+</li>
+
+</ul>
+</div>
+</nav>
+
+<div class="container">
 
 <div class="header">
 <div class="logo">SPS</div>
@@ -226,113 +106,32 @@ grid-template-columns:1fr;
 </div>
 </div>
 
-<div class="back-btn-container">
-<a href="sample.html" class="back-btn">← Back to Departments</a>
-</div>
-
-<!-- DEPARTMENT INFO -->
-
 <div class="card">
-
 <h3 class="section-title">Chemical Engineering</h3>
 
 <p><b>Established:</b> 1983</p>
-
-<p><b>Vision:</b> To be a nationally recognized chemical engineering department catering to the needs of industry & society.</p>
-
-<p><b>Mission:</b> Prepare employable personnel & entrepreneurs through industry-institute interaction; inculcate social responsibility; educate students at national competitive level.</p>
+<p><b>Vision:</b> To be nationally recognized department.</p>
 
 <h4 class="section-title">Laboratories</h4>
 
 <ul>
 <li>Fluid Mechanics Lab</li>
-<li>Instrumentation & Process Control Lab</li>
+<li>Instrumentation Lab</li>
 <li>Heat & Mass Transfer Lab</li>
 </ul>
 
 <div class="lab-images">
-
 <img src="https://i.ibb.co/N25c0qDh/chem-fluid-mechanics-lab.jpg">
 <img src="https://i.ibb.co/SDnMvQYm/chem-Heat-and-Mass-transfer-lab-1.jpg">
 <img src="https://i.ibb.co/S4Hf5s5y/chem-instrumantation-and-process-control-lab.jpg">
-<img src="https://i.ibb.co/CpG8w4fL/chem-instrumantation-and-process-control-lab1.jpg">
-<img src="https://i.ibb.co/VcxWXB54/chem-PVETlab1.jpg">
-
-</div>
-
-</div>
-
-<!-- STAFF -->
-
-<div class="card">
-
-<h3 class="section-title">Staff — Chemical Department</h3>
-
-<div class="staff-grid">
-
-<div class="staff-card">
-<img class="staff-photo" src="https://i.ibb.co/20TzZdKd/patil.jpg">
-<div class="staff-name">Mr. Patil Ulhas S.</div>
-<div class="staff-role">Incharge HOD</div>
-<div class="staff-meta">M.E. (Chemical Engg.)</div>
-<div class="staff-meta">Experience: 27 Years</div>
-<div class="staff-email">ulhaspatil23@yahoo.com</div>
-</div>
-
-<div class="staff-card">
-<img class="staff-photo" src="https://i.ibb.co/CpY9f19M/ghalke.jpg">
-<div class="staff-name">Mr. Ghalke Sunil K.</div>
-<div class="staff-role">Lecturer (Selection Grade)</div>
-<div class="staff-meta">B.Tech (Chemical Engg.)</div>
-<div class="staff-meta">Experience: 29 Years</div>
-<div class="staff-email">barshikar65@gmail.com</div>
-</div>
-
-<div class="staff-card">
-<img class="staff-photo" src="https://i.ibb.co/ZzDkZps0/chikane.jpg">
-<div class="staff-name">Mr. Chikane Mangesh Ravindra</div>
-<div class="staff-role">Lecturer</div>
-<div class="staff-meta">B.Tech (Chemical Engg.)</div>
-<div class="staff-meta">Experience: 1 Year</div>
-<div class="staff-email">mangeshchikane1999@gmail.com</div>
-</div>
-
-<div class="staff-card">
-<img class="staff-photo" src="https://i.ibb.co/w1xDghW/Bhide-jpg.jpg">
-<div class="staff-name">Ms. Bhide V.D.</div>
-<div class="staff-role">Lecturer</div>
-<div class="staff-meta">B.E. (Chemical Engg.)</div>
-<div class="staff-meta">Experience: 1 Year</div>
-<div class="staff-email">itsvish.101@gmail.com</div>
-</div>
-
-<div class="staff-card">
-<img class="staff-photo" src="https://i.ibb.co/GQGLSdHs/Waghmare.jpg">
-<div class="staff-name">Mr. Waghmare A. A.</div>
-<div class="staff-role">Technical Assistant</div>
-<div class="staff-meta">Diploma (CHE)</div>
-<div class="staff-meta">Experience: 1 Year</div>
-<div class="staff-email">akashwaghmare2491@gmail.com</div>
-</div>
-
-<div class="staff-card">
-<img class="staff-photo" src="https://i.ibb.co/hJSRgSRX/tatpuje.jpg">
-<div class="staff-name">Mr. Tatpuje Mandar Uttamrao</div>
-<div class="staff-role">Technical Assistant</div>
-<div class="staff-meta">B.Sc</div>
-<div class="staff-meta">Experience: —</div>
-<div class="staff-email">mandar.tatpuje@gmail.com</div>
 </div>
 
 </div>
 
 </div>
 
-<div class="footer">
-For detailed queries contact the department email addresses listed above.
-</div>
-
-</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
