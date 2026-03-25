@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>General Science — Satara Polytechnic Satara</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f6fb;
+color:#222;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:30px 20px;
+}
+
+/* HEADER */
+
+.header{
+background:linear-gradient(135deg,#0b63d6,#1ea7ff);
+color:white;
+padding:25px;
+border-radius:14px;
+display:flex;
+align-items:center;
+gap:18px;
+box-shadow:0 10px 35px rgba(0,0,0,.15);
+}
+
+.logo{
+width:70px;
+height:70px;
+border-radius:10px;
+background:rgba(255,255,255,.2);
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+font-size:20px;
+}
+
+.header h1{
+font-size:20px;
+}
+
+.header p{
+font-size:14px;
+opacity:.9;
+}
+
+/* CARD */
+
+.card{
+background:#fff;
+padding:25px;
+margin-top:25px;
+border-radius:14px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+/* TITLES */
+
+.section-title{
+color:#0b63d6;
+font-weight:600;
+margin-bottom:12px;
+}
+
+/* LAB IMAGES */
+
+.lab-images{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-top:15px;
+}
+
+/* STAFF GRID */
+
+.staff-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:20px;
+}
+
+/* STAFF CARD */
+
+.staff-card{
+background:#fff;
+border-radius:20px;
+padding:25px;
+text-align:center;
+box-shadow:0 12px 35px rgba(0,0,0,.12);
+transition:.4s;
+}
+
+.staff-card:hover{
+transform:translateY(-8px);
+}
+
+/* STAFF PHOTO */
+
+.staff-photo{
+width:140px;
+height:140px;
+border-radius:50%;
+object-fit:cover;
+margin:auto;
+border:5px solid #0b63d6;
+margin-bottom:18px;
+}
+
+/* STAFF TEXT */
+
+.staff-name{
+font-size:20px;
+font-weight:600;
+margin-bottom:5px;
+}
+
+.staff-role{
+color:#0b63d6;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.staff-meta{
+color:#555;
+margin-bottom:6px;
+}
+
+.staff-email{
+color:#666;
+font-size:14px;
+word-break:break-word;
+}
+
+/* FOOTER */
+
+.footer{
+margin-top:30px;
+text-align:center;
+font-size:14px;
+color:#666;
+}
+
+/* BACK BUTTON */
+
+.back-btn-container{
+margin-top:15px;
+}
+
+.back-btn{
+display:inline-block;
+background:#0b63d6;
+color:#fff;
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+.back-btn:hover{
+background:#084aa3;
+transform:translateY(-2px);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+.lab-images{
+grid-template-columns:repeat(2,1fr);
+}
+.header{
+flex-direction:column;
+align-items:flex-start;
+}
+}
+
+@media(max-width:480px){
+.lab-images{
+grid-template-columns:1fr;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HEADER -->
+
+<div class="header">
+<div class="logo">SPS</div>
+<div>
+<h1>Satara Polytechnic Satara</h1>
+<p>Department of General Science</p>
+</div>
+</div>
+
+<div class="back-btn-container">
+<a href="sample.html" class="back-btn">← Back to Departments</a>
+</div>
+
+<!-- DEPARTMENT INFO -->
+
+<div class="card">
+
+<h3 class="section-title">General Science</h3>
+
+<p><b>Established:</b> —</p>
+
+<p><b>Vision:</b> To build a strong scientific foundation among students and develop analytical thinking.</p>
+
+<p><b>Mission:</b> To provide fundamental knowledge of science and support core engineering subjects.</p>
+
+<h4 class="section-title">Laboratories</h4>
+
+<ul>
+<li>Physics Lab</li>
+<li>Chemistry Lab</li>
+<li>Environmental Science Lab</li>
+</ul>
+
+<div class="lab-images">
+<!-- You can add lab images later -->
+</div>
+
+</div>
+
+<!-- STAFF -->
+
+<div class="card">
+
+<h3 class="section-title">Staff — General Science Department</h3>
+
+<div class="staff-grid">
+
+<div class="staff-card">
+<img class="staff-photo" src="https://i.ibb.co/xtX5YMMj/ge4.webp">
+<div class="staff-name">Name Here</div>
+<div class="staff-role">Role</div>
+<div class="staff-meta">Qualification</div>
+<div class="staff-meta">Experience</div>
+<div class="staff-email">Email</div>
+</div>
+
+<div class="staff-card">
+<img class="staff-photo" src="https://i.ibb.co/MxtPs0sx/ge5.webp">
+<div class="staff-name">Name Here</div>
+<div class="staff-role">Role</div>
+<div class="staff-meta">Qualification</div>
+<div class="staff-meta">Experience</div>
+<div class="staff-email">Email</div>
+</div>
+
+<div class="staff-card">
+<img class="staff-photo" src="https://i.ibb.co/vvzj2ZPx/ge1.webp">
+<div class="staff-name">Name Here</div>
+<div class="staff-role">Role</div>
+<div class="staff-meta">Qualification</div>
+<div class="staff-meta">Experience</div>
+<div class="staff-email">Email</div>
+</div>
+
+<div class="staff-card">
+<img class="staff-photo" src="https://i.ibb.co/JwfQGvhx/ge2.jpg">
+<div class="staff-name">Name Here</div>
+<div class="staff-role">Role</div>
+<div class="staff-meta">Qualification</div>
+<div class="staff-meta">Experience</div>
+<div class="staff-email">Email</div>
+</div>
+
+<div class="staff-card">
+<img class="staff-photo" src="https://i.ibb.co/d4Q6GV2S/ge3.webp">
+<div class="staff-name">Name Here</div>
+<div class="staff-role">Role</div>
+<div class="staff-meta">Qualification</div>
+<div class="staff-meta">Experience</div>
+<div class="staff-email">Email</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+For detailed queries contact the department email addresses listed above.
+</div>
+
+</div>
+
+</body>
+</html>
