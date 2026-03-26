@@ -26,134 +26,113 @@ body{
 background:#f4f6fb;
 }
 
-/* NAVBAR (SAME AS HOMEPAGE) */
+/* NAVBAR */
 .navbar{
-  background:linear-gradient(90deg, #0b1f3a, #102e5a);
-  padding:.35rem .6rem;
+background:linear-gradient(90deg,#0b1f3a,#102e5a);
+padding:.35rem .6rem;
 }
 
 .navbar-brand img{
-  width:38px;
-  height:38px;
-  border-radius:50%;
+width:38px;
+height:38px;
+border-radius:50%;
 }
 
 .navbar-nav{
-  margin-left:20px;
+margin-left:20px;
 }
 
 .navbar-nav .nav-item{
-  margin-right:7px;
-  font-size:14px;
+margin-right:7px;
+font-size:14px;
 }
 
 .navbar-dark .navbar-nav .nav-link{
-  color:#fff!important;
-  font-weight:600;
-  padding:6px 10px;
-  transition:.3s;
+color:#fff!important;
+font-weight:600;
+padding:6px 10px;
+transition:.3s;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active{
-  background:#f39c12;
-  color:#000!important;
-  border-radius:6px;
+background:#f39c12;
+color:#000!important;
+border-radius:6px;
 }
 
 /* DROPDOWN */
 .dropdown-menu{
-  background:#102e5a;
-  border:none;
-  border-radius:10px;
+background:#102e5a;
+border:none;
+border-radius:10px;
 }
 
 .dropdown-item{
-  color:#fff;
-  font-size:14px;
-  padding:10px 16px;
+color:#fff;
+padding:10px 16px;
 }
 
 .dropdown-item:hover,
 .dropdown-item.active{
-  background:#f39c12;
-  color:#000;
+background:#f39c12;
+color:#000;
 }
 
-/* HOVER DROPDOWN */
-@media (min-width:768px){
-  .navbar .dropdown:hover .dropdown-menu{
-    display:block;
-  }
-}
-
-/* MOBILE FIX */
-@media (max-width:767px){
-  .navbar-collapse{
-    background: linear-gradient(
-      to bottom,
-      rgba(11,31,58,0.96),
-      rgba(16,46,90,0.96)
-    );
-    padding:14px 12px;
-    border-radius:0 0 16px 16px;
-  }
-
-  .navbar-nav .nav-link{
-    width:100%;
-    padding:12px 16px;
-    border-radius:10px;
-  }
-}
-
-/* PAGE */
-.container{
+/* HERO HEADER (NEW MODERN) */
+.hero{
+margin-top:100px;
 max-width:1200px;
-margin:auto;
-padding:100px 20px 30px;
-}
-
-/* HEADER */
-.header{
+margin-left:auto;
+margin-right:auto;
+padding:40px 25px;
+border-radius:20px;
 background:linear-gradient(135deg,#0b63d6,#1ea7ff);
 color:white;
-padding:25px;
-border-radius:14px;
-display:flex;
-gap:18px;
-}
-
-.logo{
-width:70px;
-height:70px;
-border-radius:50%;
-overflow:hidden;
-background:rgba(255,255,255,.2);
 display:flex;
 align-items:center;
-justify-content:center;
-flex-shrink:0;
+gap:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
 }
 
-.logo img{
+/* glass effect */
+.hero::after{
+content:"";
+position:absolute;
+}
+
+/* LOGO */
+.hero-logo{
+width:80px;
+height:80px;
+border-radius:50%;
+overflow:hidden;
+flex-shrink:0;
+border:4px solid rgba(255,255,255,.3);
+}
+
+.hero-logo img{
 width:100%;
 height:100%;
 object-fit:cover;
-border-radius:50%;
 }
 
-@media(max-width:768px){
-.header{
-flex-direction:column;
-align-items:center;
-text-align:center;
+/* TEXT */
+.hero-text h1{
+font-size:26px;
+font-weight:600;
 }
 
-.logo{
-width:80px;
-height:80px;
-margin-bottom:10px;
+.hero-text p{
+opacity:.9;
+margin-top:5px;
 }
+
+/* CONTAINER FIX (padding added) */
+.container{
+max-width:1200px;
+margin:auto;
+padding:30px 25px;
 }
 
 /* CARD */
@@ -162,6 +141,7 @@ background:#fff;
 padding:25px;
 margin-top:25px;
 border-radius:14px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
 }
 
 /* TITLES */
@@ -239,10 +219,29 @@ color:#666;
 word-break:break-word;
 }
 
+/* FOOTER */
 .footer{
 margin-top:30px;
 text-align:center;
 font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.lab-images{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:480px){
+.lab-images{
+grid-template-columns:1fr;
+}
 }
 
 </style>
@@ -284,24 +283,29 @@ font-size:14px;
 <li class="nav-item"><a class="nav-link" href="campus.html">Campus Gallery</a></li>
 <li class="nav-item"><a class="nav-link" href="notice.html">Notice Board</a></li>
 <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
-<li class="nav-item"><a class="nav-link" href="admission.html">Admission Process</a></li>
-<li class="nav-item"><a class="nav-link" href="placements.html">TPO</a></li>
-<li class="nav-item"><a class="nav-link" href="nonteachingstaff.html">Non-Teaching Staff</a></li>
 
 </ul>
 </div>
 </nav>
 
+<!-- HERO HEADER -->
+<div class="container">
+  <div class="hero">
+
+    <div class="hero-logo">
+      <img src="https://i.ibb.co/hJY0MQTy/download.jpg">
+    </div>
+
+    <div class="hero-text">
+      <h1>Department of Automobile Engineering</h1>
+      <p>Satara Polytechnic Satara</p>
+    </div>
+
+  </div>
+</div>
+
 <!-- CONTENT -->
 <div class="container">
-
-<div class="header">
-<div class="logo">
-  <img src="https://i.ibb.co/hJY0MQTy/download.jpg" alt="SPS Logo">
-</div>
-<h1>Department of Automobile Engineering</h1>
-</div>
-</div>
 
 <div class="card">
 <h3 class="section-title">Automobile Engineering</h3>
@@ -333,40 +337,39 @@ font-size:14px;
 
 <div class="staff-grid">
 
-<div class="staff-card">
-<img class="staff-photo" src="https://i.ibb.co/ZzWS61xL/gaikwad.jpg">
-<div class="staff-name">Mr. Gaikwad Abhaysingh Vilasrao</div>
-<div class="staff-role">Incharge HOD</div>
-<div class="staff-meta">B.E., M.E.</div>
-<div class="staff-meta">Experience: 8 Years</div>
-<div class="staff-email">abhaysinhgkwd@gmail.com</div>
-</div>
+<div class="staff-card"> 
+<img class="staff-photo" src="https://i.ibb.co/ZzWS61xL/gaikwad.jpg"> 
+<div class="staff-name">Mr. Gaikwad Abhaysingh Vilasrao</div> 
+<div class="staff-role">Incharge HOD</div> 
+<div class="staff-meta">B.E., M.E.</div> 
+<div class="staff-meta">Experience: 8 Years</div> 
+<div class="staff-email">abhaysinhgkwd@gmail.com</div> 
+</div> 
 
-<div class="staff-card">
-<img class="staff-photo" src="https://i.ibb.co/b5Z0qGCM/vhiki.jpg">
-<div class="staff-name">Mr. Bhosale Vhiki Ashok</div>
-<div class="staff-role">Lecturer</div>
-<div class="staff-meta">B.E.</div>
-<div class="staff-meta">Experience: 10 Years</div>
-<div class="staff-email">bhosalevicky123@gmail.com</div>
-</div>
+<div class="staff-card"> 
+<img class="staff-photo" src="https://i.ibb.co/b5Z0qGCM/vhiki.jpg"> 
+<div class="staff-name">Mr. Bhosale Vhiki Ashok</div> 
+<div class="staff-role">Lecturer</div> <div class="staff-meta">B.E.</div> 
+<div class="staff-meta">Experience: 10 Years</div> 
+<div class="staff-email">bhosalevicky123@gmail.com</div> 
+</div> 
 
-<div class="staff-card">
-<img class="staff-photo" src="https://i.ibb.co/kgPMjCRw/mane.jpg">
+<div class="staff-card"> 
+<img class="staff-photo" src="https://i.ibb.co/kgPMjCRw/mane.jpg"> 
 <div class="staff-name">Mr. Mane Amol Mohan</div>
-<div class="staff-role">Lecturer</div>
-<div class="staff-meta">B.E.</div>
-<div class="staff-meta">Experience: 9 Years</div>
-<div class="staff-email">amolmane2806@gmail.com</div>
-</div>
+<div class="staff-role">Lecturer</div> 
+<div class="staff-meta">B.E.</div> 
+<div class="staff-meta">Experience: 9 Years</div> 
+<div class="staff-email">amolmane2806@gmail.com</div> 
+</div> 
 
-<div class="staff-card">
-<img class="staff-photo" src="https://i.ibb.co/LD6hx7wt/nikam.jpg">
-<div class="staff-name">Mr. Nikam Pramod Sudhakar</div>
-<div class="staff-role">Technical Assistant</div>
-<div class="staff-meta">Diploma</div>
-<div class="staff-meta">Experience: —</div>
-<div class="staff-email">psnikam2010@gmail.com</div>
+<div class="staff-card"> 
+<img class="staff-photo" src="https://i.ibb.co/LD6hx7wt/nikam.jpg"> 
+<div class="staff-name">Mr. Nikam Pramod Sudhakar</div> 
+<div class="staff-role">Technical Assistant</div> 
+<div class="staff-meta">Diploma</div> 
+<div class="staff-meta">Experience: —</div> 
+<div class="staff-email">psnikam2010@gmail.com</div> 
 </div>
 
 </div>
