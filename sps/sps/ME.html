@@ -25,74 +25,83 @@ body{
 background:#f4f6fb;
 }
 
-/* NAVBAR */
-.custom-navbar{
-background:#0d2b52;
-padding:10px 0;
+.navbar{
+  background:linear-gradient(90deg, #0b1f3a, #102e5a);
+  padding:.35rem .6rem;
 }
 
 .navbar-brand img{
-width:45px;
-height:45px;
-border-radius:50%;
+  width:38px;
+  height:38px;
+  border-radius:50%;
 }
 
 .navbar-nav{
-gap:8px;
+  margin-left:20px;
 }
 
-.navbar-nav .nav-link{
-color:#fff !important;
-font-weight:500;
-padding:8px 14px;
-border-radius:6px;
-transition:.3s;
+.navbar-nav .nav-item{
+  margin-right:7px;
+  font-size:14px;
 }
 
-.navbar-nav .nav-link.active{
-background:#f39c12;
-color:#000 !important;
+.navbar-dark .navbar-nav .nav-link{
+  color:#fff!important;
+  font-weight:600;
+  padding:6px 10px;
+  transition:.3s;
 }
 
-.navbar-nav .nav-link:hover{
-background:#f39c12;
-color:#000 !important;
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active{
+  background:#f39c12;
+  color:#000!important;
+  border-radius:6px;
 }
 
 /* DROPDOWN */
 .dropdown-menu{
-background:#132f5c;
-border:none;
-border-radius:10px;
-padding:8px;
+  background:#102e5a;
+  border:none;
+  border-radius:10px;
 }
 
 .dropdown-item{
-color:#fff;
-padding:10px;
-border-radius:6px;
+  color:#fff;
+  font-size:14px;
+  padding:10px 16px;
 }
 
-.dropdown-item.active,
-.dropdown-item:hover{
-background:#f39c12;
-color:#000;
+.dropdown-item:hover,
+.dropdown-item.active{
+  background:#f39c12;
+  color:#000;
 }
 
-/* DESKTOP HOVER */
-@media (min-width:992px){
-.navbar .dropdown:hover .dropdown-menu{
-display:block;
-margin-top:0;
-}
+/* HOVER DROPDOWN */
+@media (min-width:768px){
+  .navbar .dropdown:hover .dropdown-menu{
+    display:block;
+  }
 }
 
-/* MOBILE */
-@media(max-width:991px){
-.navbar-collapse{
-background:#0d2b52;
-padding:15px;
-}
+/* MOBILE FIX */
+@media (max-width:767px){
+  .navbar-collapse{
+    background: linear-gradient(
+      to bottom,
+      rgba(11,31,58,0.96),
+      rgba(16,46,90,0.96)
+    );
+    padding:14px 12px;
+    border-radius:0 0 16px 16px;
+  }
+
+  .navbar-nav .nav-link{
+    width:100%;
+    padding:12px 16px;
+    border-radius:10px;
+  }
 }
 
 /* CONTAINER SPACE */
