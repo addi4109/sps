@@ -9,6 +9,7 @@
 <!-- Bootstrap -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -22,25 +23,30 @@ font-family:'Poppins',sans-serif;
 
 body{
 background:#f4f6fb;
-color:#222;
 }
 
 /* NAVBAR */
-.navbar{
-background:linear-gradient(90deg,#0b1f3a,#173a6a);
+.custom-navbar{
+background:#0d2b52;
+padding:10px 0;
 }
 
 .navbar-brand img{
-width:42px;
-height:42px;
+width:45px;
+height:45px;
 border-radius:50%;
+}
+
+.navbar-nav{
+gap:8px;
 }
 
 .navbar-nav .nav-link{
 color:#fff !important;
 font-weight:500;
 padding:8px 14px;
-border-radius:8px;
+border-radius:6px;
+transition:.3s;
 }
 
 .navbar-nav .nav-link.active{
@@ -49,40 +55,47 @@ color:#000 !important;
 }
 
 .navbar-nav .nav-link:hover{
-background:rgba(255,255,255,0.15);
+background:#f39c12;
+color:#000 !important;
 }
 
+/* DROPDOWN */
 .dropdown-menu{
-background:#102e5a;
+background:#132f5c;
 border:none;
 border-radius:10px;
+padding:8px;
 }
 
 .dropdown-item{
 color:#fff;
+padding:10px;
+border-radius:6px;
 }
 
+.dropdown-item.active,
 .dropdown-item:hover{
 background:#f39c12;
 color:#000;
 }
 
-@media (min-width:768px){
+/* DESKTOP HOVER */
+@media (min-width:992px){
 .navbar .dropdown:hover .dropdown-menu{
 display:block;
+margin-top:0;
 }
 }
 
-/* MOBILE NAV */
-@media(max-width:767px){
+/* MOBILE */
+@media(max-width:991px){
 .navbar-collapse{
-background:rgba(0,0,0,0.9);
-padding:10px;
-border-radius:0 0 12px 12px;
+background:#0d2b52;
+padding:15px;
 }
 }
 
-/* PAGE */
+/* CONTAINER SPACE */
 .container{
 max-width:1200px;
 margin:auto;
@@ -96,9 +109,7 @@ color:white;
 padding:25px;
 border-radius:14px;
 display:flex;
-align-items:center;
 gap:18px;
-box-shadow:0 10px 35px rgba(0,0,0,.15);
 }
 
 .logo{
@@ -110,7 +121,6 @@ display:flex;
 align-items:center;
 justify-content:center;
 font-weight:700;
-font-size:20px;
 }
 
 /* CARD */
@@ -119,14 +129,13 @@ background:#fff;
 padding:25px;
 margin-top:25px;
 border-radius:14px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 /* TITLES */
 .section-title{
 color:#0b63d6;
 font-weight:600;
-margin-bottom:12px;
+margin-bottom:10px;
 }
 
 /* LAB IMAGES */
@@ -142,11 +151,6 @@ width:100%;
 height:200px;
 object-fit:cover;
 border-radius:10px;
-transition:.4s;
-}
-
-.lab-images img:hover{
-transform:scale(1.05);
 }
 
 /* STAFF GRID */
@@ -163,55 +167,49 @@ background:#fff;
 border-radius:20px;
 padding:25px;
 text-align:center;
-box-shadow:0 12px 35px rgba(0,0,0,.12);
-transition:.4s;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+transition:.3s;
 }
 
 .staff-card:hover{
-transform:translateY(-8px);
+transform:translateY(-6px);
 }
 
-/* STAFF PHOTO */
 .staff-photo{
 width:140px;
 height:140px;
 border-radius:50%;
 object-fit:cover;
-margin:auto;
 border:5px solid #0b63d6;
-margin-bottom:18px;
+margin-bottom:15px;
 }
 
-/* TEXT */
 .staff-name{
-font-size:20px;
 font-weight:600;
-margin-bottom:5px;
+font-size:18px;
 }
 
 .staff-role{
 color:#0b63d6;
 font-weight:600;
-margin-bottom:10px;
+margin-bottom:8px;
 }
 
 .staff-meta{
+font-size:14px;
 color:#555;
-margin-bottom:6px;
 }
 
 .staff-email{
+font-size:13px;
 color:#666;
-font-size:14px;
 word-break:break-word;
 }
 
-/* FOOTER */
 .footer{
 margin-top:30px;
 text-align:center;
 font-size:14px;
-color:#666;
 }
 
 </style>
@@ -220,43 +218,48 @@ color:#666;
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
 
 <a class="navbar-brand" href="index.html">
 <img src="https://i.ibb.co/RkDs4pfs/download.jpg">
 </a>
 
-<button class="navbar-toggler" data-toggle="collapse" data-target="#nav">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
 <span class="navbar-toggler-icon"></span>
 </button>
 
 <div class="collapse navbar-collapse" id="nav">
-<ul class="navbar-nav">
 
-<li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+<ul class="navbar-nav mx-auto">
+
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
 <li class="nav-item"><a class="nav-link" href="govermentbody.html">Governing Body</a></li>
 
 <li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Department</a>
+<a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown">Department</a>
+
 <div class="dropdown-menu">
-<a class="dropdown-item" href="AE.html">Automobile</a>
-<a class="dropdown-item" href="CH.html">Chemical</a>
-<a class="dropdown-item" href="CO.html">Computer</a>
-<a class="dropdown-item" href="EE.html">Electrical</a>
-<a class="dropdown-item" href="ENTC.html">ENTC</a>
-<a class="dropdown-item" href="ME.html">Mechanical</a>
+<a class="dropdown-item" href="AE.html">Automobile Engineering</a>
+<a class="dropdown-item" href="CH.html">Chemical Engineering</a>
+<a class="dropdown-item" href="CO.html">Computer Engineering</a>
+<a class="dropdown-item" href="EE.html">Electrical Engineering</a>
+<a class="dropdown-item" href="ENTC.html">ENTC Engineering</a>
+<a class="dropdown-item active" href="ME.html">Mechanical Engineering</a>
 </div>
 </li>
 
-<li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-<li class="nav-item"><a class="nav-link" href="campus.html">Gallery</a></li>
-<li class="nav-item"><a class="nav-link" href="notice.html">Notice</a></li>
-<li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+<li class="nav-item"><a class="nav-link" href="events.html">Event & Activities</a></li>
+<li class="nav-item"><a class="nav-link" href="campus.html">Campus Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="notice.html">Notice Board</a></li>
+<li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+<li class="nav-item"><a class="nav-link" href="admission.html">Admission Process</a></li>
+<li class="nav-item"><a class="nav-link" href="tpo.html">TPO</a></li>
+<li class="nav-item"><a class="nav-link" href="staff.html">Non-Teaching Staff</a></li>
 
 </ul>
-</div>
 
+</div>
 </nav>
 
 <div class="container">
@@ -272,18 +275,15 @@ color:#666;
 
 <!-- INFO -->
 <div class="card">
-
 <h3 class="section-title">Mechanical Engineering</h3>
 
 <p><b>Established:</b> 1983</p>
-
-<p><b>Vision:</b> To become a center of excellence in mechanical engineering, producing innovative engineers.</p>
+<p><b>Vision:</b> To become a center of excellence in mechanical engineering.</p>
 
 <h4 class="section-title">Labs</h4>
-
 <ul>
 <li>Drawing & Design Lab</li>
-<li>Strength Of Material & Theory Of Machines Lab</li>
+<li>Strength of Material Lab</li>
 <li>Heat Power Lab</li>
 </ul>
 
@@ -291,13 +291,10 @@ color:#666;
 <img src="https://i.ibb.co/8RxXs1q/IMG-5923.jpg">
 <img src="https://i.ibb.co/zhzVFXT1/IMG-5924.jpg">
 <img src="https://i.ibb.co/Y4vPx4GZ/IMG-5925-1.jpg">
-<img src="https://i.ibb.co/RTtK3z01/IMG-5957.jpg">
-<img src="https://i.ibb.co/r2N9jMXs/IMG-5993.jpg">
 </div>
 
 </div>
 
-<!-- STAFF -->
 <div class="card">
 
 <h3 class="section-title">Staff — Mechanical Department</h3>
@@ -372,7 +369,7 @@ color:#666;
 </div>
 
 <div class="footer">
-For detailed queries contact the department email addresses listed above.
+© Satara Polytechnic Satara
 </div>
 
 </div>
