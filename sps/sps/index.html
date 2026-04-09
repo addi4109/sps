@@ -724,6 +724,91 @@ transform:translateY(-2px);
     margin-top:0;
   }
 }
+/* ===== QUICK HEAL STYLE PROGRAM SECTION ===== */
+
+.program-section{
+  padding:80px 20px;
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  color:#fff;
+  text-align:center;
+}
+
+.program-title{
+  font-size:32px;
+  font-weight:600;
+  margin-bottom:50px;
+}
+
+.program-wrapper{
+  overflow:hidden;
+  position:relative;
+}
+
+.program-track{
+  display:flex;
+  gap:25px;
+  width:max-content;
+  animation:scrollProgram 35s linear infinite;
+}
+
+/* CARD */
+.program-card{
+  min-width:260px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  border-radius:18px;
+  padding:20px;
+  text-align:left;
+  transition:.4s;
+  opacity:0;
+  transform:translateY(50px);
+}
+
+/* IMAGE */
+.program-card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:15px;
+}
+
+/* TEXT */
+.program-card h3{
+  font-size:18px;
+  margin-bottom:8px;
+}
+
+.program-card p{
+  font-size:13px;
+  opacity:.85;
+  margin-bottom:12px;
+}
+
+/* LINK */
+.program-card a{
+  color:#38bdf8;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* HOVER */
+.program-card:hover{
+  transform:translateY(-10px) scale(1.05);
+  background:rgba(255,255,255,0.15);
+}
+
+/* AUTO SCROLL */
+@keyframes scrollProgram{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
+
+/* SHOW ANIMATION */
+.program-card.show{
+  opacity:1;
+  transform:translateY(0);
+}
 </style>
 </head>
 
@@ -826,91 +911,74 @@ transform:translateY(-2px);
 </section>
 <!-- ===== OUR DEPARTMENTS ===== -->
 
-<section class="dept-section">
+<section class="program-section">
 
-<h2 class="dept-title">Our Departments</h2>
+<h2 class="program-title">Our Departments</h2>
 
-<div class="dept-container">
+<div class="program-wrapper">
 
+  <div class="program-track">
 
-<!-- AE -->
-<div class="dept-card">
-<img src="https://i.ibb.co/d4rzz8g7/AE.jpg">
-<h3>Automobile Engineering</h3>
-<p>Intake: 30</p>
-<p>Direct 2nd Year Available: Yes</p>
+    <!-- CARD -->
+    <div class="program-card">
+      <img src="https://i.ibb.co/d4rzz8g7/AE.jpg">
+      <h3>Automobile Engineering</h3>
+      <p>Hands-on training in vehicle design, engines & modern mobility.</p>
+      <a href="AE.html">Explore →</a>
+    </div>
 
-<div class="dept-buttons">
-<a href="apply.html" class="applyBtn">Apply Now</a>
-<a href="AE.html">Learn More</a>
-</div>
-</div>
+    <div class="program-card">
+      <img src="https://i.ibb.co/8DSs9d3N/CH.jpg">
+      <h3>Chemical Engineering</h3>
+      <p>Process industries, oil & gas, and high salary career paths.</p>
+      <a href="CH.html">Explore →</a>
+    </div>
 
-<!-- CH -->
-<div class="dept-card">
-<img src="https://i.ibb.co/8DSs9d3N/CH.jpg">
-<h3>Chemical Engineering</h3>
-<p>Intake: 30</p>
-<p>Direct 2nd Year Available: Yes</p>
+    <div class="program-card">
+      <img src="https://i.ibb.co/4ZRdX8fw/CO.jpg">
+      <h3>Computer Engineering</h3>
+      <p>Software, AI, web development & tech industry careers.</p>
+      <a href="CO.html">Explore →</a>
+    </div>
 
-<div class="dept-buttons">
-<a href="apply.html" class="applyBtn">Apply Now</a>
-<a href="CH.html">Learn More</a>
-</div>
-</div>
+    <div class="program-card">
+      <img src="https://i.ibb.co/vxj6hzQK/EE.jpg">
+      <h3>Electrical Engineering</h3>
+      <p>Power systems, automation & industrial applications.</p>
+      <a href="EE.html">Explore →</a>
+    </div>
 
-<!-- CO -->
-<div class="dept-card">
-<img src="https://i.ibb.co/4ZRdX8fw/CO.jpg">
-<h3>Computer Engineering</h3>
-<p>Intake: 30</p>
-<p>Direct 2nd Year Available: Yes</p>
+    <div class="program-card">
+      <img src="https://i.ibb.co/d0pT4JTd/EJ.jpg">
+      <h3>ENTC Engineering</h3>
+      <p>Communication systems, electronics & embedded tech.</p>
+      <a href="ENTC.html">Explore →</a>
+    </div>
 
-<div class="dept-buttons">
-<a href="apply.html" class="applyBtn">Apply Now</a>
-<a href="CO.html">Learn More</a>
-</div>
-</div>
+    <div class="program-card">
+      <img src="https://i.ibb.co/tThSJg5m/ME.jpg">
+      <h3>Mechanical Engineering</h3>
+      <p>Machines, manufacturing & core engineering skills.</p>
+      <a href="ME.html">Explore →</a>
+    </div>
 
-<!-- ELECTRICAL -->
-<div class="dept-card">
-<img src="https://i.ibb.co/vxj6hzQK/EE.jpg">
-<h3>Electrical Engineering</h3>
-<p>Intake: 30</p>
-<p>Direct 2nd Year Available: Yes</p>
+    <!-- duplicate for infinite loop -->
+    <div class="program-card">
+      <img src="https://i.ibb.co/d4rzz8g7/AE.jpg">
+      <h3>Automobile Engineering</h3>
+      <p>Hands-on training in vehicle design, engines & modern mobility.</p>
+      <a href="AE.html">Explore →</a>
+    </div>
 
-<div class="dept-buttons">
-<a href="apply.html" class="applyBtn">Apply Now</a>
-<a href="EE.html">Learn More</a>
-</div>
-</div>
+    <div class="program-card">
+      <img src="https://i.ibb.co/8DSs9d3N/CH.jpg">
+      <h3>Chemical Engineering</h3>
+      <p>Process industries, oil & gas, and high salary career paths.</p>
+      <a href="CH.html">Explore →</a>
+    </div>
 
-<!-- ENTC -->
-<div class="dept-card">
-<img src="https://i.ibb.co/d0pT4JTd/EJ.jpg">
-<h3>Electronic & Telecommunication Engineering</h3>
-<p>Intake: 30</p>
-<p>Direct 2nd Year Available: Yes</p>
+  </div>
 
-<div class="dept-buttons">
-<a href="apply.html" class="applyBtn">Apply Now</a>
-<a href="ENTC.html">Learn More</a>
-</div>
-</div>
-
-  <!-- ME -->
-<div class="dept-card">
-<img src="https://i.ibb.co/tThSJg5m/ME.jpg">
-<h3>Mechanical Engineering</h3>
-<p>Intake: 30</p>
-<p>Direct 2nd Year Available: Yes</p>
-
-<div class="dept-buttons">
-<a href="apply.html" class="applyBtn">Apply Now</a>
-<a href="ME.html">Learn More</a>
-</div>
-</div>
-  
 </div>
 
 </section>
@@ -1093,7 +1161,21 @@ window.scrollTo({top:0,behavior:"smooth"});
 };
 
 </script>
+<script>
+const programCards = document.querySelectorAll('.program-card');
 
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+programCards.forEach(card => {
+  observer.observe(card);
+});
+</script>
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
