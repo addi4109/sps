@@ -13,11 +13,11 @@
 
 <style>
 html{
-scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{background:#f4f6fb;overflow-x:hidden;}
@@ -28,73 +28,73 @@ body{background:#f4f6fb;overflow-x:hidden;}
 .navbar-nav{margin-left:20px}
 .navbar-nav .nav-item{margin-right:7px;font-size:14px}
 .navbar-dark .navbar-nav .nav-link{
-color:#fff!important;font-weight:600;padding:6px 10px;transition:.3s
+  color:#fff!important;font-weight:600;padding:6px 10px;transition:.3s
 }
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active{
-background:#f39c12;color:#000!important;border-radius:6px
+  background:#f39c12;color:#000!important;border-radius:6px
 }
 
 /* HERO */
 .hero{
-height:53vh;
-background:
-radial-gradient(circle at top left, rgba(255,255,255,0.15), transparent 40%),
-radial-gradient(circle at bottom right, rgba(255,255,255,0.12), transparent 45%),
-linear-gradient(135deg, #1e3c72, #2a5298);
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:#fff;
-padding-top:90px;
+  height:53vh;
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.15), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(255,255,255,0.12), transparent 45%),
+    linear-gradient(135deg, #1e3c72, #2a5298);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  padding-top:90px;
 }
 
 .hero h1{
-font-size:clamp(32px,4.5vw,56px);
-opacity:0;
-animation:titleFade 1.2s ease-out forwards;
+  font-size:clamp(32px,4.5vw,56px);
+  opacity:0;
+  animation:titleFade 1.2s ease-out forwards;
 }
 
 .hero img{
-width:140px;
-border-radius:50%;
-margin:25px 0;
-opacity:0;
-animation:
-logoZoom 1.2s ease-out forwards,
-logoFloat 4s ease-in-out infinite,
-logoGlow 3s ease-in-out infinite;
+  width:140px;
+  border-radius:50%;
+  margin:25px 0;
+  opacity:0;
+  animation:
+    logoZoom 1.2s ease-out forwards,
+    logoFloat 4s ease-in-out infinite,
+    logoGlow 3s ease-in-out infinite;
 }
 
 /* ===== ANIMATIONS ===== */
 @keyframes titleFade{
-from{opacity:0;transform:translateY(20px);}
-to{opacity:1;transform:translateY(0);}
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
 }
 
 @keyframes logoZoom{
-from{opacity:0;transform:scale(0.7);}
-to{opacity:1;transform:scale(1);}
+  from{opacity:0;transform:scale(0.7);}
+  to{opacity:1;transform:scale(1);}
 }
 
 @keyframes logoFloat{
-0%,100%{transform:translateY(0);}
-50%{transform:translateY(-6px);}
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-6px);}
 }
 
 @keyframes logoGlow{
-0%,100%{box-shadow:0 0 0 rgba(255,255,255,.3);}
-50%{box-shadow:0 0 25px rgba(255,255,255,.6);}
+  0%,100%{box-shadow:0 0 0 rgba(255,255,255,.3);}
+  50%{box-shadow:0 0 25px rgba(255,255,255,.6);}
 }
 /* ADMISSION BOX */
 .admission-box{
-background:rgba(255,255,255,.18);
-backdrop-filter:blur(12px);
-padding:1.8rem 2.4rem;
-border-radius:18px;
-max-width:440px;
-box-shadow:0 15px 40px rgba(0,0,0,.35)
+  background:rgba(255,255,255,.18);
+  backdrop-filter:blur(12px);
+  padding:1.8rem 2.4rem;
+  border-radius:18px;
+  max-width:440px;
+  box-shadow:0 15px 40px rgba(0,0,0,.35)
 }
 .admission-box h5{color:#ffd24d}
 
@@ -106,380 +106,380 @@ box-shadow:0 15px 40px rgba(0,0,0,.35)
 /* FEATURES */
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px}
 .feature-card{
-background:#fff;padding:30px;border-radius:18px;text-align:center;
-box-shadow:0 12px 30px rgba(0,0,0,.08)
+  background:#fff;padding:30px;border-radius:18px;text-align:center;
+  box-shadow:0 12px 30px rgba(0,0,0,.08)
 }
 /* FOOTER */
 .site-footer{
-background:#0b1f3a;
-color:#fff;
-text-align:center;
-padding:20px 10px;
-margin-top:40px;
+  background:#0b1f3a;
+  color:#fff;
+  text-align:center;
+  padding:20px 10px;
+  margin-top:40px;
 }
 
 .site-footer .footer-inner{
-max-width:1100px;
-margin:0 auto;
+  max-width:1100px;
+  margin:0 auto;
 }
 
 .site-footer p{
-margin:0;
-font-size:14px;
-letter-spacing:.4px;
+  margin:0;
+  font-size:14px;
+  letter-spacing:.4px;
 }
-/* 📱 MOBILE FIX – Latest News: 1 card per screen */
+  /* 📱 MOBILE FIX – Latest News: 1 card per screen */
 @media (max-width: 600px){
-.news-card-3{
-min-width:100%;
-}
+  .news-card-3{
+    min-width:100%;
+  }
 
-.news-3-wrapper{
-padding:0 48px; /* keeps space for arrows */
-}
+  .news-3-wrapper{
+    padding:0 48px; /* keeps space for arrows */
+  }
 }
 /* 🚀 PERFORMANCE BOOST */
 .news-3-track{
-will-change: transform;
-transform: translate3d(0,0,0);
+  will-change: transform;
+  transform: translate3d(0,0,0);
 }
 @media(max-width:767px){
-.navbar-collapse{
-background:rgba(0,0,0,0.85);
-padding:10px 0;
-border-radius:0 0 12px 12px;
-}
+  .navbar-collapse{
+    background:rgba(0,0,0,0.85);
+    padding:10px 0;
+    border-radius:0 0 12px 12px;
+  }
 }
 /* ===== MOBILE NAVBAR BACKGROUND FIX ===== */
 @media (max-width: 767px){
 
-.navbar-collapse{
-background: linear-gradient(
-to bottom,
-rgba(11,31,58,0.96),
-rgba(16,46,90,0.96)
-);
-padding:14px 12px;
-border-radius:0 0 16px 16px;
-box-shadow:0 12px 30px rgba(0,0,0,0.35);
-}
+  .navbar-collapse{
+    background: linear-gradient(
+      to bottom,
+      rgba(11,31,58,0.96),
+      rgba(16,46,90,0.96)
+    );
+    padding:14px 12px;
+    border-radius:0 0 16px 16px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.35);
+  }
 
-.navbar-nav .nav-link{
-width:100%;
-text-align:left;
-padding:12px 16px;
-border-radius:10px;
-}
+  .navbar-nav .nav-link{
+    width:100%;
+    text-align:left;
+    padding:12px 16px;
+    border-radius:10px;
+  }
 
-.navbar-nav .nav-link.active{
-background:#f39c12;
-color:#000 !important;
-}
+  .navbar-nav .nav-link.active{
+    background:#f39c12;
+    color:#000 !important;
+  }
 
-.navbar-nav .nav-link:not(.active):hover{
-background:rgba(255,255,255,0.08);
-}
+  .navbar-nav .nav-link:not(.active):hover{
+    background:rgba(255,255,255,0.08);
+  }
 }
 /* PROFESSIONAL FOOTER */
 .site-footer{
-background:#08152a;
-color:#ddd;
-padding:60px 20px 25px;
-margin-top:40px;
+  background:#08152a;
+  color:#ddd;
+  padding:60px 20px 25px;
+  margin-top:40px;
 }
 
 .footer-container{
-max-width:1100px;
-margin:auto;
+  max-width:1100px;
+  margin:auto;
 }
 
 .footer-col h5{
-color:#fff;
-margin-bottom:18px;
-font-weight:600;
+  color:#fff;
+  margin-bottom:18px;
+  font-weight:600;
 }
 
 .footer-col p{
-font-size:14px;
-line-height:1.6;
+  font-size:14px;
+  line-height:1.6;
 }
 
 .footer-links{
-list-style:none;
-padding:0;
+  list-style:none;
+  padding:0;
 }
 
 .footer-links li{
-margin-bottom:8px;
+  margin-bottom:8px;
 }
 
 .footer-links a{
-color:#ccc;
-text-decoration:none;
-transition:0.3s;
+  color:#ccc;
+  text-decoration:none;
+  transition:0.3s;
 }
 
 .footer-links a:hover{
-color:#f39c12;
-padding-left:4px;
+  color:#f39c12;
+  padding-left:4px;
 }
 
 .social-icons{
-margin-top:10px;
+  margin-top:10px;
 }
 
 .social-icons a{
-display:inline-block;
-margin-right:10px;
-font-size:18px;
-color:#fff;
-background:#102e5a;
-padding:8px 10px;
-border-radius:6px;
-transition:0.3s;
+  display:inline-block;
+  margin-right:10px;
+  font-size:18px;
+  color:#fff;
+  background:#102e5a;
+  padding:8px 10px;
+  border-radius:6px;
+  transition:0.3s;
 }
 
 .social-icons a:hover{
-background:#f39c12;
-color:#000;
+  background:#f39c12;
+  color:#000;
 }
 
 .footer-bottom{
-border-top:1px solid rgba(255,255,255,0.15);
-margin-top:35px;
-padding-top:15px;
-text-align:center;
-font-size:14px;
+  border-top:1px solid rgba(255,255,255,0.15);
+  margin-top:35px;
+  padding-top:15px;
+  text-align:center;
+  font-size:14px;
 }
 .footer-links{
-list-style:none;
-padding:0;
-text-align:left;   /* align left */
+  list-style:none;
+  padding:0;
+  text-align:left;   /* align left */
 }
 
 .footer-links li{
-margin-bottom:8px;
-text-align:left;   /* force left alignment */
+  margin-bottom:8px;
+  text-align:left;   /* force left alignment */
 }
 
 .footer-col{
-text-align:left;   /* column content left aligned */
+  text-align:left;   /* column content left aligned */
 }
-.footer-col{
-text-align:left;
+  .footer-col{
+  text-align:left;
 }
 
 .footer-col h5{
-text-align:left;
+  text-align:left;
 }
 
 .footer-links{
-list-style:none;
-padding:0;
-margin:0;
+  list-style:none;
+  padding:0;
+  margin:0;
 }
 
 .footer-links li{
-margin-bottom:8px;
+  margin-bottom:8px;
 }
 
 .footer-links a{
-display:block;
-color:#ccc;
-text-decoration:none;
-font-size:14px;
-transition:.3s;
+  display:block;
+  color:#ccc;
+  text-decoration:none;
+  font-size:14px;
+  transition:.3s;
 }
 
 .footer-links a:hover{
-color:#f39c12;
-padding-left:4px;
+  color:#f39c12;
+  padding-left:4px;
 }
 /* ===== MODERN COLLEGE FOOTER ===== */
 
 .main-footer{
-background:#0b1f3a;
-color:#fff;
-padding:50px 20px 20px;
+  background:#0b1f3a;
+  color:#fff;
+  padding:50px 20px 20px;
 }
 
 .footer-container{
-max-width:1200px;
-margin:auto;
+  max-width:1200px;
+  margin:auto;
 }
 
 .footer-row{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
 }
 
 .footer-title{
-font-weight:600;
-margin-bottom:18px;
-font-size:18px;
+  font-weight:600;
+  margin-bottom:18px;
+  font-size:18px;
 }
 
 .footer-links{
-list-style:none;
-padding:0;
+  list-style:none;
+  padding:0;
 }
 
 .footer-links li{
-margin-bottom:8px;
+  margin-bottom:8px;
 }
 
 .footer-links a{
-color:#ddd;
-text-decoration:none;
-font-size:14px;
-transition:.3s;
+  color:#ddd;
+  text-decoration:none;
+  font-size:14px;
+  transition:.3s;
 }
 
 .footer-links a:hover{
-color:#f39c12;
-padding-left:5px;
+  color:#f39c12;
+  padding-left:5px;
 }
 
 .footer-text{
-font-size:14px;
-line-height:1.6;
+  font-size:14px;
+  line-height:1.6;
 }
 
 .footer-bottom{
-border-top:1px solid rgba(255,255,255,0.2);
-margin-top:40px;
-padding-top:20px;
+  border-top:1px solid rgba(255,255,255,0.2);
+  margin-top:40px;
+  padding-top:20px;
 }
 
 .footer-bottom-row{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-font-size:14px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  font-size:14px;
 }
 
 .footer-credit{
-text-align:right;
+  text-align:right;
 }
 
 @media(max-width:768px){
-.footer-credit{
-text-align:left;
-}
+  .footer-credit{
+    text-align:left;
+  }
 }
 
 @keyframes templeMove{
-from{background-position:0 bottom;}
-to{background-position:1200px bottom;}
+  from{background-position:0 bottom;}
+  to{background-position:1200px bottom;}
 }
 
 
 /* ===== MAIN FOOTER ===== */
 
 .main-footer{
-background:#08152a;
-color:#fff;
-padding:60px 20px 20px;
+  background:#08152a;
+  color:#fff;
+  padding:60px 20px 20px;
 }
 
 .footer-container{
-max-width:1200px;
-margin:auto;
+  max-width:1200px;
+  margin:auto;
 }
 
 .footer-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
 }
 
 .footer-title{
-font-size:18px;
-font-weight:600;
-margin-bottom:18px;
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:18px;
 }
 
 .footer-links{
-list-style:none;
-padding:0;
+  list-style:none;
+  padding:0;
 }
 
 .footer-links li{
-margin-bottom:10px;
+  margin-bottom:10px;
 }
 
 .footer-links a{
-color:#ddd;
-text-decoration:none;
-font-size:14px;
-transition:.3s;
+  color:#ddd;
+  text-decoration:none;
+  font-size:14px;
+  transition:.3s;
 }
 
 .footer-links a:hover{
-color:#f39c12;
-padding-left:5px;
+  color:#f39c12;
+  padding-left:5px;
 }
 
 /* ===== NOTICE BOARD ===== */
 
 .notice-scroll{
-height:90px;
-overflow:hidden;
-position:relative;
+  height:90px;
+  overflow:hidden;
+  position:relative;
 }
 
 .notice-scroll ul{
-list-style:none;
-padding:0;
-animation:scrollNotice 10s linear infinite;
+  list-style:none;
+  padding:0;
+  animation:scrollNotice 10s linear infinite;
 }
 
 .notice-scroll li{
-padding:5px 0;
-font-size:14px;
+  padding:5px 0;
+  font-size:14px;
 }
 
 @keyframes scrollNotice{
-0%{transform:translateY(0);}
-100%{transform:translateY(-100%);}
+  0%{transform:translateY(0);}
+  100%{transform:translateY(-100%);}
 }
 
 /* ===== SOCIAL ICONS ===== */
 
 .social-icons a{
-display:inline-block;
-margin-right:10px;
-font-size:18px;
-color:#fff;
-background:#102e5a;
-padding:10px;
-border-radius:6px;
-transition:.3s;
+  display:inline-block;
+  margin-right:10px;
+  font-size:18px;
+  color:#fff;
+  background:#102e5a;
+  padding:10px;
+  border-radius:6px;
+  transition:.3s;
 }
 
 .social-icons a:hover{
-background:#f39c12;
-color:#000;
+  background:#f39c12;
+  color:#000;
 }
 
 /* ===== FOOTER BOTTOM ===== */
 
 .footer-bottom{
-border-top:1px solid rgba(255,255,255,.2);
-margin-top:40px;
-padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.2);
+  margin-top:40px;
+  padding-top:20px;
 }
 
 .footer-bottom-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-font-size:14px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  font-size:14px;
 }
 
 .footer-credit{
-text-align:right;
+  text-align:right;
 }
 
 @media(max-width:768px){
@@ -491,69 +491,69 @@ text-align:left;
 /* ===== BACK TO TOP ===== */
 
 #backTop{
-position:fixed;
-bottom:30px;
-right:25px;
-background:#f39c12;
-color:#000;
-border:none;
-padding:12px 15px;
-font-size:18px;
-border-radius:50%;
-cursor:pointer;
-display:none;
-box-shadow:0 6px 15px rgba(0,0,0,.3);
+  position:fixed;
+  bottom:30px;
+  right:25px;
+  background:#f39c12;
+  color:#000;
+  border:none;
+  padding:12px 15px;
+  font-size:18px;
+  border-radius:50%;
+  cursor:pointer;
+  display:none;
+  box-shadow:0 6px 15px rgba(0,0,0,.3);
 }
 /* ===== TOP RECRUITERS ===== */
 
 .recruiters-section{
-background:#fff;
-padding:60px 20px;
-text-align:center;
+  background:#fff;
+  padding:60px 20px;
+  text-align:center;
 }
 
 .recruiters-title{
-font-weight:600;
-margin-bottom:40px;
+  font-weight:600;
+  margin-bottom:40px;
 }
 
 .recruiters-slider{
-overflow:hidden;
-position:relative;
-width:100%;
+  overflow:hidden;
+  position:relative;
+  width:100%;
 }
 
 .recruiters-track{
-display:flex;
-align-items:center;
-gap:70px;
-width:max-content;
-animation:scrollRecruiters 30s linear infinite;
+  display:flex;
+  align-items:center;
+  gap:70px;
+  width:max-content;
+  animation:scrollRecruiters 30s linear infinite;
 }
 
 .recruiters-track img{
-height:60px;
-width:auto;
-object-fit:contain;
-opacity:0.95;
-transition:transform .3s ease;
+  height:60px;
+  width:auto;
+  object-fit:contain;
+  opacity:0.95;
+  transition:transform .3s ease;
 }
 
 /* hover effect */
 
 .recruiters-track img:hover{
-transform:scale(1.12);
+  transform:scale(1.12);
 }
 
 /* smooth infinite scroll */
 
 @keyframes scrollRecruiters{
-0%{
-transform:translateX(0);
-}
-100%{
-transform:translateX(-50%);
-}
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform:translateX(-50%);
+  }
 }
 /* ===== DEPARTMENTS ===== */
 
@@ -696,123 +696,133 @@ transition:.3s;
 background:#2563eb;
 transform:translateY(-2px);
 }
-/* ===== DROPDOWN DESIGN ===== */
+  /* ===== DROPDOWN DESIGN ===== */
 
 .dropdown-menu{
-background:#102e5a;
-border:none;
-border-radius:10px;
-padding:8px 0;
+  background:#102e5a;
+  border:none;
+  border-radius:10px;
+  padding:8px 0;
 }
 
 .dropdown-item{
-color:#fff;
-font-size:14px;
-padding:10px 16px;
-transition:.3s;
+  color:#fff;
+  font-size:14px;
+  padding:10px 16px;
+  transition:.3s;
 }
 
 .dropdown-item:hover{
-background:#f39c12;
-color:#000;
+  background:#f39c12;
+  color:#000;
 }
 
 /* ===== HOVER SUPPORT (DESKTOP) ===== */
 @media (min-width:768px){
-.navbar .dropdown:hover .dropdown-menu{
-display:block;
-margin-top:0;
-}
-}
-/* ===== QUICK HEAL STYLE PROGRAM SECTION ===== */
-
-.program-section{
-  padding:80px 20px;
-  background:linear-gradient(135deg,#0f172a,#1e293b);
-  color:#fff;
-  text-align:center;
-}
-
-.program-title{
-  font-size:32px;
-  font-weight:600;
-  margin-bottom:50px;
-}
-
-.program-wrapper{
-  overflow:hidden;
-  position:relative;
-}
-
-.program-track{
-  display:flex;
-  gap:25px;
-  width:max-content;
-  animation:scrollProgram 35s linear infinite;
-}
-
-/* CARD */
-.program-card{
-  min-width:260px;
-  background:rgba(255,255,255,0.08);
-  backdrop-filter:blur(12px);
-  border-radius:18px;
-  padding:20px;
-  text-align:left;
-  transition:.4s;
-  opacity:0;
-  transform:translateY(50px);
-}
-
-/* IMAGE */
-.program-card img{
-  width:100%;
-  height:150px;
-  object-fit:cover;
-  border-radius:12px;
-  margin-bottom:15px;
-}
-
-/* TEXT */
-.program-card h3{
-  font-size:18px;
-  margin-bottom:8px;
-}
-
-.program-card p{
-  font-size:13px;
-  opacity:.85;
-  margin-bottom:12px;
-}
-
-/* LINK */
-.program-card a{
-  color:#38bdf8;
-  text-decoration:none;
-  font-size:14px;
-}
-
-/* HOVER */
-.program-card:hover{
-  transform:translateY(-10px) scale(1.05);
-  background:rgba(255,255,255,0.15);
-}
-
-/* AUTO SCROLL */
-@keyframes scrollProgram{
-  0%{transform:translateX(0);}
-  100%{transform:translateX(-50%);}
-}
-
-/* SHOW ANIMATION */
-.program-card.show{
-  opacity:1;
-  transform:translateY(0);
+  .navbar .dropdown:hover .dropdown-menu{
+    display:block;
+    margin-top:0;
+  }
 }
 </style>
 </head>
 
-@@ -826,91 +911,74 @@
+<body>
+
+<!-- NAVBAR -->
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+  <a class="navbar-brand" href="index.html">
+    <img src="https://i.ibb.co/RkDs4pfs/download.jpg">
+  </a>
+
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#nav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link active" href="index.html">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="aboutus.html">About Us</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="govermentbody.html">Governing Body</a>
+      </li>
+
+      <!-- ✅ DROPDOWN ADDED HERE -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="deptDropdown" role="button" data-toggle="dropdown">
+          Department
+        </a>
+
+        <div class="dropdown-menu">
+
+          <a class="dropdown-item" href="AE.html">Automobile Engineering</a>
+          <a class="dropdown-item" href="CH.html">Chemical Engineering</a>
+          <a class="dropdown-item" href="CO.html">Computer Engineering</a>
+          <a class="dropdown-item" href="EE.html">Electrical Engineering</a>
+          <a class="dropdown-item" href="ENTC.html">ENTC Engineering</a>
+          <a class="dropdown-item" href="ME.html">Mechanical Engineering</a>
+
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="events.html">Event & Activities</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="campus.html">Campus Gallery</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="notice.html">Notice Board</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="contactus.html">Contact Us</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="admission.html">Admission Process</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="placements.html">TPO</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="nonteachingstaff.html">Non-Teaching Staff</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Satara Polytechnic , Satara</h1>
+    <img src="https://i.ibb.co/RkDs4pfs/download.jpg">
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section">
+<h2>Why Choose Us</h2>
+<div class="inner-container">
+  <div class="features">
+    <div class="feature-card"><h5>Experienced Faculty</h5><p>Highly qualified and dedicated teaching staff.</p></div>
+    <div class="feature-card"><h5>Modern Infrastructure</h5><p>Well-equipped labs and digital classrooms.</p></div>
+    <div class="feature-card"><h5>Excellent Placements</h5><p>Strong industry tie-ups and career support.</p></div>
+  </div>
+</div>
 </section>
 <!-- ===== OUR DEPARTMENTS ===== -->
 
@@ -829,71 +839,6 @@ margin-top:0;
 <h3>Automobile Engineering</h3>
 <p>Intake: 30</p>
 <p>Direct 2nd Year Available: Yes</p>
-<section class="program-section">
-
-<h2 class="program-title">Our Departments</h2>
-
-<div class="program-wrapper">
-
-  <div class="program-track">
-
-    <!-- CARD -->
-    <div class="program-card">
-      <img src="https://i.ibb.co/d4rzz8g7/AE.jpg">
-      <h3>Automobile Engineering</h3>
-      <p>Hands-on training in vehicle design, engines & modern mobility.</p>
-      <a href="AE.html">Explore →</a>
-    </div>
-
-    <div class="program-card">
-      <img src="https://i.ibb.co/8DSs9d3N/CH.jpg">
-      <h3>Chemical Engineering</h3>
-      <p>Process industries, oil & gas, and high salary career paths.</p>
-      <a href="CH.html">Explore →</a>
-    </div>
-
-    <div class="program-card">
-      <img src="https://i.ibb.co/4ZRdX8fw/CO.jpg">
-      <h3>Computer Engineering</h3>
-      <p>Software, AI, web development & tech industry careers.</p>
-      <a href="CO.html">Explore →</a>
-    </div>
-
-    <div class="program-card">
-      <img src="https://i.ibb.co/vxj6hzQK/EE.jpg">
-      <h3>Electrical Engineering</h3>
-      <p>Power systems, automation & industrial applications.</p>
-      <a href="EE.html">Explore →</a>
-    </div>
-
-    <div class="program-card">
-      <img src="https://i.ibb.co/d0pT4JTd/EJ.jpg">
-      <h3>ENTC Engineering</h3>
-      <p>Communication systems, electronics & embedded tech.</p>
-      <a href="ENTC.html">Explore →</a>
-    </div>
-
-    <div class="program-card">
-      <img src="https://i.ibb.co/tThSJg5m/ME.jpg">
-      <h3>Mechanical Engineering</h3>
-      <p>Machines, manufacturing & core engineering skills.</p>
-      <a href="ME.html">Explore →</a>
-    </div>
-
-    <!-- duplicate for infinite loop -->
-    <div class="program-card">
-      <img src="https://i.ibb.co/d4rzz8g7/AE.jpg">
-      <h3>Automobile Engineering</h3>
-      <p>Hands-on training in vehicle design, engines & modern mobility.</p>
-      <a href="AE.html">Explore →</a>
-    </div>
-
-    <div class="program-card">
-      <img src="https://i.ibb.co/8DSs9d3N/CH.jpg">
-      <h3>Chemical Engineering</h3>
-      <p>Process industries, oil & gas, and high salary career paths.</p>
-      <a href="CH.html">Explore →</a>
-    </div>
 
 <div class="dept-buttons">
 <a href="apply.html" class="applyBtn">Apply Now</a>
@@ -959,7 +904,6 @@ margin-top:0;
 <h3>Mechanical Engineering</h3>
 <p>Intake: 30</p>
 <p>Direct 2nd Year Available: Yes</p>
-  </div>
 
 <div class="dept-buttons">
 <a href="apply.html" class="applyBtn">Apply Now</a>
@@ -970,28 +914,188 @@ margin-top:0;
 </div>
 
 </section>
-@@ -1093,52 +1161,66 @@
+<!-- TOP RECRUITERS -->
+<section class="recruiters-section">
+
+<h2 class="recruiters-title">Top Recruiters</h2>
+
+<div class="recruiters-slider">
+
+<div class="recruiters-track">
+
+<img src="https://i.ibb.co/kVYfGGVw/r1.png">
+<img src="https://i.ibb.co/qMSXc53D/r2.jpg">
+<img src="https://i.ibb.co/d4vm1BkN/r3.png">
+<img src="https://i.ibb.co/4ngnnSPx/r4.png">
+<img src="https://i.ibb.co/PZ37Nmkm/r5.png">
+<img src="https://i.ibb.co/4w0MQh6c/r6.jpg">
+<img src="https://i.ibb.co/23Cs5HT6/r7.png">
+<img src="https://i.ibb.co/7PSmdJR/r8.png">
+<img src="https://i.ibb.co/C37KNLb5/r9.png">
+<img src="https://i.ibb.co/MyJq3wsk/r10.png">
+<!-- duplicate for infinite scroll -->
+  
+<img src="https://i.ibb.co/kVYfGGVw/r1.png">
+<img src="https://i.ibb.co/qMSXc53D/r2.jpg">
+<img src="https://i.ibb.co/d4vm1BkN/r3.png">
+<img src="https://i.ibb.co/4ngnnSPx/r4.png">
+<img src="https://i.ibb.co/PZ37Nmkm/r5.png">
+<img src="https://i.ibb.co/4w0MQh6c/r6.jpg">
+<img src="https://i.ibb.co/23Cs5HT6/r7.png">
+<img src="https://i.ibb.co/7PSmdJR/r8.png">
+<img src="https://i.ibb.co/C37KNLb5/r9.png">
+<img src="https://i.ibb.co/MyJq3wsk/r10.png">
+
+
+</div>
+
+</div>
+
+</section>
+<!-- TEMPLE GRAPHIC -->
+<div class="temple-top"></div>
+
+<footer class="main-footer">
+
+<div class="footer-container">
+
+<div class="footer-grid">
+
+<!-- EXPERIENCE -->
+<div>
+
+<h4 class="footer-title">EXPERIENCE MORE</h4>
+
+<p>Follow Us</p>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+<a href="#"><i class="fas fa-globe"></i></a>
+
+</div>
+
+</div>
+
+
+<!-- NOTICE BOARD -->
+
+<div>
+
+<h4 class="footer-title">Notice Board</h4>
+
+<div class="notice-scroll">
+
+<ul>
+
+<li>📢 Admission Open for 2026</li>
+<li>📢 Semester Exam Schedule Released</li>
+<li>📢 Annual Cultural Event Next Week</li>
+<li>📢 Placement Drive Coming Soon</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- QUICK LINKS -->
+
+<div>
+
+<h4 class="footer-title">Quick Links</h4>
+
+<ul class="footer-links">
+
+<li><a href="aboutus.html">About</a></li>
+<li><a href="sample.html">Departments</a></li>
+<li><a href="admission.html">Admissions</a></li>
+<li><a href="placements.html">Placements</a></li>
+
+</ul>
+
+</div>
+
+
+<!-- MORE INFO -->
+
+<div>
+
+<h4 class="footer-title">More Info</h4>
+
+<ul class="footer-links">
+
+<li><a href="#">Admin Login</a></li>
+<li><a href="contactus.html">Contact Us</a></li>
+<li><a href="#">Grievances Cell</a></li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER BOTTOM -->
+
+<div class="footer-bottom">
+
+<div class="footer-bottom-grid">
+
+<div>
+Office Timings:<br>
+Monday to Friday | 10 am to 5 pm
+</div>
+
+<div>
+📞 +91 9822517669<br>
+📞 +91 9881726261
+</div>
+
+<div class="footer-credit">
+© <span id="year"></span> Satara Polytechnic  
+Built by <b>Aditya Sawant</b>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- BACK TO TOP BUTTON -->
+
+<button id="backTop"><i class="fas fa-arrow-up"></i></button>
+
+
+<script>
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+let btn=document.getElementById("backTop");
+
+window.onscroll=function(){
+if(document.body.scrollTop>200||document.documentElement.scrollTop>200){
+btn.style.display="block";
+}else{
+btn.style.display="none";
+}
+};
+
+btn.onclick=function(){
+window.scrollTo({top:0,behavior:"smooth"});
 };
 
 </script>
 
 <script>
-const programCards = document.querySelectorAll('.program-card');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-}, { threshold: 0.2 });
-
-programCards.forEach(card => {
-  observer.observe(card);
-});
-</script>
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 <!-- REQUIRED FOR MOBILE NAVBAR -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
@@ -1035,8 +1139,4 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 </body>
 </body>
-</html>
-
-~
-
-
+</html> 
